@@ -1,0 +1,894 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */; };
+		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
+		D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7C981E574D8400F974EA /* AppDelegate.swift */; };
+		D46A7C9B1E574D8400F974EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7C9A1E574D8400F974EA /* ViewController.swift */; };
+		D46A7C9E1E574D8400F974EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46A7C9C1E574D8400F974EA /* Main.storyboard */; };
+		D46A7CA01E574D8400F974EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46A7C9F1E574D8400F974EA /* Assets.xcassets */; };
+		D46A7CA31E574D8400F974EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46A7CA11E574D8400F974EA /* LaunchScreen.storyboard */; };
+		D46A7CAE1E574D8400F974EA /* AppForeverYoungTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CAD1E574D8400F974EA /* AppForeverYoungTests.swift */; };
+		D46A7CB91E574D8400F974EA /* AppForeverYoungUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CB81E574D8400F974EA /* AppForeverYoungUITests.swift */; };
+		D46A7CC71E5751B600F974EA /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */; };
+		D46A7CC91E575E6200F974EA /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC81E575E6200F974EA /* DataBase.swift */; };
+		D49C6A871E59F28F00D60431 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C6A861E59F28F00D60431 /* ServiceManager.swift */; };
+		D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */; };
+		D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */; };
+		D4DC13021E5896C5003DF05C /* ElderlyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */; };
+		F951DC461E604E4B00B81B01 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951DC451E604E4B00B81B01 /* Notification.swift */; };
+		F9E1CF411E5ED353001CFA61 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E1CF401E5ED353001CFA61 /* HealthKit.framework */; };
+		F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8B81E60242E005C65C7 /* Interface.storyboard */; };
+		F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */; };
+		F9FBE8C31E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9FBE8CA1E60242E005C65C7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */; };
+		F9FBE8CC1E60242E005C65C7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FBE8CB1E60242E005C65C7 /* ExtensionDelegate.swift */; };
+		F9FBE8CE1E60242E005C65C7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FBE8CD1E60242E005C65C7 /* NotificationController.swift */; };
+		F9FBE8D01E60242E005C65C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */; };
+		F9FBE8D41E60242E005C65C7 /* ForeverYoungWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */; };
+		F9FBE8DE1E602586005C65C7 /* ContactPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FBE8DD1E602586005C65C7 /* ContactPersonViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D46A7CAA1E574D8400F974EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D46A7C8D1E574D8400F974EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D46A7C941E574D8400F974EA;
+			remoteInfo = AppForeverYoung;
+		};
+		D46A7CB51E574D8400F974EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D46A7C8D1E574D8400F974EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D46A7C941E574D8400F974EA;
+			remoteInfo = AppForeverYoung;
+		};
+		F9FBE8C41E60242E005C65C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D46A7C8D1E574D8400F974EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9FBE8C11E60242E005C65C7;
+			remoteInfo = "ForeverYoungWatchKit Extension";
+		};
+		F9FBE8D21E60242E005C65C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D46A7C8D1E574D8400F974EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9FBE8B51E60242E005C65C7;
+			remoteInfo = ForeverYoungWatchKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9FBE8DA1E60242E005C65C7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F9FBE8C31E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FBE8DC1E60242E005C65C7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F9FBE8D41E60242E005C65C7 /* ForeverYoungWatchKit.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewController.swift; sourceTree = "<group>"; };
+		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
+		D46A7C951E574D8400F974EA /* AppForeverYoung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppForeverYoung.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46A7C981E574D8400F974EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D46A7C9A1E574D8400F974EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D46A7C9D1E574D8400F974EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D46A7C9F1E574D8400F974EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D46A7CA21E574D8400F974EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D46A7CA41E574D8400F974EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46A7CA91E574D8400F974EA /* AppForeverYoungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppForeverYoungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46A7CAD1E574D8400F974EA /* AppForeverYoungTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppForeverYoungTests.swift; sourceTree = "<group>"; };
+		D46A7CAF1E574D8400F974EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46A7CB41E574D8400F974EA /* AppForeverYoungUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppForeverYoungUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46A7CB81E574D8400F974EA /* AppForeverYoungUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppForeverYoungUITests.swift; sourceTree = "<group>"; };
+		D46A7CBA1E574D8400F974EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		D46A7CC81E575E6200F974EA /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		D49C6A861E59F28F00D60431 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtivesMenuViewController.swift; sourceTree = "<group>"; };
+		D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppForeverYoung.entitlements; sourceTree = "<group>"; };
+		D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElderlyMenuViewController.swift; sourceTree = "<group>"; };
+		F951DC451E604E4B00B81B01 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		F9E1CF401E5ED353001CFA61 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForeverYoungWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9FBE8B91E60242E005C65C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9FBE8BD1E60242E005C65C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ForeverYoungWatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9FBE8C81E60242E005C65C7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F9FBE8CB1E60242E005C65C7 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F9FBE8CD1E60242E005C65C7 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9FBE8D11E60242E005C65C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FBE8DD1E602586005C65C7 /* ContactPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPersonViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D46A7C921E574D8400F974EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E1CF411E5ED353001CFA61 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46A7CA61E574D8400F974EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46A7CB11E574D8400F974EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FBE8BF1E60242E005C65C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D46A7C8C1E574D8400F974EA = {
+			isa = PBXGroup;
+			children = (
+				D46A7C971E574D8400F974EA /* AppForeverYoung */,
+				D46A7CAC1E574D8400F974EA /* AppForeverYoungTests */,
+				D46A7CB71E574D8400F974EA /* AppForeverYoungUITests */,
+				F9FBE8B71E60242E005C65C7 /* ForeverYoungWatchKit */,
+				F9FBE8C61E60242E005C65C7 /* ForeverYoungWatchKit Extension */,
+				D46A7C961E574D8400F974EA /* Products */,
+				D4DC12FE1E589473003DF05C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D46A7C961E574D8400F974EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D46A7C951E574D8400F974EA /* AppForeverYoung.app */,
+				D46A7CA91E574D8400F974EA /* AppForeverYoungTests.xctest */,
+				D46A7CB41E574D8400F974EA /* AppForeverYoungUITests.xctest */,
+				F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */,
+				F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D46A7C971E574D8400F974EA /* AppForeverYoung */ = {
+			isa = PBXGroup;
+			children = (
+				D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */,
+				D46A7C981E574D8400F974EA /* AppDelegate.swift */,
+				D46A7C9A1E574D8400F974EA /* ViewController.swift */,
+				D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */,
+				D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */,
+				D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */,
+				F9FBE8DD1E602586005C65C7 /* ContactPersonViewController.swift */,
+				D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */,
+				D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */,
+				D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */,
+				D46A7C9C1E574D8400F974EA /* Main.storyboard */,
+				D46A7C9F1E574D8400F974EA /* Assets.xcassets */,
+				D46A7CA11E574D8400F974EA /* LaunchScreen.storyboard */,
+				D46A7CA41E574D8400F974EA /* Info.plist */,
+				D49C6A861E59F28F00D60431 /* ServiceManager.swift */,
+				D46A7CC81E575E6200F974EA /* DataBase.swift */,
+				F951DC451E604E4B00B81B01 /* Notification.swift */,
+			);
+			path = AppForeverYoung;
+			sourceTree = "<group>";
+		};
+		D46A7CAC1E574D8400F974EA /* AppForeverYoungTests */ = {
+			isa = PBXGroup;
+			children = (
+				D46A7CAD1E574D8400F974EA /* AppForeverYoungTests.swift */,
+				D46A7CAF1E574D8400F974EA /* Info.plist */,
+			);
+			path = AppForeverYoungTests;
+			sourceTree = "<group>";
+		};
+		D46A7CB71E574D8400F974EA /* AppForeverYoungUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D46A7CB81E574D8400F974EA /* AppForeverYoungUITests.swift */,
+				D46A7CBA1E574D8400F974EA /* Info.plist */,
+			);
+			path = AppForeverYoungUITests;
+			sourceTree = "<group>";
+		};
+		D4DC12FE1E589473003DF05C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1CF401E5ED353001CFA61 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9FBE8B71E60242E005C65C7 /* ForeverYoungWatchKit */ = {
+			isa = PBXGroup;
+			children = (
+				F9FBE8B81E60242E005C65C7 /* Interface.storyboard */,
+				F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */,
+				F9FBE8BD1E60242E005C65C7 /* Info.plist */,
+			);
+			path = ForeverYoungWatchKit;
+			sourceTree = "<group>";
+		};
+		F9FBE8C61E60242E005C65C7 /* ForeverYoungWatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */,
+				F9FBE8CB1E60242E005C65C7 /* ExtensionDelegate.swift */,
+				F9FBE8CD1E60242E005C65C7 /* NotificationController.swift */,
+				F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */,
+				F9FBE8D11E60242E005C65C7 /* Info.plist */,
+				F9FBE8C71E60242E005C65C7 /* Supporting Files */,
+			);
+			path = "ForeverYoungWatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F9FBE8C71E60242E005C65C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9FBE8C81E60242E005C65C7 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D46A7C941E574D8400F974EA /* AppForeverYoung */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D46A7CBD1E574D8400F974EA /* Build configuration list for PBXNativeTarget "AppForeverYoung" */;
+			buildPhases = (
+				D46A7C911E574D8400F974EA /* Sources */,
+				D46A7C921E574D8400F974EA /* Frameworks */,
+				D46A7C931E574D8400F974EA /* Resources */,
+				F9FBE8DC1E60242E005C65C7 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9FBE8D31E60242E005C65C7 /* PBXTargetDependency */,
+			);
+			name = AppForeverYoung;
+			productName = AppForeverYoung;
+			productReference = D46A7C951E574D8400F974EA /* AppForeverYoung.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D46A7CA81E574D8400F974EA /* AppForeverYoungTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D46A7CC01E574D8400F974EA /* Build configuration list for PBXNativeTarget "AppForeverYoungTests" */;
+			buildPhases = (
+				D46A7CA51E574D8400F974EA /* Sources */,
+				D46A7CA61E574D8400F974EA /* Frameworks */,
+				D46A7CA71E574D8400F974EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D46A7CAB1E574D8400F974EA /* PBXTargetDependency */,
+			);
+			name = AppForeverYoungTests;
+			productName = AppForeverYoungTests;
+			productReference = D46A7CA91E574D8400F974EA /* AppForeverYoungTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D46A7CB31E574D8400F974EA /* AppForeverYoungUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D46A7CC31E574D8400F974EA /* Build configuration list for PBXNativeTarget "AppForeverYoungUITests" */;
+			buildPhases = (
+				D46A7CB01E574D8400F974EA /* Sources */,
+				D46A7CB11E574D8400F974EA /* Frameworks */,
+				D46A7CB21E574D8400F974EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D46A7CB61E574D8400F974EA /* PBXTargetDependency */,
+			);
+			name = AppForeverYoungUITests;
+			productName = AppForeverYoungUITests;
+			productReference = D46A7CB41E574D8400F974EA /* AppForeverYoungUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F9FBE8B51E60242E005C65C7 /* ForeverYoungWatchKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9FBE8DB1E60242E005C65C7 /* Build configuration list for PBXNativeTarget "ForeverYoungWatchKit" */;
+			buildPhases = (
+				F9FBE8B41E60242E005C65C7 /* Resources */,
+				F9FBE8DA1E60242E005C65C7 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9FBE8C51E60242E005C65C7 /* PBXTargetDependency */,
+			);
+			name = ForeverYoungWatchKit;
+			productName = ForeverYoungWatchKit;
+			productReference = F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F9FBE8C11E60242E005C65C7 /* ForeverYoungWatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9FBE8D91E60242E005C65C7 /* Build configuration list for PBXNativeTarget "ForeverYoungWatchKit Extension" */;
+			buildPhases = (
+				F9FBE8BE1E60242E005C65C7 /* Sources */,
+				F9FBE8BF1E60242E005C65C7 /* Frameworks */,
+				F9FBE8C01E60242E005C65C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ForeverYoungWatchKit Extension";
+			productName = "ForeverYoungWatchKit Extension";
+			productReference = F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D46A7C8D1E574D8400F974EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = iosparthenopedeveloper;
+				TargetAttributes = {
+					D46A7C941E574D8400F974EA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93JF9LS6ZY;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
+					};
+					D46A7CA81E574D8400F974EA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93JF9LS6ZY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D46A7C941E574D8400F974EA;
+					};
+					D46A7CB31E574D8400F974EA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93JF9LS6ZY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D46A7C941E574D8400F974EA;
+					};
+					F9FBE8B51E60242E005C65C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93JF9LS6ZY;
+						ProvisioningStyle = Automatic;
+					};
+					F9FBE8C11E60242E005C65C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93JF9LS6ZY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D46A7C901E574D8400F974EA /* Build configuration list for PBXProject "AppForeverYoung" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D46A7C8C1E574D8400F974EA;
+			productRefGroup = D46A7C961E574D8400F974EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D46A7C941E574D8400F974EA /* AppForeverYoung */,
+				D46A7CA81E574D8400F974EA /* AppForeverYoungTests */,
+				D46A7CB31E574D8400F974EA /* AppForeverYoungUITests */,
+				F9FBE8B51E60242E005C65C7 /* ForeverYoungWatchKit */,
+				F9FBE8C11E60242E005C65C7 /* ForeverYoungWatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D46A7C931E574D8400F974EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D46A7CA31E574D8400F974EA /* LaunchScreen.storyboard in Resources */,
+				D46A7CA01E574D8400F974EA /* Assets.xcassets in Resources */,
+				D46A7C9E1E574D8400F974EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46A7CA71E574D8400F974EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46A7CB21E574D8400F974EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FBE8B41E60242E005C65C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */,
+				F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FBE8C01E60242E005C65C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9FBE8D01E60242E005C65C7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D46A7C911E574D8400F974EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */,
+				D46A7C9B1E574D8400F974EA /* ViewController.swift in Sources */,
+				D4DC13021E5896C5003DF05C /* ElderlyMenuViewController.swift in Sources */,
+				F951DC461E604E4B00B81B01 /* Notification.swift in Sources */,
+				F9FBE8DE1E602586005C65C7 /* ContactPersonViewController.swift in Sources */,
+				D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */,
+				D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */,
+				D46A7CC91E575E6200F974EA /* DataBase.swift in Sources */,
+				D46A7CC71E5751B600F974EA /* CreateUserViewController.swift in Sources */,
+				D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */,
+				D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */,
+				D49C6A871E59F28F00D60431 /* ServiceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46A7CA51E574D8400F974EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D46A7CAE1E574D8400F974EA /* AppForeverYoungTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46A7CB01E574D8400F974EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D46A7CB91E574D8400F974EA /* AppForeverYoungUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FBE8BE1E60242E005C65C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9FBE8CE1E60242E005C65C7 /* NotificationController.swift in Sources */,
+				F9FBE8CC1E60242E005C65C7 /* ExtensionDelegate.swift in Sources */,
+				F9FBE8CA1E60242E005C65C7 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D46A7CAB1E574D8400F974EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D46A7C941E574D8400F974EA /* AppForeverYoung */;
+			targetProxy = D46A7CAA1E574D8400F974EA /* PBXContainerItemProxy */;
+		};
+		D46A7CB61E574D8400F974EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D46A7C941E574D8400F974EA /* AppForeverYoung */;
+			targetProxy = D46A7CB51E574D8400F974EA /* PBXContainerItemProxy */;
+		};
+		F9FBE8C51E60242E005C65C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9FBE8C11E60242E005C65C7 /* ForeverYoungWatchKit Extension */;
+			targetProxy = F9FBE8C41E60242E005C65C7 /* PBXContainerItemProxy */;
+		};
+		F9FBE8D31E60242E005C65C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9FBE8B51E60242E005C65C7 /* ForeverYoungWatchKit */;
+			targetProxy = F9FBE8D21E60242E005C65C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D46A7C9C1E574D8400F974EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D46A7C9D1E574D8400F974EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D46A7CA11E574D8400F974EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D46A7CA21E574D8400F974EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F9FBE8B81E60242E005C65C7 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9FBE8B91E60242E005C65C7 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D46A7CBB1E574D8400F974EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D46A7CBC1E574D8400F974EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D46A7CBE1E574D8400F974EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppForeverYoung/AppForeverYoung.entitlements;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = AppForeverYoung/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoung;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D46A7CBF1E574D8400F974EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppForeverYoung/AppForeverYoung.entitlements;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = AppForeverYoung/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoung;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D46A7CC11E574D8400F974EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = AppForeverYoungTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoungTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppForeverYoung.app/AppForeverYoung";
+			};
+			name = Debug;
+		};
+		D46A7CC21E574D8400F974EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = AppForeverYoungTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoungTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppForeverYoung.app/AppForeverYoung";
+			};
+			name = Release;
+		};
+		D46A7CC41E574D8400F974EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = AppForeverYoungUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoungUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AppForeverYoung;
+			};
+			name = Debug;
+		};
+		D46A7CC51E574D8400F974EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = AppForeverYoungUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoungUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AppForeverYoung;
+			};
+			name = Release;
+		};
+		F9FBE8D51E60242E005C65C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				IBSC_MODULE = ForeverYoungWatchKit_Extension;
+				INFOPLIST_FILE = ForeverYoungWatchKit/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoung.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		F9FBE8D61E60242E005C65C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				IBSC_MODULE = ForeverYoungWatchKit_Extension;
+				INFOPLIST_FILE = ForeverYoungWatchKit/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoung.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		F9FBE8D71E60242E005C65C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = "ForeverYoungWatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoung.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		F9FBE8D81E60242E005C65C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 93JF9LS6ZY;
+				INFOPLIST_FILE = "ForeverYoungWatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.iosparthenopedeveloper.AppForeverYoung.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D46A7C901E574D8400F974EA /* Build configuration list for PBXProject "AppForeverYoung" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46A7CBB1E574D8400F974EA /* Debug */,
+				D46A7CBC1E574D8400F974EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D46A7CBD1E574D8400F974EA /* Build configuration list for PBXNativeTarget "AppForeverYoung" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46A7CBE1E574D8400F974EA /* Debug */,
+				D46A7CBF1E574D8400F974EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D46A7CC01E574D8400F974EA /* Build configuration list for PBXNativeTarget "AppForeverYoungTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46A7CC11E574D8400F974EA /* Debug */,
+				D46A7CC21E574D8400F974EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D46A7CC31E574D8400F974EA /* Build configuration list for PBXNativeTarget "AppForeverYoungUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46A7CC41E574D8400F974EA /* Debug */,
+				D46A7CC51E574D8400F974EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9FBE8D91E60242E005C65C7 /* Build configuration list for PBXNativeTarget "ForeverYoungWatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9FBE8D71E60242E005C65C7 /* Debug */,
+				F9FBE8D81E60242E005C65C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9FBE8DB1E60242E005C65C7 /* Build configuration list for PBXNativeTarget "ForeverYoungWatchKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9FBE8D51E60242E005C65C7 /* Debug */,
+				F9FBE8D61E60242E005C65C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D46A7C8D1E574D8400F974EA /* Project object */;
+}
