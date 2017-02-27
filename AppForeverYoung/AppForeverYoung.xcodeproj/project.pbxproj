@@ -19,11 +19,11 @@
 		D46A7CC71E5751B600F974EA /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */; };
 		D46A7CC91E575E6200F974EA /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC81E575E6200F974EA /* DataBase.swift */; };
 		D49C6A871E59F28F00D60431 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C6A861E59F28F00D60431 /* ServiceManager.swift */; };
+		D4B23E511E64AD86009E8EBC /* AddMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */; };
 		D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */; };
 		D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */; };
 		D4DC13021E5896C5003DF05C /* ElderlyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */; };
 		F951DC461E604E4B00B81B01 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951DC451E604E4B00B81B01 /* Notification.swift */; };
-		F9E1CF411E5ED353001CFA61 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E1CF401E5ED353001CFA61 /* HealthKit.framework */; };
 		F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8B81E60242E005C65C7 /* Interface.storyboard */; };
 		F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */; };
 		F9FBE8C31E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -110,12 +110,12 @@
 		D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		D46A7CC81E575E6200F974EA /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		D49C6A861E59F28F00D60431 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryViewController.swift; sourceTree = "<group>"; };
 		D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtivesMenuViewController.swift; sourceTree = "<group>"; };
 		D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppForeverYoung.entitlements; sourceTree = "<group>"; };
 		D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElderlyMenuViewController.swift; sourceTree = "<group>"; };
 		F951DC451E604E4B00B81B01 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		F9E1CF401E5ED353001CFA61 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForeverYoungWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FBE8B91E60242E005C65C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E1CF411E5ED353001CFA61 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +195,7 @@
 				D46A7C9A1E574D8400F974EA /* ViewController.swift */,
 				D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */,
 				D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */,
+				D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */,
 				D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */,
 				F9FBE8DD1E602586005C65C7 /* ContactPersonViewController.swift */,
 				D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */,
@@ -233,7 +233,6 @@
 		D4DC12FE1E589473003DF05C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F9E1CF401E5ED353001CFA61 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -380,7 +379,7 @@
 								enabled = 1;
 							};
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -494,6 +493,7 @@
 				F951DC461E604E4B00B81B01 /* Notification.swift in Sources */,
 				F9FBE8DE1E602586005C65C7 /* ContactPersonViewController.swift in Sources */,
 				D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */,
+				D4B23E511E64AD86009E8EBC /* AddMemoryViewController.swift in Sources */,
 				D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */,
 				D46A7CC91E575E6200F974EA /* DataBase.swift in Sources */,
 				D46A7CC71E5751B600F974EA /* CreateUserViewController.swift in Sources */,

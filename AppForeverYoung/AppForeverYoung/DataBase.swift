@@ -408,4 +408,117 @@ class DataBase {
         
         return personas
     }
+    
+    
+    static func getQuestions() -> [String] {
+        let semaphore = DispatchSemaphore(value: 0);
+        let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/QuestionService/api/getQuestions.php"
+        var questions: [String] = Array()
+        
+        //Set up the url request
+        var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
+        
+        //setting the method to post
+        requestUrl.httpMethod = "GET"
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
+            (data, response, error) in
+            
+            //exiting if there is some error
+            if error != nil {
+                print("please enter a valid url")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data \(data)")
+                return
+            }
+            
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                let myJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as AnyObject
+                
+                //getting the JSON array teams from the response
+                let data: NSArray = myJSON["questions"] as! NSArray
+                if let dataArr = data as? [[String: Any]] {
+                    for person in dataArr {
+                        //your code for accessing dd.
+                        questions.append(person["query"] as! String)
+                    }
+                }
+            } catch {
+                print(error)
+            }
+            semaphore.signal();
+        })
+        //executing the task
+        task.resume()
+        semaphore.wait()
+        
+        return questions
+    }
+    
+    
+    static func createMemory(telephone: String, titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String) -> Bool {
+        let semaphore = DispatchSemaphore(value: 0);
+        var message = ""
+        
+        let URL_SAVE_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/createMemory.php"
+        var requestUrl = URLRequest(url: URL(string: URL_SAVE_TEAM)!)
+        
+        //setting the method to post
+        requestUrl.httpMethod = "POST"
+        
+        //creating the post parameter by concatenating the keys and values from text field
+        let postParameters = "telephone="+telephone+"&titleMemory="+titleMemory+"&bodyMemory="+bodyMemory+"&dateMemory="+dateMemory+"&timeMemory="+timeMemory
+        
+        requestUrl.httpBody = postParameters.data(using: .utf8)
+        
+        let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                print("please enter a valid user")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data \(data)")
+                return
+            }
+            
+            do {
+                let myJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as?NSDictionary
+                
+                //parsing the json
+                if let parseJSON = myJSON {
+                    //creating a string
+                    var msg : String!
+                    
+                    //getting the json response
+                    msg = parseJSON["message"] as! String?
+                    //printing the response
+                    print(msg)
+                    message = msg
+                }
+            } catch  {
+                print("error trying to convert data to JSON")
+                return
+            }
+            semaphore.signal();
+        })
+        //executing the task
+        task.resume()
+        semaphore.wait()
+        
+        if message ==  "Memory added successfully" {
+            return true
+        } else {
+            return false
+        }
+    }
+
 }

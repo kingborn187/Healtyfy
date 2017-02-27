@@ -13,8 +13,10 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
     @IBOutlet var typeQuestionPicker: UIPickerView!
     @IBOutlet var label: UILabel!
     
-    let typeQuestion = ["How are you?", "Do you have a lunch?", "Are you alone?", "Are you at home?"]
+    //let typeQuestion = ["How are you?", "Do you have a lunch?", "Are you alone?", "Are you at home?"]
+    let typeQuestion = DataBase.getQuestions()
     var question = String()
+    let serviceManager = ServiceManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,11 +58,11 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             present(alertController, animated: true, completion: nil)
         } else {
+            serviceManager.send(msg: "message by relatives", usernameRequest: globalUsername)
             let alertController = UIAlertController(title: "Question send", message: "the question \"\(question)\" is send", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
     }
-    
-    
 }
+
