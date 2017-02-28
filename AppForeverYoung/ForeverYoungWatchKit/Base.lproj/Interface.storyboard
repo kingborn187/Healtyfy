@@ -9,102 +9,67 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="lIE-8m-73W">
+            <objects>
+                <notificationController id="Gld-hM-8lx">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="dv3-IE-8f1"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="FriendRequest" id="71D-Nz-ejJ"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="dv3-IE-8f1" id="SDJ-Wh-fvO"/>
+                        <segue destination="Kox-B1-kWd" kind="relationship" relationship="dynamicNotificationInterface" id="YjZ-CE-rQn"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-220" y="196"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ForeverYoungWatchKit" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="wDP-zR-D3N">
-                            <items>
-                                <button width="1" alignment="left" title="Notification" id="feS-JM-dv4">
-                                    <connections>
-                                        <segue destination="thI-uQ-tpy" kind="push" id="ElZ-0x-JtB"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="left" title="Memory" id="i8c-yc-Ri7">
-                                    <connections>
-                                        <segue destination="pbo-kU-rEZ" kind="push" id="cnO-tU-fsR"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="left" title="Chat" id="Vx1-ON-wLB">
-                                    <connections>
-                                        <segue destination="FGl-Iq-CFO" kind="push" id="9NH-4j-PVP"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-150" y="526"/>
-        </scene>
-        <!--Notification-->
-        <scene sceneID="yfJ-rQ-4fz">
-            <objects>
-                <controller title="Notification" id="thI-uQ-tpy"/>
-            </objects>
-            <point key="canvasLocation" x="-150" y="219"/>
-        </scene>
-        <!--Chat-->
-        <scene sceneID="9r7-uX-VqN">
-            <objects>
-                <controller title="Chat" id="FGl-Iq-CFO"/>
-            </objects>
-            <point key="canvasLocation" x="-150" y="862"/>
-        </scene>
-        <!--Memory-->
-        <scene sceneID="67t-bu-glO">
-            <objects>
-                <controller title="Memory" id="pbo-kU-rEZ"/>
-            </objects>
-            <point key="canvasLocation" x="128" y="526"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="kxL-wg-Vja">
-            <objects>
-                <notificationController id="FPr-SD-3nV">
-                    <items>
-                        <label alignment="left" text="Alert Label" id="lis-4G-iE5"/>
-                    </items>
-                    <notificationCategory key="notificationCategory" id="2Vq-NI-lDt"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="lis-4G-iE5" id="P9F-ID-C0U"/>
-                        <segue destination="xzp-jv-bry" kind="relationship" relationship="dynamicNotificationInterface" id="BzO-Tb-ico"/>
-                    </connections>
-                </notificationController>
-            </objects>
-            <point key="canvasLocation" x="241" y="14"/>
-        </scene>
-        <!--Dynamic Notification Interface Controller-->
-        <scene sceneID="6ts-IC-0b5">
-            <objects>
-                <controller id="xzp-jv-bry">
-                    <items>
-                        <imageView height="97" alignment="left" id="ii5-6I-H8c"/>
-                        <group width="1" alignment="left" id="lZj-3U-hh8">
-                            <items>
-                                <label alignment="left" text="Name" id="OkB-9K-Pec"/>
-                                <label alignment="right" text="Surname" textAlignment="center" id="WsJ-85-vMl"/>
-                            </items>
-                        </group>
+                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Notification" id="feS-JM-dv4"/>
                     </items>
                     <connections>
-                        <segue destination="LAh-mb-3Kd" kind="relationship" relationship="nextPage" id="DZe-U3-VZc"/>
+                        <segue destination="Idn-St-dCN" kind="relationship" relationship="nextPage" id="eH8-aE-IsQ"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="539" y="14"/>
+            <point key="canvasLocation" x="-215" y="526"/>
         </scene>
         <!--Interface Controller-->
-        <scene sceneID="5pb-gu-l6j">
+        <scene sceneID="yIJ-Td-rml">
             <objects>
-                <controller id="LAh-mb-3Kd">
+                <controller id="Idn-St-dCN">
                     <items>
-                        <label width="136" height="112" alignment="left" text="Label" numberOfLines="0" id="PpA-rV-8UQ"/>
+                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Memory" id="i8c-yc-Ri7"/>
+                    </items>
+                    <connections>
+                        <segue destination="udU-Mm-e7H" kind="relationship" relationship="nextPage" id="ccV-qc-mhJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="102" y="526"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="V3i-Zf-6vC">
+            <objects>
+                <controller id="udU-Mm-e7H">
+                    <items>
+                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Chat" id="Vx1-ON-wLB"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="808" y="14"/>
+            <point key="canvasLocation" x="423" y="526"/>
+        </scene>
+        <!--Fried Request Notification Controller-->
+        <scene sceneID="FAO-dt-Uvz">
+            <objects>
+                <controller id="Kox-B1-kWd" customClass="FriedRequestNotificationController" customModule="ForeverYoungWatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="196"/>
         </scene>
     </scenes>
 </document>

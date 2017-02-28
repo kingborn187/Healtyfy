@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */; };
 		D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */; };
 		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
 		D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7C981E574D8400F974EA /* AppDelegate.swift */; };
@@ -92,6 +93,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedRequestNotificationController.swift; sourceTree = "<group>"; };
 		D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewController.swift; sourceTree = "<group>"; };
 		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
 		D46A7C951E574D8400F974EA /* AppForeverYoung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppForeverYoung.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +258,7 @@
 				F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8D11E60242E005C65C7 /* Info.plist */,
 				F9FBE8C71E60242E005C65C7 /* Supporting Files */,
+				D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */,
 			);
 			path = "ForeverYoungWatchKit Extension";
 			sourceTree = "<group>";
@@ -408,6 +411,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 93JF9LS6ZY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.watchos.app = {
+								enabled = 0;
+							};
+						};
 					};
 					F9FBE8C11E60242E005C65C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -524,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9FBE8CE1E60242E005C65C7 /* NotificationController.swift in Sources */,
+				D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */,
 				F9FBE8CC1E60242E005C65C7 /* ExtensionDelegate.swift in Sources */,
 				F9FBE8CA1E60242E005C65C7 /* InterfaceController.swift in Sources */,
 			);
