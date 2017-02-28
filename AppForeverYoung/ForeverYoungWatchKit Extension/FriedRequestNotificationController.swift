@@ -34,4 +34,18 @@ class FriedRequestNotificationController: WKUserNotificationInterfaceController 
         super.didDeactivate()
     }
  
+    override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
+        let notificationBody = notification.request.content.body
+        label.setText(notificationBody)
+        
+        if let imageAttchment = notification.request.content.attachments.first {
+            let imageUrl = imageAttchment.url
+            let imageData = try! Data(contentsOf: imageUrl)
+            let newImage = UIImage(data: imageData)
+            image.setImage(newImage)
+        } else {
+            self.image.setImageNamed("unknown")
+        }
+        completionHandler(.custom)
+    }
 }

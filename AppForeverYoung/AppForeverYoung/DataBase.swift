@@ -11,7 +11,7 @@ import UIKit
 
 class DataBase {
     
-    static func createUser(username: String, password: String, name: String, surname: String, telephone: String, type: String) -> Bool {
+    static func createUser(username: String, password: String, name: String, surname: String, telephone: String, type: String, imagePerson: UIImage) -> Bool {
         let semaphore = DispatchSemaphore(value: 0);
         var message = ""
         
@@ -21,9 +21,12 @@ class DataBase {
         //setting the method to post
         requestUrl.httpMethod = "POST"
         
-        //creating the post parameter by concatenating the keys and values from text field
-        let postParameters = "username="+username+"&password="+password+"&name="+name+"&surname="+surname+"&telephone="+telephone+"&type="+type
+        let imagePersonData = UIImagePNGRepresentation(imagePerson)
         
+        //creating the post parameter by concatenating the keys and values from text field
+        var postParameters = "username="+username+"&password="+password+"&name="+name+"&surname="+surname+"&telephone="+telephone+"&type="+type
+        postParameters += "&imagePerson="+(imagePersonData?.base64EncodedString())!
+        print((imagePersonData?.base64EncodedString())!)
         requestUrl.httpBody = postParameters.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {

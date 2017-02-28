@@ -255,10 +255,10 @@
 				F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */,
 				F9FBE8CB1E60242E005C65C7 /* ExtensionDelegate.swift */,
 				F9FBE8CD1E60242E005C65C7 /* NotificationController.swift */,
+				D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */,
 				F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8D11E60242E005C65C7 /* Info.plist */,
 				F9FBE8C71E60242E005C65C7 /* Supporting Files */,
-				D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */,
 			);
 			path = "ForeverYoungWatchKit Extension";
 			sourceTree = "<group>";

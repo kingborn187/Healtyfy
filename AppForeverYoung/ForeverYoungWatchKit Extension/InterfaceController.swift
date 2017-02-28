@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import UserNotifications
 
 class InterfaceController: WKInterfaceController {
 
@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        registerUserNotificationSettings()
     }
     
     override func willActivate() {
@@ -28,4 +29,36 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+}
+
+
+// Notification Center Delegate
+extension InterfaceController: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
+}
+
+
+// Notification Center
+extension InterfaceController {
+    
+    func registerUserNotificationSettings() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if granted {
+                let answer1 = UNNotificationAction(identifier: "answer1", title: "ACCEPT", options: [.foreground])
+                let answer2 = UNNotificationAction(identifier: "answer2", title: "DECLINE", options: [.foreground])
+                let friendRequest = UNNotificationCategory(identifier: "friendRequest", actions: [answer1, answer2] , intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([friendRequest])
+                UNUserNotificationCenter.current().delegate = self
+                print("⌚️⌚️⌚️Successfully registered notification support")
+            } else {
+                print("⌚️⌚️⌚️ERROR: \(error?.localizedDescription)")
+            }
+        }
+    }
 }

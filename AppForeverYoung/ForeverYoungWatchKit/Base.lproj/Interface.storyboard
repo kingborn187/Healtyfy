@@ -14,9 +14,9 @@
             <objects>
                 <notificationController id="Gld-hM-8lx">
                     <items>
-                        <label alignment="left" text="Alert Label" id="dv3-IE-8f1"/>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Alert Label" textAlignment="center" numberOfLines="0" id="dv3-IE-8f1"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="FriendRequest" id="71D-Nz-ejJ"/>
+                    <notificationCategory key="notificationCategory" identifier="friendRequest" id="71D-Nz-ejJ"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="dv3-IE-8f1" id="SDJ-Wh-fvO"/>
                         <segue destination="Kox-B1-kWd" kind="relationship" relationship="dynamicNotificationInterface" id="YjZ-CE-rQn"/>
@@ -67,7 +67,14 @@
         <!--Fried Request Notification Controller-->
         <scene sceneID="FAO-dt-Uvz">
             <objects>
-                <controller id="Kox-B1-kWd" customClass="FriedRequestNotificationController" customModule="ForeverYoungWatchKit_Extension"/>
+                <controller id="Kox-B1-kWd" customClass="FriedRequestNotificationController" customModule="ForeverYoungWatchKit_Extension">
+                    <items>
+                        <imageView height="100" alignment="center" image="unknown" contentMode="scaleAspectFill" id="dnZ-rv-Fuy"/>
+                        <label alignment="center" text="&lt;message&gt;" numberOfLines="0" id="ebn-Q0-T6c">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="80" y="196"/>
         </scene>
