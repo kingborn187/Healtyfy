@@ -13,6 +13,7 @@ class PersonasTableViewCell: UITableViewCell {
     @IBOutlet var telephone: UILabel!
     @IBOutlet var name: UILabel!
     @IBOutlet var surname: UILabel!
+    @IBOutlet var imagePerson: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

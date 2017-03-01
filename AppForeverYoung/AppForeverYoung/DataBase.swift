@@ -21,12 +21,9 @@ class DataBase {
         //setting the method to post
         requestUrl.httpMethod = "POST"
         
-        let imagePersonData = UIImagePNGRepresentation(imagePerson)
-        
         //creating the post parameter by concatenating the keys and values from text field
-        var postParameters = "username="+username+"&password="+password+"&name="+name+"&surname="+surname+"&telephone="+telephone+"&type="+type
-        postParameters += "&imagePerson="+(imagePersonData?.base64EncodedString())!
-        print((imagePersonData?.base64EncodedString())!)
+        let postParameters = "username="+username+"&password="+password+"&name="+name+"&surname="+surname+"&telephone="+telephone+"&type="+type+"&imagePerson="+""
+       
         requestUrl.httpBody = postParameters.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
@@ -65,7 +62,9 @@ class DataBase {
         //executing the task
         task.resume()
         semaphore.wait()
+        
         if message ==  "User added successfully" {
+            upload_image(url: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/addImage.php", image: imagePerson, name: username)
             return true
         } else {
             return false
@@ -522,6 +521,58 @@ class DataBase {
         } else {
             return false
         }
+    }
+    
+    static func upload_image(url: String, image: UIImage, name: String) {
+        
+        let urlMast = NSURL(string: url)
+        
+        var request = URLRequest(url: urlMast! as URL)
+        request.httpMethod = "POST"
+        
+        let boundary = generateBoundaryString()
+        
+        //define the multipart request type
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        let image_data = UIImagePNGRepresentation(image)
+        let body = NSMutableData()
+        let fname = name+".png"
+        let mimetype = "image/png"
+        
+        body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Disposition:form-data; name=\"photo\"\r\n\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Incoming\r\n".data(using: String.Encoding.utf8)!)
+        body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Disposition:form-data; name=\"file\"; filename=\"\(fname)\"\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Type: \(mimetype)\r\n\r\n".data(using: String.Encoding.utf8)!)
+        body.append(image_data!)
+        body.append("\r\n".data(using: String.Encoding.utf8)!)
+        body.append("--\(boundary)--\r\n".data(using: String.Encoding.utf8)!)
+        
+        request.httpBody = body as Data
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest) {
+            (
+            data, response, error) in
+            
+            guard let _:Data = data, let _:URLResponse = response , error
+                == nil else {
+                    print("error")
+                    return
+            }
+            let dataString = String(data: data!, encoding:
+                String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+            print(dataString!)
+            
+        }
+        task.resume()
+    }
+    
+    static func generateBoundaryString() -> String
+    {
+        return "Boundary-\(NSUUID().uuidString)"
     }
 
 }

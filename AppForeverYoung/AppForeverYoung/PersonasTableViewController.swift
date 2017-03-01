@@ -44,6 +44,8 @@ class PersonasTableViewController: UITableViewController {
         cell.name.text = personas[key]?.name
         cell.surname.text = personas[key]?.surname
         
+        cell.imagePerson.contentMode = .scaleAspectFit
+        downloadImage(url: URL(string: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/michele.png")!, imageView: cell.imagePerson)
         return cell
     }
     
@@ -55,8 +57,52 @@ class PersonasTableViewController: UITableViewController {
                 let destinationController = segue.destination as! RealtivesMenuViewController
                 destinationController.name = (personas[key]?.name)!
                 destinationController.surname = (personas[key]?.surname)!
+                //destinationController.imagePerson.image = downloadImage(url: URL(string: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/michele.png")!)
             }
         }
     }
     
+    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+    
+    func downloadImage(url: URL, imageView: UIImageView) {
+        print("Download Started")
+       
+        getDataFromUrl(url: url) { (data, response, error)  in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { () -> Void in
+                imageView.image = UIImage(data: data)
+            }
+        }
+    }
+}
+
+
+extension UIImageView {
+    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { () -> Void in
+                self.image = image
+            }
+            }.resume()
+    }
+    
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloadedFrom(url: url, contentMode: mode)
+    }
 }

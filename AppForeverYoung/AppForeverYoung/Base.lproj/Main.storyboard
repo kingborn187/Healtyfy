@@ -58,6 +58,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imagePerson" destination="pca-y3-LgE" id="tLx-Y3-ngG"/>
                                     <outlet property="name" destination="rnF-oD-zCG" id="xcL-wS-cCE"/>
                                     <outlet property="surname" destination="dFV-CC-f7R" id="98X-JL-v0d"/>
                                     <outlet property="telephone" destination="kP8-9H-QGf" id="S6f-uT-0C8"/>
@@ -775,6 +776,6 @@
         <image name="unknown" width="361" height="486"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GGK-eO-Xt1"/>
+        <segue reference="pkC-II-Mbk"/>
     </inferredMetricsTieBreakers>
 </document>
