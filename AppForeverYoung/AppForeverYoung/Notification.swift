@@ -11,11 +11,19 @@ import Foundation
 class Notification {
     
     
-    static func sendFiendshipRequest(name: String, surname: String) {
+    static func sendFiendshipRequest(name: String, surname: String, token: String) {
         let semaphore = DispatchSemaphore(value: 0);
         
         let URL_SAVE_TEAM = "http://localhost:8888/ServerPush/newspush.php"
-        let requestUrl = URLRequest(url: URL(string: URL_SAVE_TEAM)!)
+        var requestUrl = URLRequest(url: URL(string: URL_SAVE_TEAM)!)
+        
+        print("->"+token)
+        
+        //setting the method to post
+        requestUrl.httpMethod = "POST"
+        
+        let postParameters = "token="+token
+        requestUrl.httpBody = postParameters.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
             (data, response, error) in

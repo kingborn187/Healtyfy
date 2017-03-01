@@ -25,6 +25,9 @@
 		D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */; };
 		D4DC13021E5896C5003DF05C /* ElderlyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */; };
 		F951DC461E604E4B00B81B01 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951DC451E604E4B00B81B01 /* Notification.swift */; };
+		F981F5BD1E66D9010060BB30 /* ShareClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981F5BC1E66D9010060BB30 /* ShareClass.swift */; };
+		F981F5BE1E66D9050060BB30 /* ShareClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981F5BC1E66D9010060BB30 /* ShareClass.swift */; };
+		F981F5BF1E66D9210060BB30 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC81E575E6200F974EA /* DataBase.swift */; };
 		F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8B81E60242E005C65C7 /* Interface.storyboard */; };
 		F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */; };
 		F9FBE8C31E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -118,6 +121,7 @@
 		D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppForeverYoung.entitlements; sourceTree = "<group>"; };
 		D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElderlyMenuViewController.swift; sourceTree = "<group>"; };
 		F951DC451E604E4B00B81B01 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		F981F5BC1E66D9010060BB30 /* ShareClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareClass.swift; sourceTree = "<group>"; };
 		F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForeverYoungWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FBE8B91E60242E005C65C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		D46A7C8C1E574D8400F974EA = {
 			isa = PBXGroup;
 			children = (
+				F981F5BB1E66D8EA0060BB30 /* Share */,
 				D46A7C971E574D8400F974EA /* AppForeverYoung */,
 				D46A7CAC1E574D8400F974EA /* AppForeverYoungTests */,
 				D46A7CB71E574D8400F974EA /* AppForeverYoungUITests */,
@@ -237,6 +242,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F981F5BB1E66D8EA0060BB30 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				F981F5BC1E66D9010060BB30 /* ShareClass.swift */,
+			);
+			name = Share;
 			sourceTree = "<group>";
 		};
 		F9FBE8B71E60242E005C65C7 /* ForeverYoungWatchKit */ = {
@@ -497,6 +510,7 @@
 			files = (
 				D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */,
 				D46A7C9B1E574D8400F974EA /* ViewController.swift in Sources */,
+				F981F5BD1E66D9010060BB30 /* ShareClass.swift in Sources */,
 				D4DC13021E5896C5003DF05C /* ElderlyMenuViewController.swift in Sources */,
 				F951DC461E604E4B00B81B01 /* Notification.swift in Sources */,
 				F9FBE8DE1E602586005C65C7 /* ContactPersonViewController.swift in Sources */,
@@ -535,6 +549,8 @@
 				D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */,
 				F9FBE8CC1E60242E005C65C7 /* ExtensionDelegate.swift in Sources */,
 				F9FBE8CA1E60242E005C65C7 /* InterfaceController.swift in Sources */,
+				F981F5BF1E66D9210060BB30 /* DataBase.swift in Sources */,
+				F981F5BE1E66D9050060BB30 /* ShareClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

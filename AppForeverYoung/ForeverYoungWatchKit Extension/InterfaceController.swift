@@ -11,7 +11,7 @@ import Foundation
 import UserNotifications
 
 class InterfaceController: WKInterfaceController {
-
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -28,7 +28,7 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }
 
 
@@ -40,8 +40,31 @@ extension InterfaceController: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
+        
+        if response.notification.request.content.categoryIdentifier == "friendRequest" {
+            // Handle the actions for the expired timer.
+            print("enter in category: friendRequest")
+            if response.actionIdentifier == "answer1" {
+                // Invalidate the old timer and create a new one. . .
+                print("enter in action accet")
+                let result = DataBase.createFriendship(usernameElderly: "sergio", usernameRelative: "renato")
+                if result == true {
+                    print("amicizia aggiunta")
+                } else {
+                    print("amicizia non aggiunta")
+                }
+            }
+            else if response.actionIdentifier == "answer2" {
+                // Invalidate the timer. . .
+                print("enter in action decline")
+            }
+        }
+        
+        // Else handle actions for other notification types. . .
     }
+    
 }
+
 
 
 // Notification Center

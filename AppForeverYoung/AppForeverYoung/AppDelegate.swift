@@ -9,6 +9,9 @@
 import UIKit
 import UserNotifications
 
+var token = ""
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -16,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Check if you have permission to use notifications.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-       
-        
+        registerUserNotificationSettings()
         return true
     }
     
@@ -38,7 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
         print("Successful registration. Token is:")
-        print(tokenString(deviceToken))
+        token = tokenString(deviceToken)
+        print(token)
     }
     
     
@@ -61,6 +63,29 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
+        
+        
+        if response.notification.request.content.categoryIdentifier == "friendRequest" {
+            // Handle the actions for the expired timer.
+            print("enter in category: friendRequest")
+            if response.actionIdentifier == "answer1" {
+                // Invalidate the old timer and create a new one. . .
+                print("enter in action accept")
+                let result = DataBase.createFriendship(usernameElderly: globalUsername, usernameRelative: "renato")
+                if result == true {
+                    print("amicizia aggiunta")
+                } else {
+                    print("amicizia non aggiunta")
+                }
+
+            }
+            else if response.actionIdentifier == "answer2" {
+                // Invalidate the timer. . .
+                print("enter in action decline")
+            }
+        }
+        
+
     }
 }
 
