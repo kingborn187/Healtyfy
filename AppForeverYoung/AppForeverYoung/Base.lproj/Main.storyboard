@@ -83,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyz-QC-3uR">
-                                <rect key="frame" x="16" y="101" width="343" height="100"/>
+                                <rect key="frame" x="16" y="101" width="343" height="200"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -91,17 +91,6 @@
                                     <outlet property="delegate" destination="cDg-En-Dwa" id="bsj-1F-OwX"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlE-oh-PH7">
-                                <rect key="frame" x="113" y="209" width="149" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Send">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendAction:" destination="cDg-En-Dwa" eventType="touchUpInside" id="gFC-eR-66T"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4f-sy-PTY">
                                 <rect key="frame" x="16" y="72" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,6 +105,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlE-oh-PH7">
+                                <rect key="frame" x="113" y="309" width="149" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="cDg-En-Dwa" eventType="touchUpInside" id="gFC-eR-66T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -131,7 +131,7 @@
         <!--Insert Memory-->
         <scene sceneID="fU3-mi-K5A">
             <objects>
-                <viewController title="Insert Memory" id="hpf-JV-2ec" sceneMemberID="viewController">
+                <viewController title="Insert Memory" id="hpf-JV-2ec" customClass="AddMemoryViewController" customModule="AppForeverYoung" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r7E-Cz-gml"/>
                         <viewControllerLayoutGuide type="bottom" id="0KW-FJ-rwD"/>
@@ -175,10 +175,19 @@
                                 <state key="normal" title="Send memory">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="hpf-JV-2ec" eventType="touchUpInside" id="VHZ-EN-xvd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="bodyMemory" destination="2aB-sW-MGE" id="6oe-ej-26u"/>
+                        <outlet property="dateMemory" destination="UDz-lm-g1g" id="nv1-GQ-Mni"/>
+                        <outlet property="timeMemory" destination="yvG-hA-Dy8" id="QpA-NV-OUQ"/>
+                        <outlet property="titleMemory" destination="A6m-aA-ppx" id="lFZ-YH-Ver"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kti-ZJ-K1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -461,7 +470,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ENm-hO-CW1" kind="show" id="O00-XM-JXN"/>
+                                    <segue destination="ENm-hO-CW1" kind="show" identifier="showChat" id="O00-XM-JXN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evE-bH-NLy">

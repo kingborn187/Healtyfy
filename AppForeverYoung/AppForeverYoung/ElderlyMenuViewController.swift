@@ -34,15 +34,26 @@ class ElderlyMenuViewController: UIViewController {
         print(msg)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    func showAlert(msg: String) {
+        let alertController = UIAlertController(title: "Message by relatives", message: "you have received a message by ...", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "READ LATER", style: UIAlertActionStyle.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "READ NOW", style: UIAlertActionStyle.default, handler:  {(action:UIAlertAction) in
+            self.performSegue(withIdentifier: "showChat", sender: self)}))
+        present(alertController, animated: true, completion: nil)
+        print(msg)
+    }
+    
+    func showMemory(msg: String) {
+        let alertController = UIAlertController(title: "Memory by relatives", message: "you have received a memory by ...", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "LOOK LATER", style: UIAlertActionStyle.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "LOOK NOW", style: UIAlertActionStyle.default, handler:  {(action:UIAlertAction) in
+            self.performSegue(withIdentifier: "showChat", sender: self)}))
+        present(alertController, animated: true, completion: nil)
+        print(msg)
+    }
 }
 
 
@@ -59,6 +70,12 @@ extension ElderlyMenuViewController: ServiceManagerDelegate {
             switch message {
             case "friendship request":
                 self.showMessage(msg: "Mesaggio ricevuto")
+                
+            case "message by relatives":
+                self.showAlert(msg: "Mesaggio ricevuto")
+                
+            case "memory by relatives":
+                self.showMemory(msg: "Mesaggio ricevuto")
                 
             default:
                 NSLog("%@", "Unknown message value received: \(message)")

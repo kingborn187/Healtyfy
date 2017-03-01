@@ -89,7 +89,7 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     
     @IBAction func createAction(_ sender: Any) {
-        let result = DataBase.createUser(username: username.text!, password: password.text!, name: name.text!, surname: surname.text!, telephone: telephone.text!, type: person)
+        let result = DataBase.createUser(username: username.text!, password: password.text!, name: name.text!, surname: surname.text!, telephone: telephone.text!, type: person, imagePerson: imagePerson.image!)
         
         if result {
             let alertController = UIAlertController(title: "Successfully performed registration", message: "You have enrolled successfully", preferredStyle: UIAlertControllerStyle.alert)

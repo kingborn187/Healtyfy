@@ -8,8 +8,6 @@
 
 import UIKit
 
-var globalUsername = ""
-
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var username: UITextField!

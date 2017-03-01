@@ -58,7 +58,7 @@ class AddPersonViewController: UIViewController {
     
     @IBAction func AddAction(_ sender: Any) {
         if find {
-            Notification.sendFiendshipRequest(name: "renato", surname: "tramontano")
+            Notification.sendFiendshipRequest(name: "renato", surname: "tramontano", token: token)
             serviceManager.send(msg: "friendship request", usernameRequest: globalUsername)
             let alertController = UIAlertController(title: "Request send", message: "The friend request has been sent", preferredStyle: UIAlertControllerStyle.alert)
             
