@@ -436,7 +436,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Healtify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QG-Wz-Ame">
-                                <rect key="frame" x="16" y="133" width="343" height="104"/>
+                                <rect key="frame" x="16" y="28" width="343" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="93"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -463,8 +463,8 @@
                                 <rect key="frame" x="37" y="380" width="300" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGO V2" translatesAutoresizingMaskIntoConstraints="NO" id="oOW-Ek-J6I">
-                                <rect key="frame" x="214" y="38" width="123" height="157"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoHeltify" translatesAutoresizingMaskIntoConstraints="NO" id="3Ha-UT-hze">
+                                <rect key="frame" x="74" y="160" width="226" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -700,7 +700,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LOGO V2" width="272" height="340"/>
+        <image name="LogoHeltify" width="1280" height="1024"/>
         <image name="linea grigiacopia" width="518" height="76"/>
         <image name="sfondo1" width="750" height="1200"/>
         <image name="unknown" width="361" height="486"/>
