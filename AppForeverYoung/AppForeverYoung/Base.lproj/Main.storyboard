@@ -478,12 +478,12 @@
                                 <rect key="frame" x="37" y="380" width="300" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoHeltify" translatesAutoresizingMaskIntoConstraints="NO" id="3Ha-UT-hze">
-                                <rect key="frame" x="74" y="164" width="226" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beat bianco" translatesAutoresizingMaskIntoConstraints="NO" id="7Hj-lQ-RAe">
                                 <rect key="frame" x="-10" y="184" width="392" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoHeltify" translatesAutoresizingMaskIntoConstraints="NO" id="3Ha-UT-hze">
+                                <rect key="frame" x="74" y="164" width="226" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -697,7 +697,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sau-rv-zDv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="L0U-KT-CYP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L0U-KT-CYP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96023422479999998" green="0.61872178320000004" blue="0.020890045909999998" alpha="0.4178884845890411" colorSpace="custom" customColorSpace="sRGB"/>
