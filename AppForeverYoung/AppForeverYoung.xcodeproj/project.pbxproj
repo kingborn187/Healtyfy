@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63DF246C1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
+		63DF246D1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
+		63DF246E1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
+		63DF246F1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
+		63DF24701E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
 		D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */; };
 		D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */; };
 		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
@@ -96,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		63DF246B1E67076000625FB2 /* olivier_demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = olivier_demo.ttf; sourceTree = "<group>"; };
 		D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedRequestNotificationController.swift; sourceTree = "<group>"; };
 		D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewController.swift; sourceTree = "<group>"; };
 		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,9 +174,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63DF246A1E67074900625FB2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				63DF246B1E67076000625FB2 /* olivier_demo.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		D46A7C8C1E574D8400F974EA = {
 			isa = PBXGroup;
 			children = (
+				63DF246A1E67074900625FB2 /* Fonts */,
 				F981F5BB1E66D8EA0060BB30 /* Share */,
 				D46A7C971E574D8400F974EA /* AppForeverYoung */,
 				D46A7CAC1E574D8400F974EA /* AppForeverYoungTests */,
@@ -466,6 +481,7 @@
 			files = (
 				D46A7CA31E574D8400F974EA /* LaunchScreen.storyboard in Resources */,
 				D46A7CA01E574D8400F974EA /* Assets.xcassets in Resources */,
+				63DF246C1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 				D46A7C9E1E574D8400F974EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DF246D1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DF246E1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DF246F1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 				F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */,
 				F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */,
 			);
@@ -497,6 +516,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DF24701E67076000625FB2 /* olivier_demo.ttf in Resources */,
 				F9FBE8D01E60242E005C65C7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
