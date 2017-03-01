@@ -441,14 +441,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Healtify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WW9-Mp-5RL">
-                                <rect key="frame" x="16" y="65" width="343" height="135"/>
+                                <rect key="frame" x="16" y="51" width="343" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="olivier" family="olivier" pointSize="107"/>
                                 <color key="textColor" red="0.99091321229934692" green="0.2930225133895874" blue="0.0016137638594955206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Healtify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QG-Wz-Ame">
-                                <rect key="frame" x="14" y="62" width="343" height="135"/>
+                                <rect key="frame" x="14" y="46" width="343" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="olivier" family="olivier" pointSize="107"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -476,7 +476,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoHeltify" translatesAutoresizingMaskIntoConstraints="NO" id="3Ha-UT-hze">
-                                <rect key="frame" x="74" y="160" width="226" height="177"/>
+                                <rect key="frame" x="74" y="164" width="226" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beat bianco" translatesAutoresizingMaskIntoConstraints="NO" id="7Hj-lQ-RAe">
+                                <rect key="frame" x="-10" y="184" width="392" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -713,6 +717,7 @@
     </scenes>
     <resources>
         <image name="LogoHeltify" width="1280" height="1024"/>
+        <image name="beat bianco" width="400" height="96"/>
         <image name="linea grigiacopia" width="518" height="76"/>
         <image name="sfondo1" width="750" height="1200"/>
         <image name="unknown" width="361" height="486"/>
