@@ -45,7 +45,7 @@ class PersonasTableViewController: UITableViewController {
         cell.surname.text = personas[key]?.surname
         
         cell.imagePerson.contentMode = .scaleAspectFit
-        downloadImage(url: URL(string: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/michele.png")!, imageView: cell.imagePerson)
+        downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+cell.telephone.text!+".png"))!, imageView: cell.imagePerson)
         return cell
     }
     

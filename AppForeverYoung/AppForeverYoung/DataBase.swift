@@ -64,7 +64,7 @@ class DataBase {
         semaphore.wait()
         
         if message ==  "User added successfully" {
-            upload_image(url: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/addImage.php", image: imagePerson, name: username)
+            upload_image(url: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/addImage.php", image: imagePerson, name: telephone)
             return true
         } else {
             return false
