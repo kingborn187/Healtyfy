@@ -11,7 +11,7 @@ import UIKit
 
 class DataBase {
     
-    static func createUser(username: String, password: String, name: String, surname: String, telephone: String, type: String, imagePerson: UIImage) -> Bool {
+    static func createUser(username: String, password: String, name: String, surname: String, telephone: String, type: String, imagePerson: UIImage, age: String) -> Bool {
         let semaphore = DispatchSemaphore(value: 0);
         var message = ""
         
@@ -22,7 +22,7 @@ class DataBase {
         requestUrl.httpMethod = "POST"
         
         //creating the post parameter by concatenating the keys and values from text field
-        let postParameters = "username="+username+"&password="+password+"&name="+name+"&surname="+surname+"&telephone="+telephone+"&type="+type+"&imagePerson="+""
+        let postParameters = "username="+username+"&password="+password+"&name="+name+"&surname="+surname+"&telephone="+telephone+"&type="+type+"&imagePerson="+""+"&age="+age
        
         requestUrl.httpBody = postParameters.data(using: .utf8)
         
@@ -518,7 +518,7 @@ class DataBase {
         semaphore.wait()
         
         if message ==  "Memory added successfully" {
-            upload_image(url: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/addImage.php", image: imageMemory, name: telephone+"-"+timeMemory)
+            upload_image(url: "http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/addImage.php", image: imageMemory, name: telephone+titleMemory)
 
             return true
         } else {
@@ -526,10 +526,10 @@ class DataBase {
         }
     }
     
-    static func getMemory() -> [String: (titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] {
+    static func getMemory() -> [(titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] {
         let semaphore = DispatchSemaphore(value: 0);
         let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/getMemory.php"
-        var memory: [String: (titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] = [:]
+        var memory: [(titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] = []
         
         //Set up the url request
         var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
@@ -561,13 +561,13 @@ class DataBase {
                 if let dataArr = data as? [[String: Any]] {
                     for person in dataArr {
                         //your code for accessing dd.
-                        let telephone = person["telephone"] as! String
+                        //let telephone = person["telephone"] as! String
                         let titleMemory = person["titleMemory"] as! String
                         let bodyMemory = person["bodyMemory"] as! String
                         let dateMemory = person["dateMemory"] as! String
                         let timeMemory = person["timeMemory"] as! String
                         
-                        memory[telephone] = (titleMemory: titleMemory, bodyMemory: bodyMemory, dateMemory: dateMemory, timeMemory: timeMemory)
+                        memory.append((titleMemory: titleMemory, bodyMemory: bodyMemory, dateMemory: dateMemory, timeMemory: timeMemory))
                     }
                 }
             } catch {

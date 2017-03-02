@@ -191,10 +191,10 @@
 		D4073CDB1E6814630082A765 /* Relatives Class */ = {
 			isa = PBXGroup;
 			children = (
+				D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */,
 				D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */,
 				D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */,
 				F9FBE8DD1E602586005C65C7 /* ContactPersonViewController.swift */,
-				D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */,
 				D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */,
 				D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */,
 			);
