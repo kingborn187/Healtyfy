@@ -57,7 +57,7 @@ class PersonasTableViewController: UITableViewController {
                 let destinationController = segue.destination as! RealtivesMenuViewController
                 destinationController.name = (personas[key]?.name)!
                 destinationController.surname = (personas[key]?.surname)!
-                downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+key+".png"))!, imageView: destinationController.image)
+                destinationController.imagex = "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+key+".png"
             }
         }
     }

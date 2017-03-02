@@ -18,10 +18,12 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet var telephone: UITextField!
     @IBOutlet var buttonImagePerson: UIButton!
     @IBOutlet var imagePerson: UIImageView!
+    @IBOutlet var age: UITextField!
     
     let typePerson = ["Elderly", "Relative"]
     var person = String()
     let picker = UIImagePickerController()
+    var datePickerView:UIDatePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
         name.delegate = self
         surname.delegate = self
         telephone.delegate = self
+        age.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -94,7 +97,7 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     
     @IBAction func createAction(_ sender: Any) {
-        let result = DataBase.createUser(username: username.text!, password: password.text!, name: name.text!, surname: surname.text!, telephone: telephone.text!, type: person, imagePerson: imagePerson.image!)
+        let result = DataBase.createUser(username: username.text!, password: password.text!, name: name.text!, surname: surname.text!, telephone: telephone.text!, type: person, imagePerson: imagePerson.image!, age: age.text!)
         
         if result {
             let alertController = UIAlertController(title: "Successfully performed registration", message: "You have enrolled successfully", preferredStyle: UIAlertControllerStyle.alert)
@@ -139,10 +142,62 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        imagePerson.contentMode = .scaleAspectFit
+        //imagePerson.contentMode = .scaleAspectFit
         imagePerson.image = chosenImage
+        buttonImagePerson.setTitle("", for: .normal)
         dismiss(animated:true, completion: nil)
     }
+    
+    
+    @IBAction func selectDate(_ sender: UITextField) {
+        // Data Picker
+        self.datePickerView = UIDatePicker(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        datePickerView.backgroundColor = UIColor.white
+        datePickerView.datePickerMode = UIDatePickerMode.date
+        
+        // Tool Bar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .blackOpaque
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 255/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        self.age?.inputAccessoryView = toolBar
+        
+        
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
+    }
+    
+    func doneClick() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.timeStyle = .none
+        age?.text = dateFormatter1.string(from: datePickerView.date)
+        self.age?.resignFirstResponder()
+    }
+    
+    
+    func cancelClick() {
+        self.age?.resignFirstResponder()
+    }
+
+    func datePickerValueChanged(sender:UIDatePicker) {
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        age?.text = dateFormatter.string(from: sender.date)
+        
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)

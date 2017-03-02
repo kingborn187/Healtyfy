@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddMemoryViewController: UIViewController {
+class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate {
 
     @IBOutlet var titleMemory: UITextField!
     @IBOutlet var bodyMemory: UITextField!
@@ -17,16 +17,27 @@ class AddMemoryViewController: UIViewController {
     @IBOutlet var imageMemory: UIImageView!
     
     let serviceManager = ServiceManager()
+    let picker = UIImagePickerController()
+    var datePickerView:UIDatePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        picker.delegate = self
         // Do any additional setup after loading the view.
+        timeMemory.delegate = self
+        bodyMemory.delegate = self
+        dateMemory.delegate = self
+        timeMemory.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Hide keyboard when user touches outside kebord
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     @IBAction func sendAction(_ sender: Any) {
@@ -46,6 +57,126 @@ class AddMemoryViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
         }
     }
+    
+    
+    @IBAction func addImageFromLibrary(_ sender: Any) {
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(picker, animated: true, completion: nil)
+    }
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        //imageMemory.contentMode = .scaleAspectFit
+        imageMemory.image = chosenImage
+        dismiss(animated:true, completion: nil)
+    }
+    
+    
+    
+    @IBAction func selectDate(_ sender: UITextField) {
+        // Data Picker
+        self.datePickerView = UIDatePicker(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        datePickerView.backgroundColor = UIColor.white
+        datePickerView.datePickerMode = UIDatePickerMode.date
+        
+        // Tool Bar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .blackOpaque
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 255/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        self.dateMemory?.inputAccessoryView = toolBar
+        
+        
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
+    }
+    
+    func doneClick() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.timeStyle = .none
+        dateMemory?.text = dateFormatter1.string(from: datePickerView.date)
+        self.dateMemory?.resignFirstResponder()
+    }
+    
+    
+    func cancelClick() {
+        self.dateMemory?.resignFirstResponder()
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateMemory?.text = dateFormatter.string(from: sender.date)
+        
+    }
+    
+    
+    @IBAction func selectTime(_ sender: UITextField) {
+        // Data Picker
+        self.datePickerView = UIDatePicker(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        datePickerView.backgroundColor = UIColor.white
+        datePickerView.datePickerMode = UIDatePickerMode.time
+        
+        // Tool Bar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .blackOpaque
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 255/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick2))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick2))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        self.timeMemory?.inputAccessoryView = toolBar
+        
+        
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(datePickerValueChanged2), for: .valueChanged)
+    }
+    
+    func doneClick2() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .none
+        dateFormatter1.timeStyle = .short
+        timeMemory?.text = dateFormatter1.string(from: datePickerView.date)
+        self.timeMemory?.resignFirstResponder()
+    }
+    
+    
+    func cancelClick2() {
+        self.timeMemory?.resignFirstResponder()
+    }
+    
+    func datePickerValueChanged2(sender:UIDatePicker) {
+        
+        let dateFormatter =  DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.none
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        timeMemory?.text = dateFormatter.string(from: sender.date)
+        
+    }
+    
+
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)

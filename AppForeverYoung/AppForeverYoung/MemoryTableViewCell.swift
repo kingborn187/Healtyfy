@@ -10,6 +10,12 @@ import UIKit
 
 class MemoryTableViewCell: UITableViewCell {
 
+    @IBOutlet var imageMemory: UIImageView!
+    @IBOutlet var titleMemory: UILabel!
+    @IBOutlet var dateMemory: UILabel!
+    @IBOutlet var timeMemory: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
