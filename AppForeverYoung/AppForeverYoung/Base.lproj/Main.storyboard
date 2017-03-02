@@ -113,6 +113,12 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.MasksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendAction:" destination="cDg-En-Dwa" eventType="touchUpInside" id="gFC-eR-66T"/>
                                 </connections>
@@ -193,6 +199,12 @@
                                 <state key="normal" title="Send memory">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.MasksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendAction:" destination="hpf-JV-2ec" eventType="touchUpInside" id="VHZ-EN-xvd"/>
                                 </connections>
@@ -408,6 +420,12 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.MasksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AddAction:" destination="c1h-Q5-EXJ" eventType="touchUpInside" id="cnU-BJ-reQ"/>
                                 </connections>
@@ -892,11 +910,10 @@
         <image name="linea grigiacopia" width="518" height="76"/>
         <image name="sfondo1" width="750" height="1200"/>
         <image name="sfondogenerale" width="750" height="1334"/>
-        <image name="unknown" width="361" height="486"/>
+        <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QxB-kO-N1I"/>
-        <segue reference="pkC-II-Mbk"/>
-        <segue reference="QxB-kO-N1I"/>
+        <segue reference="dZH-Wd-RHP"/>
     </inferredMetricsTieBreakers>
 </document>
