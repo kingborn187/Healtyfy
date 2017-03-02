@@ -872,7 +872,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aK5-IP-ge2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MlB-PX-xG8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MlB-PX-xG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -892,7 +892,7 @@
         <image name="linea grigiacopia" width="518" height="76"/>
         <image name="sfondo1" width="750" height="1200"/>
         <image name="sfondogenerale" width="750" height="1334"/>
-        <image name="unknown" width="361" height="486"/>
+        <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pkC-II-Mbk"/>
