@@ -35,8 +35,14 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
         return 1
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attributedString = NSAttributedString(string: typeQuestion[row], attributes: [NSForegroundColorAttributeName : UIColor.white])
+        return attributedString
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return typeQuestion.count
+        
     }
     
     //MARK: UIPickerViewDelegate
