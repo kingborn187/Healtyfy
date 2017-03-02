@@ -517,6 +517,8 @@ class DataBase {
         semaphore.wait()
         
         if message ==  "Memory added successfully" {
+            upload_image(url: "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/addImage.php", image: imageMemory, name: telephone+"-"+timeMemory)
+
             return true
         } else {
             return false
@@ -530,7 +532,6 @@ class DataBase {
         
         //Set up the url request
         var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
-        
         //setting the method to post
         requestUrl.httpMethod = "GET"
         
@@ -559,11 +560,13 @@ class DataBase {
                 if let dataArr = data as? [[String: Any]] {
                     for person in dataArr {
                         //your code for accessing dd.
-                        let key = person["telephone"] as! String
-                        memory[key]?.titleMemory = person["titleMemory"] as! String
-                        memory[key]?.bodyMemory = person["bodyMemory"] as! String
-                        memory[key]?.dateMemory = person["dateMemory"] as! String
-                        memory[key]?.timeMemory = person["timeMemory"] as! String
+                        let telephone = person["telephone"] as! String
+                        let titleMemory = person["titleMemory"] as! String
+                        let bodyMemory = person["bodyMemory"] as! String
+                        let dateMemory = person["dateMemory"] as! String
+                        let timeMemory = person["timeMemory"] as! String
+                        
+                        memory[telephone] = (titleMemory: titleMemory, bodyMemory: bodyMemory, dateMemory: dateMemory, timeMemory: timeMemory)
                     }
                 }
             } catch {
