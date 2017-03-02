@@ -958,6 +958,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="CreateButton" destination="Reu-IV-8sU" id="7Rv-Fh-IZn"/>
                         <outlet property="age" destination="w9G-px-6L3" id="BBf-VT-pqD"/>
                         <outlet property="buttonImagePerson" destination="bcT-ZQ-Rdk" id="8jb-xw-CPe"/>
                         <outlet property="imagePerson" destination="B8s-V2-jjN" id="OHS-B6-FS5"/>

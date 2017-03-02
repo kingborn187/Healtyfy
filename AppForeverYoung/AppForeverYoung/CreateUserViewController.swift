@@ -19,6 +19,7 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet var buttonImagePerson: UIButton!
     @IBOutlet var imagePerson: UIImageView!
     @IBOutlet var age: UITextField!
+    @IBOutlet weak var CreateButton: UIButton!
     
     let typePerson = ["Elderly", "Relative"]
     var person = String()
@@ -28,6 +29,11 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        CreateButton.layer.borderWidth = 1.0
+        CreateButton.layer.borderColor = UIColor(white: 1.0, alpha: 0.7).cgColor
+        CreateButton.layer.cornerRadius = 10
+        
         picker.delegate = self
         person = typePerson[0]
         
