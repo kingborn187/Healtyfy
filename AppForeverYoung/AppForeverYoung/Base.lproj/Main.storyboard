@@ -895,7 +895,6 @@
         <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QxB-kO-N1I"/>
         <segue reference="pkC-II-Mbk"/>
         <segue reference="QxB-kO-N1I"/>
     </inferredMetricsTieBreakers>
