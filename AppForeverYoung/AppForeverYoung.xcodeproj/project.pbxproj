@@ -12,6 +12,8 @@
 		63DF246E1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
 		63DF246F1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
 		63DF24701E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
+		D4073CDE1E681EF80082A765 /* MemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073CDD1E681EF80082A765 /* MemoryTableViewController.swift */; };
+		D4073CE01E681F180082A765 /* MemoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */; };
 		D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */; };
 		D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */; };
 		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
@@ -102,6 +104,8 @@
 
 /* Begin PBXFileReference section */
 		63DF246B1E67076000625FB2 /* olivier_demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = olivier_demo.ttf; sourceTree = "<group>"; };
+		D4073CDD1E681EF80082A765 /* MemoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryTableViewController.swift; sourceTree = "<group>"; };
+		D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryTableViewCell.swift; sourceTree = "<group>"; };
 		D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedRequestNotificationController.swift; sourceTree = "<group>"; };
 		D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewController.swift; sourceTree = "<group>"; };
 		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,14 +123,14 @@
 		D46A7CB81E574D8400F974EA /* AppForeverYoungUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppForeverYoungUITests.swift; sourceTree = "<group>"; };
 		D46A7CBA1E574D8400F974EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
-		D46A7CC81E575E6200F974EA /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		D49C6A861E59F28F00D60431 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D46A7CC81E575E6200F974EA /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataBase.swift; path = AppForeverYoung/DataBase.swift; sourceTree = "<group>"; };
+		D49C6A861E59F28F00D60431 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceManager.swift; path = AppForeverYoung/ServiceManager.swift; sourceTree = "<group>"; };
 		D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryViewController.swift; sourceTree = "<group>"; };
 		D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtivesMenuViewController.swift; sourceTree = "<group>"; };
 		D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppForeverYoung.entitlements; sourceTree = "<group>"; };
 		D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElderlyMenuViewController.swift; sourceTree = "<group>"; };
-		F951DC451E604E4B00B81B01 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		F951DC451E604E4B00B81B01 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = AppForeverYoung/Notification.swift; sourceTree = "<group>"; };
 		F981F5BC1E66D9010060BB30 /* ShareClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareClass.swift; sourceTree = "<group>"; };
 		F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForeverYoungWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FBE8B91E60242E005C65C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */,
+				D4073CDD1E681EF80082A765 /* MemoryTableViewController.swift */,
+				D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */,
 			);
 			name = "Elderly Class";
 			sourceTree = "<group>";
@@ -243,9 +249,6 @@
 				D46A7C9F1E574D8400F974EA /* Assets.xcassets */,
 				D46A7CA11E574D8400F974EA /* LaunchScreen.storyboard */,
 				D46A7CA41E574D8400F974EA /* Info.plist */,
-				D49C6A861E59F28F00D60431 /* ServiceManager.swift */,
-				D46A7CC81E575E6200F974EA /* DataBase.swift */,
-				F951DC451E604E4B00B81B01 /* Notification.swift */,
 			);
 			path = AppForeverYoung;
 			sourceTree = "<group>";
@@ -278,6 +281,9 @@
 		F981F5BB1E66D8EA0060BB30 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				D49C6A861E59F28F00D60431 /* ServiceManager.swift */,
+				D46A7CC81E575E6200F974EA /* DataBase.swift */,
+				F951DC451E604E4B00B81B01 /* Notification.swift */,
 				F981F5BC1E66D9010060BB30 /* ShareClass.swift */,
 			);
 			name = Share;
@@ -544,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4073CE01E681F180082A765 /* MemoryTableViewCell.swift in Sources */,
 				D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */,
 				D46A7C9B1E574D8400F974EA /* ViewController.swift in Sources */,
 				F981F5BD1E66D9010060BB30 /* ShareClass.swift in Sources */,
@@ -553,6 +560,7 @@
 				D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */,
 				D4B23E511E64AD86009E8EBC /* AddMemoryViewController.swift in Sources */,
 				D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */,
+				D4073CDE1E681EF80082A765 /* MemoryTableViewController.swift in Sources */,
 				D46A7CC91E575E6200F974EA /* DataBase.swift in Sources */,
 				D46A7CC71E5751B600F974EA /* CreateUserViewController.swift in Sources */,
 				D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */,

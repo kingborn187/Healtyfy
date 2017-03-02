@@ -44,7 +44,11 @@
             <objects>
                 <controller id="Idn-St-dCN">
                     <items>
-                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Memory" id="i8c-yc-Ri7"/>
+                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Memory" id="i8c-yc-Ri7">
+                            <connections>
+                                <segue destination="3DD-6Y-6QL" kind="push" id="9Nj-W8-8EV"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <segue destination="udU-Mm-e7H" kind="relationship" relationship="nextPage" id="ccV-qc-mhJ"/>
@@ -52,6 +56,24 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="102" y="526"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="oLE-4U-X8b">
+            <objects>
+                <controller id="3DD-6Y-6QL">
+                    <connections>
+                        <segue destination="tQ4-PO-YOQ" kind="relationship" relationship="nextPage" id="bvy-h2-Eye"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="102" y="843"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="t9b-cy-b99">
+            <objects>
+                <controller id="tQ4-PO-YOQ"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="843"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="V3i-Zf-6vC">

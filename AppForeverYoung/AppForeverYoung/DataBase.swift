@@ -523,6 +523,61 @@ class DataBase {
         }
     }
     
+    static func getMemory() -> [String: (titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] {
+        let semaphore = DispatchSemaphore(value: 0);
+        let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/getMemory.php"
+        var memory: [String: (titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] = [:]
+        
+        //Set up the url request
+        var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
+        
+        //setting the method to post
+        requestUrl.httpMethod = "GET"
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
+            (data, response, error) in
+            
+            //exiting if there is some error
+            if error != nil {
+                print("please enter a valid url")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data \(data)")
+                return
+            }
+            
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                let myJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as AnyObject
+                
+                //getting the JSON array teams from the response
+                let data: NSArray = myJSON["memory"] as! NSArray
+                if let dataArr = data as? [[String: Any]] {
+                    for person in dataArr {
+                        //your code for accessing dd.
+                        let key = person["telephone"] as! String
+                        memory[key]?.titleMemory = person["titleMemory"] as! String
+                        memory[key]?.bodyMemory = person["bodyMemory"] as! String
+                        memory[key]?.dateMemory = person["dateMemory"] as! String
+                        memory[key]?.timeMemory = person["timeMemory"] as! String
+                    }
+                }
+            } catch {
+                print(error)
+            }
+            semaphore.signal();
+        })
+        //executing the task
+        task.resume()
+        semaphore.wait()
+        
+        return memory
+    }
+    
     static func upload_image(url: String, image: UIImage, name: String) {
         
         let urlMast = NSURL(string: url)
