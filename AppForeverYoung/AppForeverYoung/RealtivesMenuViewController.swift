@@ -16,7 +16,7 @@ class RealtivesMenuViewController: UIViewController {
     
     var name = ""
     var surname = ""
-    var image = ""
+    var image = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class RealtivesMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
         namePerson.text = name
         surnamePerson.text = surname
-        imagePerson.image = UIImage(named: image)
+        imagePerson.image = image.image
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,5 +42,10 @@ class RealtivesMenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
 
 }

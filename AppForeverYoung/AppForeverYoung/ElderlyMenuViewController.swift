@@ -54,6 +54,11 @@ class ElderlyMenuViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
         print(msg)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
 }
 
 

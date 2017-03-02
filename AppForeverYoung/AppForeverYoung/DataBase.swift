@@ -464,7 +464,7 @@ class DataBase {
     }
     
     
-    static func createMemory(telephone: String, titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String) -> Bool {
+    static func createMemory(telephone: String, titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String, imageMemory: UIImage) -> Bool {
         let semaphore = DispatchSemaphore(value: 0);
         var message = ""
         
@@ -475,7 +475,7 @@ class DataBase {
         requestUrl.httpMethod = "POST"
         
         //creating the post parameter by concatenating the keys and values from text field
-        let postParameters = "telephone="+telephone+"&titleMemory="+titleMemory+"&bodyMemory="+bodyMemory+"&dateMemory="+dateMemory+"&timeMemory="+timeMemory
+        let postParameters = "telephone="+telephone+"&titleMemory="+titleMemory+"&bodyMemory="+bodyMemory+"&dateMemory="+dateMemory+"&timeMemory="+timeMemory+"&imageMemory="+""
         
         requestUrl.httpBody = postParameters.data(using: .utf8)
         

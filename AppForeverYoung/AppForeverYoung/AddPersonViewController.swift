@@ -84,6 +84,10 @@ class AddPersonViewController: UIViewController {
         print(msg)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillAppear(animated)
+    }
 }
 
 extension AddPersonViewController: ServiceManagerDelegate {

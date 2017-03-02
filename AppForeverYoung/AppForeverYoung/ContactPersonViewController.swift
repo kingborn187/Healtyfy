@@ -64,5 +64,10 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
             present(alertController, animated: true, completion: nil)
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillAppear(animated)
+    }
 }
 

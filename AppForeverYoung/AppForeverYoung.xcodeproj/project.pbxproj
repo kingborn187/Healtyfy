@@ -182,14 +182,35 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		D4073CDB1E6814630082A765 /* Relatives Class */ = {
+			isa = PBXGroup;
+			children = (
+				D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */,
+				D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */,
+				F9FBE8DD1E602586005C65C7 /* ContactPersonViewController.swift */,
+				D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */,
+				D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */,
+				D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */,
+			);
+			name = "Relatives Class";
+			sourceTree = "<group>";
+		};
+		D4073CDC1E6814780082A765 /* Elderly Class */ = {
+			isa = PBXGroup;
+			children = (
+				D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */,
+			);
+			name = "Elderly Class";
+			sourceTree = "<group>";
+		};
 		D46A7C8C1E574D8400F974EA = {
 			isa = PBXGroup;
 			children = (
 				63DF246A1E67074900625FB2 /* Fonts */,
-				F981F5BB1E66D8EA0060BB30 /* Share */,
 				D46A7C971E574D8400F974EA /* AppForeverYoung */,
 				D46A7CAC1E574D8400F974EA /* AppForeverYoungTests */,
 				D46A7CB71E574D8400F974EA /* AppForeverYoungUITests */,
+				F981F5BB1E66D8EA0060BB30 /* Share */,
 				F9FBE8B71E60242E005C65C7 /* ForeverYoungWatchKit */,
 				F9FBE8C61E60242E005C65C7 /* ForeverYoungWatchKit Extension */,
 				D46A7C961E574D8400F974EA /* Products */,
@@ -212,17 +233,12 @@
 		D46A7C971E574D8400F974EA /* AppForeverYoung */ = {
 			isa = PBXGroup;
 			children = (
-				D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */,
 				D46A7C981E574D8400F974EA /* AppDelegate.swift */,
 				D46A7C9A1E574D8400F974EA /* ViewController.swift */,
 				D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */,
-				D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */,
-				D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */,
-				D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */,
-				F9FBE8DD1E602586005C65C7 /* ContactPersonViewController.swift */,
-				D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */,
-				D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */,
-				D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */,
+				D4073CDC1E6814780082A765 /* Elderly Class */,
+				D4073CDB1E6814630082A765 /* Relatives Class */,
+				D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */,
 				D46A7C9C1E574D8400F974EA /* Main.storyboard */,
 				D46A7C9F1E574D8400F974EA /* Assets.xcassets */,
 				D46A7CA11E574D8400F974EA /* LaunchScreen.storyboard */,

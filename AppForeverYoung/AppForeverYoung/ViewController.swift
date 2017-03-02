@@ -67,8 +67,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
-        
-       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
     }
 }
 

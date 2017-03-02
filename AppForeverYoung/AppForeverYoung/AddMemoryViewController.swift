@@ -14,6 +14,7 @@ class AddMemoryViewController: UIViewController {
     @IBOutlet var bodyMemory: UITextField!
     @IBOutlet var dateMemory: UITextField!
     @IBOutlet var timeMemory: UITextField!
+    @IBOutlet var imageMemory: UIImageView!
     
     let serviceManager = ServiceManager()
     
@@ -29,7 +30,7 @@ class AddMemoryViewController: UIViewController {
     }
     
     @IBAction func sendAction(_ sender: Any) {
-        let result = DataBase.createMemory(telephone: "3385025964", titleMemory: titleMemory.text!, bodyMemory: bodyMemory.text!, dateMemory: dateMemory.text!, timeMemory: timeMemory.text!)
+        let result = DataBase.createMemory(telephone: "3385025964", titleMemory: titleMemory.text!, bodyMemory: bodyMemory.text!, dateMemory: dateMemory.text!, timeMemory: timeMemory.text!, imageMemory: imageMemory.image!)
         
         if result {
             serviceManager.send(msg: "memory by relatives", usernameRequest: globalUsername)
@@ -46,5 +47,9 @@ class AddMemoryViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillAppear(animated)
+    }
 
 }

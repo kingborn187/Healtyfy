@@ -139,5 +139,9 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
         dismiss(animated:true, completion: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillAppear(animated)
+    }
   
 }
