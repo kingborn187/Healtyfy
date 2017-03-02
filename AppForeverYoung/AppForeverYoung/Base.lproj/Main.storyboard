@@ -655,12 +655,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medicine" translatesAutoresizingMaskIntoConstraints="NO" id="lxf-ko-UZG">
+                                <rect key="frame" x="125" y="75" width="146" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="p8z-mE-0Jc">
+                                <rect key="frame" x="125" y="280" width="146" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3Z-UF-oDb">
                                 <rect key="frame" x="16" y="60" width="343" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20155699823943662" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Memories">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -678,12 +689,19 @@
                                     <segue destination="eZg-yW-gWw" kind="show" id="Vwh-81-pee"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notifiche" translatesAutoresizingMaskIntoConstraints="NO" id="ARD-7t-cqA">
+                                <rect key="frame" x="126" y="475" width="122" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evE-bH-NLy">
                                 <rect key="frame" x="16" y="458" width="343" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20001650528169015" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Notification">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Notifications">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -709,8 +727,11 @@
                                 <rect key="frame" x="16" y="260" width="343" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20185959507042253" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Chat">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -951,13 +972,16 @@
     <resources>
         <image name="LogoHeltify" width="1280" height="1024"/>
         <image name="beat bianco" width="400" height="96"/>
+        <image name="chat" width="512" height="512"/>
         <image name="linea grigiacopia" width="518" height="76"/>
+        <image name="medicine" width="512" height="512"/>
+        <image name="notifiche" width="512" height="512"/>
         <image name="sfondo1" width="750" height="1200"/>
         <image name="sfondogenerale" width="750" height="1334"/>
         <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pkC-II-Mbk"/>
-        <segue reference="QxB-kO-N1I"/>
+        <segue reference="CEF-AG-cnd"/>
     </inferredMetricsTieBreakers>
 </document>
