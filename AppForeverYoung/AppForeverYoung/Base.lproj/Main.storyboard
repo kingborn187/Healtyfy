@@ -872,7 +872,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aK5-IP-ge2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MlB-PX-xG8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MlB-PX-xG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -897,5 +897,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="QxB-kO-N1I"/>
         <segue reference="pkC-II-Mbk"/>
+        <segue reference="QxB-kO-N1I"/>
     </inferredMetricsTieBreakers>
 </document>
