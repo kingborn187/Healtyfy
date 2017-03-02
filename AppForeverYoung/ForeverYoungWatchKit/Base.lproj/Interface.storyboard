@@ -33,7 +33,7 @@
                         <button width="1" height="1" alignment="center" verticalAlignment="center" title="Notification" id="feS-JM-dv4"/>
                     </items>
                     <connections>
-                        <segue destination="Idn-St-dCN" kind="relationship" relationship="nextPage" id="eH8-aE-IsQ"/>
+                        <segue destination="Idn-St-dCN" kind="relationship" relationship="nextPage" id="Jim-Ny-KFF"/>
                     </connections>
                 </controller>
             </objects>
@@ -46,34 +46,44 @@
                     <items>
                         <button width="1" height="1" alignment="center" verticalAlignment="center" title="Memory" id="i8c-yc-Ri7">
                             <connections>
-                                <segue destination="3DD-6Y-6QL" kind="push" id="9Nj-W8-8EV"/>
+                                <segue destination="3DD-6Y-6QL" kind="modal" id="lVA-WC-yB4"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <segue destination="udU-Mm-e7H" kind="relationship" relationship="nextPage" id="ccV-qc-mhJ"/>
+                        <segue destination="udU-Mm-e7H" kind="relationship" relationship="nextPage" id="pKt-Os-Atu"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="102" y="526"/>
         </scene>
-        <!--Interface Controller-->
+        <!--MemoryMenu-->
         <scene sceneID="oLE-4U-X8b">
             <objects>
-                <controller id="3DD-6Y-6QL">
+                <controller identifier="MemoryMenu" title="MemoryMenu" id="3DD-6Y-6QL" customClass="MemoryInterfaceController" customModule="ForeverYoungWatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="title" textAlignment="center" id="vaD-Db-vLu"/>
+                        <imageView alignment="left" id="ljS-XB-8DF"/>
+                        <label width="1" alignment="center" text="time" textAlignment="center" id="9N0-gA-DHi"/>
+                        <label width="1" alignment="left" text="body" textAlignment="left" numberOfLines="0" id="tf6-J1-yd3"/>
+                    </items>
                     <connections>
+                        <outlet property="body" destination="tf6-J1-yd3" id="np9-eU-sZZ"/>
+                        <outlet property="image" destination="ljS-XB-8DF" id="QGr-7N-m7e"/>
+                        <outlet property="time" destination="9N0-gA-DHi" id="CTr-YL-I0u"/>
+                        <outlet property="title" destination="vaD-Db-vLu" id="Gbq-UF-kzH"/>
                         <segue destination="tQ4-PO-YOQ" kind="relationship" relationship="nextPage" id="bvy-h2-Eye"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="102" y="843"/>
+            <point key="canvasLocation" x="102" y="857"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="t9b-cy-b99">
             <objects>
                 <controller id="tQ4-PO-YOQ"/>
             </objects>
-            <point key="canvasLocation" x="423" y="843"/>
+            <point key="canvasLocation" x="412" y="857"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="V3i-Zf-6vC">
