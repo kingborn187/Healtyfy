@@ -45,7 +45,7 @@ class PersonasTableViewController: UITableViewController {
         cell.surname.text = personas[key]?.surname
         
         cell.imagePerson.contentMode = .scaleAspectFit
-        downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+cell.telephone.text!+".png"))!, imageView: cell.imagePerson)
+        downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+cell.telephone.text!+".jpg"))!, imageView: cell.imagePerson)
         return cell
     }
     
@@ -57,7 +57,7 @@ class PersonasTableViewController: UITableViewController {
                 let destinationController = segue.destination as! RealtivesMenuViewController
                 destinationController.name = (personas[key]?.name)!
                 destinationController.surname = (personas[key]?.surname)!
-                destinationController.imagex = "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+key+".png"
+                destinationController.imagex = "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+key+".jpg"
             }
         }
     }

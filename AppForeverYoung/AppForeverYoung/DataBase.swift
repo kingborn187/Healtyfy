@@ -72,10 +72,11 @@ class DataBase {
     }
     
     
-    static func login(username: String, password: String) -> String {
+    static func login(username: String, password: String) -> (telephone: String, type: String)? {
         let semaphore = DispatchSemaphore(value: 0);
         let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/getUsers.php"
-        var choice = ""
+        var result: (telephone: String, type: String)?
+        
         
         //Set up the url request
         var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
@@ -112,7 +113,9 @@ class DataBase {
                         //your code for accessing dd.
                         if username == product["username"] as! String {
                             if password == product["password"] as! String {
-                                choice = product["type"] as! String
+                                let type = product["type"] as! String
+                                let telephone = product["telephone"] as! String
+                                result = (telephone: telephone, type: type)
                             }
                         }
                     }
@@ -125,7 +128,7 @@ class DataBase {
         //executing the task
         task.resume()
         semaphore.wait()
-        return choice
+        return result
     }
     
     static func findPersonWithPhone(telephone: String) -> (name: String, surname: String)? {
@@ -526,10 +529,10 @@ class DataBase {
         }
     }
     
-    static func getMemory() -> [(titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] {
+    static func getMemory() -> [(titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String, telephone: String)] {
         let semaphore = DispatchSemaphore(value: 0);
         let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/getMemory.php"
-        var memory: [(titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String)] = []
+        var memory: [(titleMemory: String, bodyMemory: String, dateMemory: String, timeMemory: String, telephone: String)] = []
         
         //Set up the url request
         var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
@@ -566,8 +569,9 @@ class DataBase {
                         let bodyMemory = person["bodyMemory"] as! String
                         let dateMemory = person["dateMemory"] as! String
                         let timeMemory = person["timeMemory"] as! String
+                        let telephone = person["telephone"] as! String
                         
-                        memory.append((titleMemory: titleMemory, bodyMemory: bodyMemory, dateMemory: dateMemory, timeMemory: timeMemory))
+                        memory.append((titleMemory: titleMemory, bodyMemory: bodyMemory, dateMemory: dateMemory, timeMemory: timeMemory, telephone: telephone))
                     }
                 }
             } catch {
@@ -582,6 +586,61 @@ class DataBase {
         return memory
     }
     
+    static func getChat() -> [(sender: String, consignee: String, message: String)] {
+        let semaphore = DispatchSemaphore(value: 0);
+        let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/ChatService/api/getChats.php"
+        var chat: [(sender: String, consignee: String, message: String)] = []
+        
+        //Set up the url request
+        var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
+        //setting the method to post
+        requestUrl.httpMethod = "GET"
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
+            (data, response, error) in
+            
+            //exiting if there is some error
+            if error != nil {
+                print("please enter a valid url")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data \(data)")
+                return
+            }
+            
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                let myJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as AnyObject
+                
+                //getting the JSON array teams from the response
+                let data: NSArray = myJSON["chats"] as! NSArray
+                if let dataArr = data as? [[String: Any]] {
+                    for person in dataArr {
+                        //your code for accessing dd.
+                        //let telephone = person["telephone"] as! String
+                        let sender = person["sender"] as! String
+                        let consignee = person["consignee"] as! String
+                        let message = person["message"] as! String
+                        
+                        chat.append((sender: sender, consignee: consignee, message: message))
+                    }
+                }
+            } catch {
+                print(error)
+            }
+            semaphore.signal();
+        })
+        //executing the task
+        task.resume()
+        semaphore.wait()
+        
+        return chat
+    }
+    
     static func upload_image(url: String, image: UIImage, name: String) {
         
         let urlMast = NSURL(string: url)
@@ -594,10 +653,10 @@ class DataBase {
         //define the multipart request type
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         
-        let image_data = UIImagePNGRepresentation(image)
+        let image_data = UIImageJPEGRepresentation(image, 0)
         let body = NSMutableData()
-        let fname = name+".png"
-        let mimetype = "image/png"
+        let fname = name+".jpg"
+        let mimetype = "image/jpg"
         
         body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
         body.append("Content-Disposition:form-data; name=\"photo\"\r\n\r\n".data(using: String.Encoding.utf8)!)

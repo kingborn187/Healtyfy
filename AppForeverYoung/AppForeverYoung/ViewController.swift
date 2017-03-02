@@ -64,9 +64,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let segue = DataBase.login(username: username.text!, password: password.text!)
         
-        if segue != "" {
+        if segue != nil {
             globalUsername = username.text!
-            performSegue(withIdentifier: segue, sender: self)
+            globalTelephone = (segue?.telephone)!
+            performSegue(withIdentifier: (segue?.type)!, sender: self)
         } else {
             let alertController = UIAlertController(title: "Error!", message: "The username or the password you entered was incorrect", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

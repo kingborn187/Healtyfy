@@ -73,8 +73,8 @@ extension InterfaceController {
     func registerUserNotificationSettings() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
             if granted {
-                let answer1 = UNNotificationAction(identifier: "answer1", title: "ACCEPT", options: [.foreground])
-                let answer2 = UNNotificationAction(identifier: "answer2", title: "DECLINE", options: [.foreground])
+                let answer1 = UNNotificationAction(identifier: "answer1", title: "ACCEPT", options: [])
+                let answer2 = UNNotificationAction(identifier: "answer2", title: "DECLINE", options: [])
                 let friendRequest = UNNotificationCategory(identifier: "friendRequest", actions: [answer1, answer2] , intentIdentifiers: [], options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([friendRequest])
                 UNUserNotificationCenter.current().delegate = self

@@ -1,8 +1,8 @@
 //
-//  MemoryInterfaceController.swift
+//  ChatInterfaceController.swift
 //  AppForeverYoung
 //
-//  Created by Renato Tramontano on 02/03/17.
+//  Created by Renato Tramontano on 03/03/17.
 //  Copyright © 2017 iosparthenopedeveloper. All rights reserved.
 //
 
@@ -10,41 +10,37 @@ import WatchKit
 import Foundation
 
 
-class MemoryInterfaceController: WKInterfaceController {
-    
+class ChatInterfaceController: WKInterfaceController {
 
+    
     @IBOutlet var tableView: WKInterfaceTable!
     
-    let memory = DataBase.getMemory()
-    var classMemory: [MemoryInterfaceController] = []
-
+    let chat = DataBase.getChat()
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        tableView.setNumberOfRows(memory.count, withRowType: "MemoryRows")
+        tableView.setNumberOfRows(chat.count, withRowType: "ChatRows")
         setupTable()
     }
-
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
     func setupTable() {
-        for i in 0 ... memory.count {
-            if let row = tableView.rowController(at: i) as? MemoryRow {
-                row.tit.setText(memory[i].titleMemory)
-                row.date.setText(memory[i].dateMemory)
-                row.time.setText(memory[i].timeMemory)
-                row.body.setText(memory[i].bodyMemory)
-                downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/"+memory[i].telephone+memory[i].titleMemory+".jpg"))!, imageView: row.image)
-                print("http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/"+memory[i].telephone+memory[i].titleMemory+".jpg")
+        for i in 0 ... chat.count {
+            if let row = tableView.rowController(at: i) as? ChatRow {
+                row.query.setText(chat[i].message)
+                downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+chat[i].sender+".jpg"))!, imageView: row.image)
+                print("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+chat[i].sender+".jpg")
             }
         }
     }
@@ -69,6 +65,6 @@ class MemoryInterfaceController: WKInterfaceController {
             }
         }
     }
-
+    
 }
 

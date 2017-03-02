@@ -60,37 +60,85 @@
         <!--MemoryMenu-->
         <scene sceneID="oLE-4U-X8b">
             <objects>
-                <controller identifier="MemoryMenu" title="MemoryMenu" id="3DD-6Y-6QL" customClass="MemoryInterfaceController" customModule="ForeverYoungWatchKit_Extension">
+                <controller title="MemoryMenu" id="3DD-6Y-6QL" customClass="MemoryInterfaceController" customModule="ForeverYoungWatchKit_Extension">
                     <items>
-                        <label width="1" alignment="center" text="title" textAlignment="center" id="vaD-Db-vLu"/>
-                        <imageView alignment="left" id="ljS-XB-8DF"/>
-                        <label width="1" alignment="center" text="time" textAlignment="center" id="9N0-gA-DHi"/>
-                        <label width="1" alignment="left" text="body" textAlignment="left" numberOfLines="0" id="tf6-J1-yd3"/>
+                        <table alignment="left" id="h7K-cB-Yd5">
+                            <items>
+                                <tableRow identifier="MemoryRows" id="aBF-OK-BOC" customClass="MemoryRow" customModule="ForeverYoungWatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" alpha="0.5" layout="vertical" id="z5l-oI-FcO">
+                                        <items>
+                                            <label width="1" alignment="center" text="title" textAlignment="center" id="qsO-mG-OFL"/>
+                                            <imageView width="1" height="87" alignment="center" id="K9d-RR-tXN"/>
+                                            <group width="1" alignment="left" id="wHl-cp-AHe">
+                                                <items>
+                                                    <label alignment="left" text="date" textAlignment="center" id="cSJ-Lp-YM1"/>
+                                                    <label alignment="right" text="time" id="CaG-wY-XOs"/>
+                                                </items>
+                                            </group>
+                                            <label width="1" alignment="left" text="body" numberOfLines="0" id="yqw-Qa-cwV"/>
+                                        </items>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="body" destination="yqw-Qa-cwV" id="NUO-vB-INw"/>
+                                        <outlet property="date" destination="cSJ-Lp-YM1" id="fUn-7c-GSF"/>
+                                        <outlet property="image" destination="K9d-RR-tXN" id="DAG-Z3-mri"/>
+                                        <outlet property="time" destination="CaG-wY-XOs" id="t9t-av-umM"/>
+                                        <outlet property="tit" destination="qsO-mG-OFL" id="hQT-84-8TK"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
-                        <outlet property="body" destination="tf6-J1-yd3" id="np9-eU-sZZ"/>
-                        <outlet property="image" destination="ljS-XB-8DF" id="QGr-7N-m7e"/>
-                        <outlet property="time" destination="9N0-gA-DHi" id="CTr-YL-I0u"/>
-                        <outlet property="title" destination="vaD-Db-vLu" id="Gbq-UF-kzH"/>
-                        <segue destination="tQ4-PO-YOQ" kind="relationship" relationship="nextPage" id="bvy-h2-Eye"/>
+                        <outlet property="tableView" destination="h7K-cB-Yd5" id="jTm-mI-BG5"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="102" y="857"/>
+            <point key="canvasLocation" x="102" y="856.5"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="t9b-cy-b99">
+        <!--Chat Interface Controller-->
+        <scene sceneID="nAr-NH-5uv">
             <objects>
-                <controller id="tQ4-PO-YOQ"/>
+                <controller spacing="5" id="Iz0-Vb-LMy" customClass="ChatInterfaceController" customModule="ForeverYoungWatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="dlI-E5-pdA">
+                            <items>
+                                <tableRow identifier="ChatRows" id="3Q0-aJ-bF5" customClass="ChatRow" customModule="ForeverYoungWatchKit_Extension">
+                                    <group key="rootItem" width="1" height="1" alignment="left" layout="vertical" spacing="4" id="DSN-bZ-Yje">
+                                        <items>
+                                            <imageView height="100" alignment="left" id="TSI-P6-L7I"/>
+                                            <label alignment="left" text="query" numberOfLines="0" id="IK2-Pb-pg8">
+                                                <fontDescription key="font" type="system" pointSize="25"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="TSI-P6-L7I" id="S9a-vU-pj7"/>
+                                        <outlet property="query" destination="IK2-Pb-pg8" id="ycr-la-DGK"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="dlI-E5-pdA" id="cfu-Vn-IWe"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="412" y="857"/>
+            <point key="canvasLocation" x="412" y="222.5"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="V3i-Zf-6vC">
             <objects>
                 <controller id="udU-Mm-e7H">
                     <items>
-                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Chat" id="Vx1-ON-wLB"/>
+                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Chat" id="Vx1-ON-wLB">
+                            <connections>
+                                <segue destination="Iz0-Vb-LMy" kind="modal" id="W8U-nL-ahC"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>

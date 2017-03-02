@@ -1,5 +1,5 @@
 //
-//  MemoryTableViewController.swift
+//  ChatTableViewController.swift
 //  AppForeverYoung
 //
 //  Created by Renato Tramontano on 02/03/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MemoryTableViewController: UITableViewController {
+class ChatTableViewController: UITableViewController {
     
-    var memory = DataBase.getMemory()
+    var chat = DataBase.getChat()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,29 +30,25 @@ class MemoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return memory.count
+        return chat.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "CellMemory"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MemoryTableViewCell
+        let cellIdentifier = "CellChat"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ChatTableViewCell
         
-        //let keys = Array(self.memory.keys)
-        //let key = keys[indexPath.row]
-        cell.titleMemory.text = memory[indexPath.row].titleMemory
-        cell.dateMemory.text = memory[indexPath.row].dateMemory
-        cell.timeMemory.text = memory[indexPath.row].timeMemory
+        cell.labelChat.text = chat[indexPath.row].message
+      
+        //cell.imageChat.contentMode = .scaleAspectFit
+        downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+chat[indexPath.row].sender+".jpg"))!, imageView: cell.imageChat)
         
-        cell.imageMemory.contentMode = .scaleAspectFit
-        downloadImage(url: URL(string: ("http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/"+memory[indexPath.row].telephone+cell.titleMemory.text!+".jpg"))!, imageView: cell.imageMemory)
+        print("http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+chat[indexPath.row].sender+".jpg")
         
-        print("http://kingborn187.altervista.org/AppForeverYoung/MemoryService/api/"+memory[indexPath.row].telephone+cell.titleMemory.text!+".jpg")
-
         return cell
     }
     
-   
+    
     
     func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {

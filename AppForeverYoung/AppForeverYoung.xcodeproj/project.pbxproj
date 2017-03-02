@@ -18,6 +18,8 @@
 		D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */; };
 		D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */; };
 		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
+		D43B27591E68C21B00784847 /* MemoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B27581E68C21B00784847 /* MemoryRow.swift */; };
+		D43EE5541E68D7BC0095AAC7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */; };
 		D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7C981E574D8400F974EA /* AppDelegate.swift */; };
 		D46A7C9B1E574D8400F974EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7C9A1E574D8400F974EA /* ViewController.swift */; };
 		D46A7C9E1E574D8400F974EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46A7C9C1E574D8400F974EA /* Main.storyboard */; };
@@ -28,6 +30,9 @@
 		D46A7CC71E5751B600F974EA /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */; };
 		D46A7CC91E575E6200F974EA /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC81E575E6200F974EA /* DataBase.swift */; };
 		D49C6A871E59F28F00D60431 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C6A861E59F28F00D60431 /* ServiceManager.swift */; };
+		D49F59991E68D7DE000EB0A7 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F59981E68D7DE000EB0A7 /* ChatTableViewController.swift */; };
+		D49F599B1E68DD63000EB0A7 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F599A1E68DD63000EB0A7 /* ChatRow.swift */; };
+		D49F599D1E68DD98000EB0A7 /* ChatInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F599C1E68DD98000EB0A7 /* ChatInterfaceController.swift */; };
 		D4B23E511E64AD86009E8EBC /* AddMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */; };
 		D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */; };
 		D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */; };
@@ -111,6 +116,8 @@
 		D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedRequestNotificationController.swift; sourceTree = "<group>"; };
 		D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewController.swift; sourceTree = "<group>"; };
 		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
+		D43B27581E68C21B00784847 /* MemoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryRow.swift; sourceTree = "<group>"; };
+		D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		D46A7C951E574D8400F974EA /* AppForeverYoung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppForeverYoung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A7C981E574D8400F974EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46A7C9A1E574D8400F974EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +134,9 @@
 		D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		D46A7CC81E575E6200F974EA /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataBase.swift; path = AppForeverYoung/DataBase.swift; sourceTree = "<group>"; };
 		D49C6A861E59F28F00D60431 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceManager.swift; path = AppForeverYoung/ServiceManager.swift; sourceTree = "<group>"; };
+		D49F59981E68D7DE000EB0A7 /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
+		D49F599A1E68DD63000EB0A7 /* ChatRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
+		D49F599C1E68DD98000EB0A7 /* ChatInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInterfaceController.swift; sourceTree = "<group>"; };
 		D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryViewController.swift; sourceTree = "<group>"; };
 		D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtivesMenuViewController.swift; sourceTree = "<group>"; };
 		D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +217,8 @@
 				D4DC13011E5896C5003DF05C /* ElderlyMenuViewController.swift */,
 				D4073CDD1E681EF80082A765 /* MemoryTableViewController.swift */,
 				D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */,
+				D49F59981E68D7DE000EB0A7 /* ChatTableViewController.swift */,
+				D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */,
 			);
 			name = "Elderly Class";
 			sourceTree = "<group>";
@@ -309,6 +321,9 @@
 				F9FBE8CD1E60242E005C65C7 /* NotificationController.swift */,
 				D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */,
 				D4073CE11E6825830082A765 /* MemoryInterfaceController.swift */,
+				D43B27581E68C21B00784847 /* MemoryRow.swift */,
+				D49F599C1E68DD98000EB0A7 /* ChatInterfaceController.swift */,
+				D49F599A1E68DD63000EB0A7 /* ChatRow.swift */,
 				F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8D11E60242E005C65C7 /* Info.plist */,
 				F9FBE8C71E60242E005C65C7 /* Supporting Files */,
@@ -564,7 +579,9 @@
 				D4B23E511E64AD86009E8EBC /* AddMemoryViewController.swift in Sources */,
 				D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */,
 				D4073CDE1E681EF80082A765 /* MemoryTableViewController.swift in Sources */,
+				D49F59991E68D7DE000EB0A7 /* ChatTableViewController.swift in Sources */,
 				D46A7CC91E575E6200F974EA /* DataBase.swift in Sources */,
+				D43EE5541E68D7BC0095AAC7 /* ChatTableViewCell.swift in Sources */,
 				D46A7CC71E5751B600F974EA /* CreateUserViewController.swift in Sources */,
 				D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */,
 				D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */,
@@ -595,6 +612,9 @@
 				F9FBE8CE1E60242E005C65C7 /* NotificationController.swift in Sources */,
 				D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */,
 				D4073CE21E6825830082A765 /* MemoryInterfaceController.swift in Sources */,
+				D43B27591E68C21B00784847 /* MemoryRow.swift in Sources */,
+				D49F599B1E68DD63000EB0A7 /* ChatRow.swift in Sources */,
+				D49F599D1E68DD98000EB0A7 /* ChatInterfaceController.swift in Sources */,
 				F9FBE8CC1E60242E005C65C7 /* ExtensionDelegate.swift in Sources */,
 				F9FBE8CA1E60242E005C65C7 /* InterfaceController.swift in Sources */,
 				F981F5BF1E66D9210060BB30 /* DataBase.swift in Sources */,

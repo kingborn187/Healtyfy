@@ -41,14 +41,16 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
     }
     
     @IBAction func sendAction(_ sender: Any) {
-        let result = DataBase.createMemory(telephone: "3385025964", titleMemory: titleMemory.text!, bodyMemory: bodyMemory.text!, dateMemory: dateMemory.text!, timeMemory: timeMemory.text!, imageMemory: imageMemory.image!)
+        let result = DataBase.createMemory(telephone: globalTelephone, titleMemory: titleMemory.text!, bodyMemory: bodyMemory.text!, dateMemory: dateMemory.text!, timeMemory: timeMemory.text!, imageMemory: imageMemory.image!)
         
         if result {
             serviceManager.send(msg: "memory by relatives", usernameRequest: globalUsername)
             let alertController = UIAlertController(title: "Registration memory send", message: "You have successfully send a registartion memory", preferredStyle: UIAlertControllerStyle.alert)
             
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-               
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction) in
+                self.performSegue(withIdentifier: "returnMainRelatives", sender: self)
+            }))
+        
             present(alertController, animated: true, completion: nil)
         } else {
             let alertController = UIAlertController(title: "No registration memory", message: "You don't have send successfully a memory", preferredStyle: UIAlertControllerStyle.alert)
