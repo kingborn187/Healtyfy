@@ -12,11 +12,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var username: UITextField!
     @IBOutlet var password: UITextField!
+    @IBOutlet weak var LoginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
+        
+        LoginButton.layer.borderWidth = 1.0
+        LoginButton.layer.borderColor = UIColor(white: 1.0, alpha: 0.7).cgColor
+        LoginButton.layer.cornerRadius = 10
         
         username.delegate = self
         password.delegate = self

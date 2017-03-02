@@ -4,10 +4,30 @@ import UserNotifications
 
 class ElderlyMenuViewController: UIViewController {
     
+    @IBOutlet weak var ImmagineMemories: UIButton!
     let serviceManager = ServiceManager()
+    
+    @IBOutlet weak var ImmagineChat: UIButton!
+    @IBOutlet weak var ImmagineNotifications: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ImmagineMemories.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
+        ImmagineMemories.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        ImmagineMemories.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        ImmagineMemories.layer.shadowOpacity = 0.9
+        
+        ImmagineChat.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
+        ImmagineChat.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        ImmagineChat.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        ImmagineChat.layer.shadowOpacity = 0.9
+        
+        ImmagineNotifications.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
+        ImmagineNotifications.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        ImmagineNotifications.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        ImmagineNotifications.layer.shadowOpacity = 0.9
+        
         // Do any additional setup after loading the view.
         serviceManager.delegate = self
     }
