@@ -636,7 +636,7 @@ class DataBase {
         //executing the task
         task.resume()
         semaphore.wait()
-    }
+    }//
     
     static func getChat() -> [(sender: String, consignee: String, message: String)] {
         let semaphore = DispatchSemaphore(value: 0);
