@@ -72,7 +72,7 @@
                                     <outlet property="name" destination="rnF-oD-zCG" id="xcL-wS-cCE"/>
                                     <outlet property="surname" destination="dFV-CC-f7R" id="98X-JL-v0d"/>
                                     <outlet property="telephone" destination="kP8-9H-QGf" id="S6f-uT-0C8"/>
-                                    <segue destination="y63-2R-mLy" kind="show" identifier="selectPerson" id="pkC-II-Mbk"/>
+                                    <segue destination="5r4-FH-Jva" kind="show" id="gm7-xo-ISq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,6 +81,7 @@
                             <outlet property="delegate" destination="adH-rY-KYg" id="iaL-cI-awi"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="0og-YR-0Kh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K03-jB-sWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,6 +146,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9I1-Jy-4PM"/>
                     <connections>
                         <outlet property="label" destination="KwV-bJ-oiz" id="Mw2-GW-z49"/>
                         <outlet property="typeQuestionPicker" destination="gyz-QC-3uR" id="Xgc-2A-Al4"/>
@@ -255,13 +257,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="I0b-tH-4sZ"/>
                     <connections>
                         <outlet property="bodyMemory" destination="2aB-sW-MGE" id="6oe-ej-26u"/>
                         <outlet property="dateMemory" destination="UDz-lm-g1g" id="nv1-GQ-Mni"/>
                         <outlet property="imageMemory" destination="7VO-zq-2uZ" id="jeZ-JV-8HF"/>
                         <outlet property="timeMemory" destination="yvG-hA-Dy8" id="QpA-NV-OUQ"/>
                         <outlet property="titleMemory" destination="A6m-aA-ppx" id="lFZ-YH-Ver"/>
-                        <segue destination="y63-2R-mLy" kind="show" identifier="returnMainRelatives" id="aJN-Bh-Fnv"/>
+                        <segue destination="5r4-FH-Jva" kind="show" identifier="returnMainRelatives" id="Yzd-Tg-44w"/>
+                        <segue destination="5r4-FH-Jva" kind="show" identifier="returnMainRelatives" id="TVe-VP-hFa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kti-ZJ-K1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,47 +288,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rs8-Wi-xNo">
-                                <rect key="frame" x="16" y="314" width="342" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98094278570000004" green="0.82537007330000001" blue="0.02673581429" alpha="0.2714041096" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Add person">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="c1h-Q5-EXJ" kind="show" id="b7i-eV-ub9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1Y-fI-Jgy">
-                                <rect key="frame" x="17" y="352" width="341" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98094278570000004" green="0.82537007330000001" blue="0.02673581429" alpha="0.2714041096" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Select person">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="adH-rY-KYg" kind="show" id="nhy-ua-mnu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-nX-38a">
-                                <rect key="frame" x="17" y="428" width="341" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98094278570000004" green="0.82537007330000001" blue="0.02673581429" alpha="0.2714041096" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Contact person">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cDg-En-Dwa" kind="show" id="JuB-0f-ipy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toj-RI-ArS">
-                                <rect key="frame" x="16" y="390" width="342" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98094278570000004" green="0.82537007330000001" blue="0.02673581429" alpha="0.2714041095890411" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Control person">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1m-HX-wYJ">
                                 <rect key="frame" x="19" y="231" width="73" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -332,17 +295,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OJ-4a-391">
-                                <rect key="frame" x="15" y="466" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98094278570000004" green="0.82537007330000001" blue="0.02673581429" alpha="0.2714041096" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Insert memory">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hpf-JV-2ec" kind="show" id="j2D-gl-KQp"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ux-YG-6rW">
                                 <rect key="frame" x="99" y="231" width="259" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -381,6 +333,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="FA4-ka-sNt"/>
                     <connections>
                         <outlet property="imagePerson" destination="NEE-ON-Mi8" id="tDM-bL-tGJ"/>
                         <outlet property="namePerson" destination="2ux-YG-6rW" id="pno-4A-aue"/>
@@ -466,6 +419,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CJU-Xf-1gU"/>
                     <connections>
                         <outlet property="nameLabel" destination="o57-13-dZA" id="WiM-xe-DjN"/>
                         <outlet property="surnameLabel" destination="JLo-Vi-aMA" id="n7F-Dm-k9W"/>
@@ -596,12 +550,12 @@
                         <outlet property="password" destination="uO3-IQ-4Qi" id="BEN-TH-ffm"/>
                         <outlet property="username" destination="KoX-gy-Wb0" id="6Yx-Ed-Lg6"/>
                         <segue destination="I4w-VS-bNJ" kind="show" identifier="Elderly" id="sB6-bu-PuX"/>
-                        <segue destination="y63-2R-mLy" kind="show" identifier="Relative" id="dZH-Wd-RHP"/>
+                        <segue destination="5r4-FH-Jva" kind="show" identifier="Relative" id="Pzr-qy-DEi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="181.25937031484258"/>
+            <point key="canvasLocation" x="879.20000000000005" y="181.25937031484258"/>
         </scene>
         <!--Memory Table View Controller-->
         <scene sceneID="Zrx-zC-aWw">
@@ -1064,14 +1018,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr1-am-B4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226" y="181"/>
+            <point key="canvasLocation" x="2164" y="180.35982008995504"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="ri7-eQ-ct9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aK5-IP-ge2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="m0B-ok-Ynb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MlB-PX-xG8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MlB-PX-xG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1089,7 +1044,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAF-9x-Vbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-999.20000000000005" y="181.25937031484258"/>
+            <point key="canvasLocation" x="-60" y="181.25937031484258"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RcG-6X-fjL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5r4-FH-Jva" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="usM-JR-6qc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="y63-2R-mLy" kind="relationship" relationship="viewControllers" id="9JD-uc-VZW"/>
+                        <segue destination="adH-rY-KYg" kind="relationship" relationship="viewControllers" id="tRd-X7-LJG"/>
+                        <segue destination="cDg-En-Dwa" kind="relationship" relationship="viewControllers" id="Qal-JB-Byu"/>
+                        <segue destination="hpf-JV-2ec" kind="relationship" relationship="viewControllers" id="yi4-fh-bd0"/>
+                        <segue destination="c1h-Q5-EXJ" kind="relationship" relationship="viewControllers" id="uez-JT-I4k"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b66-si-TCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1257" y="-544"/>
         </scene>
     </scenes>
     <resources>
@@ -1104,7 +1081,8 @@
         <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CEF-AG-cnd"/>
-        <segue reference="9FQ-ND-enU"/>
+        <segue reference="e78-RU-EHf"/>
+        <segue reference="9JD-uc-VZW"/>
+        <segue reference="TVe-VP-hFa"/>
     </inferredMetricsTieBreakers>
 </document>

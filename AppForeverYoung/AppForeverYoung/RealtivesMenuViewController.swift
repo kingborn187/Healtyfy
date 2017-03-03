@@ -8,15 +8,15 @@
 
 import UIKit
 
+var name = ""
+var surname = ""
+var imagex = ""
+
 class RealtivesMenuViewController: UIViewController {
     
     @IBOutlet var imagePerson: UIImageView!
     @IBOutlet var namePerson: UILabel!
     @IBOutlet var surnamePerson: UILabel!
-    
-    var name = ""
-    var surname = ""
-    var imagex = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +24,12 @@ class RealtivesMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
         namePerson.text = name
         surnamePerson.text = surname
+        
         if imagex != "" {
             downloadImage(url: URL(string: imagex)!, imageView: imagePerson)
         }
+        namePerson.text = name
+        surnamePerson.text = surname
     }
     
     override func didReceiveMemoryWarning() {

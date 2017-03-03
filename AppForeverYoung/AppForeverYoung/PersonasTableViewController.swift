@@ -14,7 +14,7 @@ class PersonasTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,17 +50,16 @@ class PersonasTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selectPerson" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let keys = Array(self.personas.keys)
-                let key = keys[indexPath.row]
-                let destinationController = segue.destination as! RealtivesMenuViewController
-                destinationController.name = (personas[key]?.name)!
-                destinationController.surname = (personas[key]?.surname)!
-                destinationController.imagex = "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+key+".jpg"
-                globarControlTelephone = key
-            }
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let keys = Array(self.personas.keys)
+            let key = keys[indexPath.row]
+     
+            name = (personas[key]?.name)!
+            surname = (personas[key]?.surname)!
+            imagex = "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+key+".jpg"
+            globarControlTelephone = key
         }
+        
     }
     
     
@@ -73,7 +72,7 @@ class PersonasTableViewController: UITableViewController {
     
     func downloadImage(url: URL, imageView: UIImageView) {
         print("Download Started")
-       
+        
         getDataFromUrl(url: url) { (data, response, error)  in
             guard let data = data, error == nil else { return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
