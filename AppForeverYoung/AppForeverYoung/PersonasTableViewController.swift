@@ -58,6 +58,7 @@ class PersonasTableViewController: UITableViewController {
                 destinationController.name = (personas[key]?.name)!
                 destinationController.surname = (personas[key]?.surname)!
                 destinationController.imagex = "http://kingborn187.altervista.org/AppForeverYoung/UserService/api/"+key+".jpg"
+                globarControlTelephone = key
             }
         }
     }

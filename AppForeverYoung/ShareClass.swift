@@ -10,3 +10,4 @@ import Foundation
 
 var globalUsername = ""
 var globalTelephone = ""
+var globarControlTelephone = ""

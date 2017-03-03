@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p4o-xe-mRz">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,6 +40,9 @@
                                 </items>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </group>
+                            <connections>
+                                <segue destination="eK2-jW-jHD" kind="modal" id="4Bp-Zj-65h"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>
@@ -48,6 +51,39 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-215" y="526"/>
+        </scene>
+        <!--Notification Interface Controller-->
+        <scene sceneID="glF-0Z-3gY">
+            <objects>
+                <controller id="eK2-jW-jHD" customClass="NotificationInterfaceController" customModule="ForeverYoungWatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="gEP-9J-Bhc">
+                            <items>
+                                <tableRow identifier="NotificationRows" id="Pag-7K-bHC" customClass="NotificationRow" customModule="ForeverYoungWatchKit_Extension">
+                                    <group key="rootItem" width="1" height="1" alignment="left" layout="vertical" id="7XS-8e-tr7">
+                                        <items>
+                                            <label width="1" alignment="left" text="message" textAlignment="center" id="3iC-g0-tdl"/>
+                                            <imageView height="91" alignment="left" id="sgB-2X-Mfc"/>
+                                            <label width="1" alignment="left" text="sender" id="K8y-wi-j8X"/>
+                                            <label width="1" alignment="left" text="date" id="RN5-gN-47q"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="date" destination="RN5-gN-47q" id="TxS-jL-HyI"/>
+                                        <outlet property="imageNot" destination="sgB-2X-Mfc" id="9gl-uk-ieL"/>
+                                        <outlet property="message" destination="3iC-g0-tdl" id="he9-0a-SYk"/>
+                                        <outlet property="sender" destination="K8y-wi-j8X" id="MNV-tO-QwJ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="gEP-9J-Bhc" id="iRi-D0-GgV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-215" y="865.5"/>
         </scene>
         <!--Animation Medicine-->
         <scene sceneID="bIM-9E-HF1">
@@ -147,7 +183,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="102" y="856"/>
+            <point key="canvasLocation" x="96" y="877"/>
         </scene>
         <!--Back-->
         <scene sceneID="nAr-NH-5uv">
@@ -180,7 +216,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="412" y="221.5"/>
+            <point key="canvasLocation" x="423" y="875"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="OhA-g4-c8Y">

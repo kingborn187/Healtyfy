@@ -64,9 +64,13 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             present(alertController, animated: true, completion: nil)
         } else {
+            DataBase.createChat(sender: globalTelephone, consignee: globarControlTelephone, message: self.label.text!)
+            DataBase.createNotification(sender: globalTelephone, consignee: globarControlTelephone, message: "Message")
             serviceManager.send(msg: "message by relatives", usernameRequest: globalUsername)
             let alertController = UIAlertController(title: "Question send", message: "the question \"\(question)\" is send", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+                (action:UIAlertAction) in
+                self.performSegue(withIdentifier: "backToMenuRel", sender: self)}))
             present(alertController, animated: true, completion: nil)
         }
     }

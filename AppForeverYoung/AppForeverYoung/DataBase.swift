@@ -588,7 +588,6 @@ class DataBase {
     
     static func createChat(sender: String, consignee: String, message: String) {
         let semaphore = DispatchSemaphore(value: 0);
-        var message = ""
         
         let URL_SAVE_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/ChatService/api/createChat.php"
         var requestUrl = URLRequest(url: URL(string: URL_SAVE_TEAM)!)
@@ -625,7 +624,6 @@ class DataBase {
                     msg = parseJSON["message"] as! String?
                     //printing the response
                     print(msg)
-                    message = msg
                 }
             } catch  {
                 print("error trying to convert data to JSON")
@@ -695,7 +693,14 @@ class DataBase {
     
     static func createNotification(sender: String, consignee: String, message: String) {
         let semaphore = DispatchSemaphore(value: 0);
-        var message = ""
+        let date = Date()
+        let calendar = Calendar.current
+        let day = String(calendar.component(.day, from: date))
+        let month = String(calendar.component(.month, from: date))
+        let year = String(calendar.component(.year, from: date))
+        let hour = String(calendar.component(.hour, from: date))
+        let minute = String(calendar.component(.minute, from: date))
+        let dateCurrent = day+"/"+month+"/"+year+" "+hour+":"+minute
         
         let URL_SAVE_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/NotificationService/api/createNotification.php"
         var requestUrl = URLRequest(url: URL(string: URL_SAVE_TEAM)!)
@@ -704,7 +709,7 @@ class DataBase {
         requestUrl.httpMethod = "POST"
         
         //creating the post parameter by concatenating the keys and values from text field
-        let postParameters = "sender="+sender+"&consignee="+consignee+"&message="+message
+        let postParameters = "sender="+sender+"&consignee="+consignee+"&message="+message+"&date="+dateCurrent
         requestUrl.httpBody = postParameters.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
@@ -732,7 +737,6 @@ class DataBase {
                     msg = parseJSON["message"] as! String?
                     //printing the response
                     print(msg)
-                    message = msg
                 }
             } catch  {
                 print("error trying to convert data to JSON")
@@ -746,10 +750,10 @@ class DataBase {
     }
 
     
-    static func getNotification() -> [(sender: String, consignee: String, message: String)] {
+    static func getNotification() -> [(sender: String, consignee: String, message: String, date: String)] {
         let semaphore = DispatchSemaphore(value: 0);
         let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/NotificationService/api/getNotification.php"
-        var notification: [(sender: String, consignee: String, message: String)] = []
+        var notification: [(sender: String, consignee: String, message: String, date: String)] = []
         
         //Set up the url request
         var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
@@ -785,8 +789,9 @@ class DataBase {
                         let sender = person["sender"] as! String
                         let consignee = person["consignee"] as! String
                         let message = person["message"] as! String
+                        let date = person["date"] as! String
                         
-                        notification.append((sender: sender, consignee: consignee, message: message))
+                        notification.append((sender: sender, consignee: consignee, message: message, date: date))
                     }
                 }
             } catch {
