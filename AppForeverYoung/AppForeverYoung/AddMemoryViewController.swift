@@ -78,7 +78,6 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
     }
     
     
-    
     @IBAction func selectDate(_ sender: UITextField) {
         // Data Picker
         self.datePickerView = UIDatePicker(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
@@ -105,6 +104,8 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
     }
     
+   
+    
     func doneClick() {
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateStyle = .medium
@@ -127,7 +128,6 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
         dateMemory?.text = dateFormatter.string(from: sender.date)
         
     }
-    
     
     @IBAction func selectTime(_ sender: UITextField) {
         // Data Picker

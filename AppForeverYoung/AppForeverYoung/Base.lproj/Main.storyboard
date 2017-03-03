@@ -194,7 +194,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="selectDate:" destination="hpf-JV-2ec" eventType="editingDidEnd" id="Oly-F3-bbi"/>
+                                    <action selector="selectDate:" destination="hpf-JV-2ec" eventType="editingDidBegin" id="ofe-Ch-j5b"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="time memory" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-hA-Dy8">
@@ -205,7 +205,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="selectTime:" destination="hpf-JV-2ec" eventType="editingDidEnd" id="oAB-uV-xQO"/>
+                                    <action selector="selectTime:" destination="hpf-JV-2ec" eventType="editingDidEnd" id="Qvr-Ie-eem"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pm-NS-fNe">
@@ -971,8 +971,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="controlTelephone:" destination="QD5-la-uSo" eventType="editingDidEndOnExit" id="tzj-oL-LYw"/>
-                                    <action selector="selectDate:" destination="QD5-la-uSo" eventType="editingDidEnd" id="2ga-Sp-69H"/>
+                                    <action selector="selectDate:" destination="QD5-la-uSo" eventType="editingDidBegin" id="5mp-TF-1b3"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhs-0j-fmn">
@@ -1024,7 +1023,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aK5-IP-ge2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MlB-PX-xG8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MlB-PX-xG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
