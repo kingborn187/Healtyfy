@@ -586,6 +586,58 @@ class DataBase {
         return memory
     }
     
+    static func createChat(sender: String, consignee: String, message: String) {
+        let semaphore = DispatchSemaphore(value: 0);
+        var message = ""
+        
+        let URL_SAVE_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/ChatService/api/createChat.php"
+        var requestUrl = URLRequest(url: URL(string: URL_SAVE_TEAM)!)
+        
+        //setting the method to post
+        requestUrl.httpMethod = "POST"
+        
+        //creating the post parameter by concatenating the keys and values from text field
+        let postParameters = "sender="+sender+"&consignee="+consignee+"&message="+message
+        requestUrl.httpBody = postParameters.data(using: .utf8)
+        
+        let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                print("please enter a valid url")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data \(data)")
+                return
+            }
+            
+            do {
+                let myJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as?NSDictionary
+                
+                //parsing the json
+                if let parseJSON = myJSON {
+                    //creating a string
+                    var msg : String!
+                    
+                    //getting the json response
+                    msg = parseJSON["message"] as! String?
+                    //printing the response
+                    print(msg)
+                    message = msg
+                }
+            } catch  {
+                print("error trying to convert data to JSON")
+                return
+            }
+            semaphore.signal();
+        })
+        //executing the task
+        task.resume()
+        semaphore.wait()
+    }//
+    
     static func getChat() -> [(sender: String, consignee: String, message: String)] {
         let semaphore = DispatchSemaphore(value: 0);
         let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/ChatService/api/getChats.php"
@@ -640,6 +692,115 @@ class DataBase {
         
         return chat
     }
+    
+    static func createNotification(sender: String, consignee: String, message: String) {
+        let semaphore = DispatchSemaphore(value: 0);
+        var message = ""
+        
+        let URL_SAVE_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/NotificationService/api/createNotification.php"
+        var requestUrl = URLRequest(url: URL(string: URL_SAVE_TEAM)!)
+        
+        //setting the method to post
+        requestUrl.httpMethod = "POST"
+        
+        //creating the post parameter by concatenating the keys and values from text field
+        let postParameters = "sender="+sender+"&consignee="+consignee+"&message="+message
+        requestUrl.httpBody = postParameters.data(using: .utf8)
+        
+        let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                print("please enter a valid url")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data \(data)")
+                return
+            }
+            
+            do {
+                let myJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as?NSDictionary
+                
+                //parsing the json
+                if let parseJSON = myJSON {
+                    //creating a string
+                    var msg : String!
+                    
+                    //getting the json response
+                    msg = parseJSON["message"] as! String?
+                    //printing the response
+                    print(msg)
+                    message = msg
+                }
+            } catch  {
+                print("error trying to convert data to JSON")
+                return
+            }
+            semaphore.signal();
+        })
+        //executing the task
+        task.resume()
+        semaphore.wait()
+    }
+
+    
+    static func getNotification() -> [(sender: String, consignee: String, message: String)] {
+        let semaphore = DispatchSemaphore(value: 0);
+        let URL_LOAD_TEAM = "http://kingborn187.altervista.org/AppForeverYoung/NotificationService/api/getNotification.php"
+        var notification: [(sender: String, consignee: String, message: String)] = []
+        
+        //Set up the url request
+        var requestUrl = URLRequest(url: URL(string: URL_LOAD_TEAM)!)
+        //setting the method to post
+        requestUrl.httpMethod = "GET"
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: requestUrl, completionHandler: {
+            (data, response, error) in
+            
+            //exiting if there is some error
+            if error != nil {
+                print("please enter a valid url")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data \(data)")
+                return
+            }
+            
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                let myJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as AnyObject
+                
+                //getting the JSON array teams from the response
+                let data: NSArray = myJSON["notification"] as! NSArray
+                if let dataArr = data as? [[String: Any]] {
+                    for person in dataArr {
+                        //your code for accessing dd.
+                        //let telephone = person["telephone"] as! String
+                        let sender = person["sender"] as! String
+                        let consignee = person["consignee"] as! String
+                        let message = person["message"] as! String
+                        
+                        notification.append((sender: sender, consignee: consignee, message: message))
+                    }
+                }
+            } catch {
+                print(error)
+            }
+            semaphore.signal();
+        })
+        //executing the task
+        task.resume()
+        semaphore.wait()
+        
+        return notification
+    }
+
     
     static func upload_image(url: String, image: UIImage, name: String) {
         
