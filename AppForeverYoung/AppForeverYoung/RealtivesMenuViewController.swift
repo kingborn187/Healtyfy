@@ -27,6 +27,8 @@ class RealtivesMenuViewController: UIViewController {
         
         if imagex != "" {
             downloadImage(url: URL(string: imagex)!, imageView: imagePerson)
+            self.imagePerson.layer.cornerRadius = self.imagePerson.frame.size.width / 2
+            self.imagePerson.clipsToBounds = true
         }
         namePerson.text = name
         surnamePerson.text = surname
