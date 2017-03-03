@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.view.frame.origin.y += keyboardSize.height
             }
         }
-    }
+    }//
     
     // Hide keyboard when user touches outside kebord
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
