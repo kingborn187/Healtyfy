@@ -31,7 +31,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ForeverYoungWatchKit" customModuleProvider="target">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="feS-JM-dv4">
-                            <group key="contentGroup" width="1" height="1" alignment="left" alpha="0.90000000000000002" backgroundImage="notWatch" layout="vertical" id="pOI-3z-BHG">
+                            <group key="contentGroup" width="1" height="1" alignment="left" alpha="0.90000000000000002" backgroundImage="notificheWatch" layout="vertical" id="pOI-3z-BHG">
                                 <items>
                                     <label height="36" alignment="center" verticalAlignment="center" text="NOTIFICATIONS" textAlignment="center" id="qrh-ZK-rZ2">
                                         <color key="textColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
