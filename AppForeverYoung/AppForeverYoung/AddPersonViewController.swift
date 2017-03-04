@@ -13,6 +13,7 @@ class AddPersonViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
+    @IBOutlet weak var BackgroundCardView: UIImageView!
     
     var person: (name: String, surname: String)? = ("", "")
     var find = false
@@ -20,6 +21,13 @@ class AddPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        BackgroundCardView.layer.cornerRadius = 15
+        BackgroundCardView.layer.masksToBounds = true
+        BackgroundCardView.layer.borderWidth = 2.0
+        BackgroundCardView.layer.borderColor = UIColor(hue: 0.7222, saturation: 0, brightness: 1, alpha: 0.25).cgColor
+
+        
         // Do any additional setup after loading the view.
         nameLabel.text = person?.name
         surnameLabel.text = person?.surname

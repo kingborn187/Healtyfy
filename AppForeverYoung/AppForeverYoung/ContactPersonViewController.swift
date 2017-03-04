@@ -12,6 +12,7 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
     
     @IBOutlet var typeQuestionPicker: UIPickerView!
     @IBOutlet var label: UILabel!
+    @IBOutlet weak var riquadro1: UIImageView!
     
     //let typeQuestion = ["How are you?", "Do you have a lunch?", "Are you alone?", "Are you at home?"]
     let typeQuestion = DataBase.getQuestions()
@@ -20,6 +21,12 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        riquadro1.layer.cornerRadius = 15
+        riquadro1.layer.masksToBounds = true
+        riquadro1.layer.borderWidth = 2.0
+        riquadro1.layer.borderColor = UIColor(hue: 0.7222, saturation: 0, brightness: 1, alpha: 0.25).cgColor
+        
         print(question)
         label.text = question
         // Do any additional setup after loading the view.
