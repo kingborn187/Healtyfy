@@ -81,7 +81,7 @@
                             <outlet property="delegate" destination="adH-rY-KYg" id="iaL-cI-awi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Select Person" id="0og-YR-0Kh"/>
+                    <tabBarItem key="tabBarItem" title="Select Person" image="Select Person0" id="0og-YR-0Kh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K03-jB-sWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,7 +150,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact Person" id="9I1-Jy-4PM"/>
+                    <tabBarItem key="tabBarItem" title="Contact Person" image="2" id="9I1-Jy-4PM"/>
                     <connections>
                         <outlet property="label" destination="KwV-bJ-oiz" id="Mw2-GW-z49"/>
                         <outlet property="riquadro1" destination="0o1-iQ-NmX" id="1kM-aT-0Cz"/>
@@ -263,7 +263,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Insert Memory" id="I0b-tH-4sZ"/>
+                    <tabBarItem key="tabBarItem" title="Insert Memory" image="1" id="I0b-tH-4sZ"/>
                     <connections>
                         <outlet property="bodyMemory" destination="2aB-sW-MGE" id="6oe-ej-26u"/>
                         <outlet property="dateMemory" destination="UDz-lm-g1g" id="nv1-GQ-Mni"/>
@@ -445,7 +445,7 @@
                             <constraint firstItem="nM7-mF-ePH" firstAttribute="leading" secondItem="qoa-9V-ySj" secondAttribute="leading" id="z5f-9C-DCg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Control Person" id="ti8-sB-W9I"/>
+                    <tabBarItem key="tabBarItem" title="Control Person" image="4" id="ti8-sB-W9I"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="845"/>
                     <connections>
@@ -537,7 +537,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Person" id="CJU-Xf-1gU"/>
+                    <tabBarItem key="tabBarItem" title="Add Person" image="3" id="CJU-Xf-1gU"/>
                     <connections>
                         <outlet property="BackgroundCardView" destination="0bu-PI-byM" id="qRv-f4-V8O"/>
                         <outlet property="nameLabel" destination="o57-13-dZA" id="WiM-xe-DjN"/>
@@ -1195,7 +1195,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="37" height="37"/>
+        <image name="2" width="25" height="15"/>
+        <image name="3" width="37" height="42"/>
+        <image name="4" width="37" height="33"/>
         <image name="LogoHeltify" width="1280" height="1024"/>
+        <image name="Select Person0" width="21" height="25"/>
         <image name="beat bianco" width="400" height="96"/>
         <image name="chat" width="512" height="512"/>
         <image name="circle" width="387" height="382"/>
@@ -1208,7 +1213,7 @@
         <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yzd-Tg-44w"/>
         <segue reference="8ON-Ca-yxa"/>
+        <segue reference="HHv-Qg-qua"/>
     </inferredMetricsTieBreakers>
 </document>
