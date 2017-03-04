@@ -60,7 +60,7 @@
                         <table alignment="left" id="gEP-9J-Bhc">
                             <items>
                                 <tableRow identifier="NotificationRows" id="Pag-7K-bHC" customClass="NotificationRow" customModule="ForeverYoungWatchKit_Extension">
-                                    <group key="rootItem" width="1" height="1" alignment="left" layout="vertical" id="7XS-8e-tr7">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="7XS-8e-tr7">
                                         <items>
                                             <label width="1" alignment="left" text="message" textAlignment="center" id="3iC-g0-tdl"/>
                                             <imageView height="91" alignment="left" id="sgB-2X-Mfc"/>
@@ -236,7 +236,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="692" y="234"/>
+            <point key="canvasLocation" x="666" y="866"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="V3i-Zf-6vC">
