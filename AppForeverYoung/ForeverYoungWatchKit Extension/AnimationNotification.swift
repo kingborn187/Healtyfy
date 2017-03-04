@@ -1,8 +1,8 @@
 //
-//  AnimationMedicine.swift
+//  AnimationNotification.swift
 //  AppForeverYoung
 //
-//  Created by Gennaro Mellone on 03/03/17.
+//  Created by Gennaro Mellone on 04/03/17.
 //  Copyright © 2017 iosparthenopedeveloper. All rights reserved.
 //
 
@@ -10,15 +10,14 @@ import WatchKit
 import Foundation
 
 
-class AnimationMedicine: WKInterfaceController {
-    @IBOutlet var imageObject: WKInterfaceImage!
+class AnimationNotification: WKInterfaceController {
 
+    @IBOutlet var imageObject: WKInterfaceImage!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        imageObject.setImageNamed("antibiotic")
+        imageObject.setImageNamed("bell")
         WKInterfaceDevice.current().play(.notification)
-        imageObject.startAnimatingWithImages(in: NSRange(location: 0, length: 13), duration: 2, repeatCount: 4)
-        
+        imageObject.startAnimatingWithImages(in: NSRange(location: 0, length: 9), duration: 2, repeatCount: 4)
         // Configure interface objects here.
     }
 

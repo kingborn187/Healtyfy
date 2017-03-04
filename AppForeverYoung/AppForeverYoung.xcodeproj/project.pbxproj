@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6301250F1E6996F500935F9F /* AnimationMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301250E1E6996F500935F9F /* AnimationMedicine.swift */; };
+		639026EB1E6AD33200764226 /* AnimationNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639026EA1E6AD33200764226 /* AnimationNotification.swift */; };
+		639026ED1E6AD35800764226 /* AnimationChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639026EC1E6AD35800764226 /* AnimationChat.swift */; };
 		63DF246C1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
-		63DF246D1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
-		63DF246E1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
-		63DF246F1E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
-		63DF24701E67076000625FB2 /* olivier_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63DF246B1E67076000625FB2 /* olivier_demo.ttf */; };
 		D4073CDE1E681EF80082A765 /* MemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073CDD1E681EF80082A765 /* MemoryTableViewController.swift */; };
 		D4073CE01E681F180082A765 /* MemoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */; };
 		D4073CE21E6825830082A765 /* MemoryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073CE11E6825830082A765 /* MemoryInterfaceController.swift */; };
@@ -115,6 +113,8 @@
 
 /* Begin PBXFileReference section */
 		6301250E1E6996F500935F9F /* AnimationMedicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMedicine.swift; sourceTree = "<group>"; };
+		639026EA1E6AD33200764226 /* AnimationNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationNotification.swift; sourceTree = "<group>"; };
+		639026EC1E6AD35800764226 /* AnimationChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationChat.swift; sourceTree = "<group>"; };
 		63DF246B1E67076000625FB2 /* olivier_demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = olivier_demo.ttf; sourceTree = "<group>"; };
 		D4073CDD1E681EF80082A765 /* MemoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryTableViewController.swift; sourceTree = "<group>"; };
 		D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -200,6 +200,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		639026EE1E6AD40700764226 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				6301250E1E6996F500935F9F /* AnimationMedicine.swift */,
+				639026EA1E6AD33200764226 /* AnimationNotification.swift */,
+				639026EC1E6AD35800764226 /* AnimationChat.swift */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
 		63DF246A1E67074900625FB2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,7 +351,7 @@
 				F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8D11E60242E005C65C7 /* Info.plist */,
 				F9FBE8C71E60242E005C65C7 /* Supporting Files */,
-				6301250E1E6996F500935F9F /* AnimationMedicine.swift */,
+				639026EE1E6AD40700764226 /* Animations */,
 			);
 			path = "ForeverYoungWatchKit Extension";
 			sourceTree = "<group>";
@@ -545,7 +555,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DF246D1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +562,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DF246E1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +569,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DF246F1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 				F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */,
 				F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */,
 			);
@@ -571,7 +578,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DF24701E67076000625FB2 /* olivier_demo.ttf in Resources */,
 				F9FBE8D01E60242E005C65C7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,6 +638,7 @@
 				D43B27591E68C21B00784847 /* MemoryRow.swift in Sources */,
 				D45062CD1E69D46200E7C969 /* NotificationRow.swift in Sources */,
 				D49F599B1E68DD63000EB0A7 /* ChatRow.swift in Sources */,
+				639026ED1E6AD35800764226 /* AnimationChat.swift in Sources */,
 				D49F599D1E68DD98000EB0A7 /* ChatInterfaceController.swift in Sources */,
 				F9FBE8CC1E60242E005C65C7 /* ExtensionDelegate.swift in Sources */,
 				F9FBE8CA1E60242E005C65C7 /* InterfaceController.swift in Sources */,
@@ -639,6 +646,7 @@
 				F981F5BF1E66D9210060BB30 /* DataBase.swift in Sources */,
 				F981F5BE1E66D9050060BB30 /* ShareClass.swift in Sources */,
 				6301250F1E6996F500935F9F /* AnimationMedicine.swift in Sources */,
+				639026EB1E6AD33200764226 /* AnimationNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

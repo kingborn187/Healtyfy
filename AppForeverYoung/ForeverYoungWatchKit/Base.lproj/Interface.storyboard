@@ -31,10 +31,10 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ForeverYoungWatchKit" customModuleProvider="target">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="feS-JM-dv4">
-                            <group key="contentGroup" width="1" height="1" alignment="left" alpha="0.90000000000000002" backgroundImage="notificheWatch" layout="vertical" id="pOI-3z-BHG">
+                            <group key="contentGroup" width="1" height="1" alignment="left" alpha="0.90000000000000002" backgroundImage="notificheWatch" layout="vertical" radius="12" id="pOI-3z-BHG">
                                 <items>
                                     <label height="36" alignment="center" verticalAlignment="center" text="NOTIFICATIONS" textAlignment="center" id="qrh-ZK-rZ2">
-                                        <color key="textColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="font" type="boldSystem" pointSize="18"/>
                                     </label>
                                 </items>
@@ -52,21 +52,38 @@
             </objects>
             <point key="canvasLocation" x="-215" y="526"/>
         </scene>
-        <!--Notification Interface Controller-->
+        <!--Back-->
         <scene sceneID="glF-0Z-3gY">
             <objects>
-                <controller id="eK2-jW-jHD" customClass="NotificationInterfaceController" customModule="ForeverYoungWatchKit_Extension">
+                <controller identifier="NotificationMenu" title="Back" id="eK2-jW-jHD" customClass="NotificationInterfaceController" customModule="ForeverYoungWatchKit_Extension">
                     <items>
-                        <table alignment="left" id="gEP-9J-Bhc">
+                        <table alignment="left" spacing="8" id="gEP-9J-Bhc">
                             <items>
                                 <tableRow identifier="NotificationRows" id="Pag-7K-bHC" customClass="NotificationRow" customModule="ForeverYoungWatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="7XS-8e-tr7">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="12" spacing="2" id="7XS-8e-tr7">
                                         <items>
-                                            <label width="1" alignment="left" text="message" textAlignment="center" id="3iC-g0-tdl"/>
-                                            <imageView height="91" alignment="left" id="sgB-2X-Mfc"/>
-                                            <label width="1" alignment="left" text="sender" id="K8y-wi-j8X"/>
-                                            <label width="1" alignment="left" text="date" id="RN5-gN-47q"/>
+                                            <label width="1" alignment="left" text="message" textAlignment="center" id="3iC-g0-tdl">
+                                                <color key="textColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="19"/>
+                                            </label>
+                                            <group width="1" alignment="left" id="u7L-gg-ppA">
+                                                <items>
+                                                    <label width="36" height="24" alignment="left" text="From:" textAlignment="left" id="J9W-Ie-dI8">
+                                                        <color key="textColor" red="0.96023422479999998" green="0.61872178320000004" blue="0.020890045909999998" alpha="0.65162136130000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" type="system" pointSize="13"/>
+                                                    </label>
+                                                    <label width="90" alignment="center" verticalAlignment="center" text="sender" textAlignment="left" id="K8y-wi-j8X">
+                                                        <color key="textColor" red="0.96023422479999998" green="0.61872178320000004" blue="0.020890045909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" type="system" pointSize="14"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <imageView alignment="left" id="sgB-2X-Mfc"/>
+                                            <label width="1" alignment="left" text="date" textAlignment="center" id="RN5-gN-47q">
+                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                            </label>
                                         </items>
+                                        <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="0.40282534250000002" colorSpace="custom" customColorSpace="sRGB"/>
                                     </group>
                                     <connections>
                                         <outlet property="date" destination="RN5-gN-47q" id="TxS-jL-HyI"/>
@@ -83,7 +100,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-215" y="865.5"/>
+            <point key="canvasLocation" x="-215" y="865"/>
         </scene>
         <!--Animation Medicine-->
         <scene sceneID="bIM-9E-HF1">
@@ -97,19 +114,33 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-215" y="215"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="bup-dx-ajB">
-            <objects>
-                <controller id="CFx-vx-dzJ"/>
-            </objects>
             <point key="canvasLocation" x="102" y="215"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Animation Notification-->
+        <scene sceneID="bup-dx-ajB">
+            <objects>
+                <controller id="CFx-vx-dzJ" customClass="AnimationNotification" customModule="ForeverYoungWatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" id="79z-Bz-Va8"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageObject" destination="79z-Bz-Va8" id="3MC-Jh-wsu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-215" y="215"/>
+        </scene>
+        <!--Animation Chat-->
         <scene sceneID="M3y-IH-O1Y">
             <objects>
-                <controller id="wM8-o0-74L"/>
+                <controller id="wM8-o0-74L" customClass="AnimationChat" customModule="ForeverYoungWatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" id="Ntm-B2-5VN"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageObject" destination="Ntm-B2-5VN" id="g9m-lY-VHX"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="423" y="215"/>
         </scene>
@@ -119,10 +150,10 @@
                 <controller id="Idn-St-dCN">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="i8c-yc-Ri7">
-                            <group key="contentGroup" width="1" height="1" alignment="left" backgroundImage="medicineWatch" layout="vertical" id="i3A-Ec-k6w">
+                            <group key="contentGroup" width="1" height="1" alignment="left" backgroundImage="medicineWatch" layout="vertical" radius="12" id="i3A-Ec-k6w">
                                 <items>
                                     <label alignment="center" verticalAlignment="center" text="MEMO" id="O6g-6L-7DV">
-                                        <color key="textColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="font" type="boldSystem" pointSize="18"/>
                                     </label>
                                 </items>
@@ -210,7 +241,7 @@
                                     <group key="rootItem" width="1" height="168" alignment="left" layout="vertical" radius="12" spacing="4" id="DSN-bZ-Yje">
                                         <items>
                                             <label alignment="center" text="query" textAlignment="center" numberOfLines="0" id="IK2-Pb-pg8">
-                                                <color key="textColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="font" type="system" pointSize="25"/>
                                             </label>
                                             <imageView height="100" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="TSI-P6-L7I"/>
@@ -258,10 +289,10 @@
                 <controller id="udU-Mm-e7H">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="Vx1-ON-wLB">
-                            <group key="contentGroup" width="1" height="1" alignment="left" backgroundImage="chatWatch" id="bI1-xk-CAc">
+                            <group key="contentGroup" width="1" height="1" alignment="left" backgroundImage="chatWatch" radius="12" id="bI1-xk-CAc">
                                 <items>
                                     <label alignment="center" verticalAlignment="center" text="CHAT" id="wj4-KE-bI8">
-                                        <color key="textColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="font" type="boldSystem" pointSize="18"/>
                                     </label>
                                 </items>
