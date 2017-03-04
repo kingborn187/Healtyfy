@@ -44,6 +44,7 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
         let result = DataBase.createMemory(telephone: globalTelephone, titleMemory: titleMemory.text!, bodyMemory: bodyMemory.text!, dateMemory: dateMemory.text!, timeMemory: timeMemory.text!, imageMemory: imageMemory.image!)
         
         if result {
+            Notification.sendMemory(name: "", surname: "", token: "")
             serviceManager.send(msg: "memory by relatives", usernameRequest: globalUsername)
             DataBase.createNotification(sender: globalTelephone, consignee: globarControlTelephone, message: "Memory")
             let alertController = UIAlertController(title: "Registration memory send", message: "You have successfully send a registartion memory", preferredStyle: UIAlertControllerStyle.alert)
