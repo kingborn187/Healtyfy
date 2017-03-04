@@ -21,17 +21,13 @@ class RealtivesMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        namePerson.text = name
-        surnamePerson.text = surname
-        
         if imagex != "" {
             downloadImage(url: URL(string: imagex)!, imageView: imagePerson)
             self.imagePerson.layer.cornerRadius = self.imagePerson.frame.size.width / 2
             self.imagePerson.clipsToBounds = true
+            namePerson.text = name
+            surnamePerson.text = surname
         }
-        namePerson.text = name
-        surnamePerson.text = surname
     }
     
     override func didReceiveMemoryWarning() {

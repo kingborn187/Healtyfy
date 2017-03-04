@@ -60,6 +60,7 @@ class AddPersonViewController: UIViewController {
         if find {
             Notification.sendFiendshipRequest(name: "renato", surname: "tramontano", token: token)
             serviceManager.send(msg: "friendship request", usernameRequest: globalUsername)
+            DataBase.createNotification(sender: globalTelephone, consignee: telephone.text!, message: "Association")
             let alertController = UIAlertController(title: "Request send", message: "The friend request has been sent", preferredStyle: UIAlertControllerStyle.alert)
             
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:  nil))

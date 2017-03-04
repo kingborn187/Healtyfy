@@ -45,6 +45,7 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
         
         if result {
             serviceManager.send(msg: "memory by relatives", usernameRequest: globalUsername)
+            DataBase.createNotification(sender: globalTelephone, consignee: globarControlTelephone, message: "Memory")
             let alertController = UIAlertController(title: "Registration memory send", message: "You have successfully send a registartion memory", preferredStyle: UIAlertControllerStyle.alert)
             
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction) in
@@ -154,6 +155,7 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged2), for: .valueChanged)
     }
+  
     
     func doneClick2() {
         let dateFormatter1 = DateFormatter()
