@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        
+        print("Prova")
     }
 }
 
@@ -77,7 +77,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 } else {
                     print("amicizia non aggiunta")
                 }
-
+                
             }
             else if response.actionIdentifier == "answer2" {
                 // Invalidate the timer. . .
@@ -85,10 +85,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             }
         }
         else if response.notification.request.content.categoryIdentifier == "memorySaved" {
+            UNUserNotificationCenter.current().delegate = self
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [response.notification.request.identifier])
             print("memory aggiunta")
+            
+            if response.actionIdentifier == "view" {
+                print("enter in action view")
+            }
         }
-        
-
     }
 }
 
@@ -105,12 +109,15 @@ extension AppDelegate {
                 UNUserNotificationCenter.current().setNotificationCategories([friendRequest])
                 UNUserNotificationCenter.current().delegate = self
                 
-                
                 let respost = UNNotificationAction(identifier: "view", title: "VIEW", options: [])
                 let memorySaved = UNNotificationCategory(identifier: "memorySaved", actions: [respost] , intentIdentifiers: [], options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([memorySaved])
+                
+                
+                
+                
+                
                 UNUserNotificationCenter.current().delegate = self
-            
                 
                 print("⌚️⌚️⌚️Successfully registered notification support")
             } else {

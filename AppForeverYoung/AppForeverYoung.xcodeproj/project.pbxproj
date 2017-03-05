@@ -15,6 +15,7 @@
 		D4073CE01E681F180082A765 /* MemoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */; };
 		D4073CE21E6825830082A765 /* MemoryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4073CE11E6825830082A765 /* MemoryInterfaceController.swift */; };
 		D42508F41E65D2D400CFDB07 /* FriedRequestNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */; };
+		D430A5931E6C1E0000CE85B8 /* profilo.png in Resources */ = {isa = PBXBuildFile; fileRef = D430A5921E6C1E0000CE85B8 /* profilo.png */; };
 		D4319DC61E60B32D00D51C97 /* PersonasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */; };
 		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
 		D433A1C81E69C24A00924B01 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433A1C71E69C24A00924B01 /* NotificationTableViewController.swift */; };
@@ -121,6 +122,7 @@
 		D4073CDF1E681F180082A765 /* MemoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryTableViewCell.swift; sourceTree = "<group>"; };
 		D4073CE11E6825830082A765 /* MemoryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryInterfaceController.swift; sourceTree = "<group>"; };
 		D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedRequestNotificationController.swift; sourceTree = "<group>"; };
+		D430A5921E6C1E0000CE85B8 /* profilo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profilo.png; sourceTree = "<group>"; };
 		D4319DC51E60B32D00D51C97 /* PersonasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewController.swift; sourceTree = "<group>"; };
 		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
 		D433A1C71E69C24A00924B01 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				D4073CDB1E6814630082A765 /* Relatives Class */,
 				D4DC12FD1E5893F4003DF05C /* AppForeverYoung.entitlements */,
 				D46A7C9C1E574D8400F974EA /* Main.storyboard */,
+				D430A5921E6C1E0000CE85B8 /* profilo.png */,
 				D46A7C9F1E574D8400F974EA /* Assets.xcassets */,
 				D46A7CA11E574D8400F974EA /* LaunchScreen.storyboard */,
 				D46A7CA41E574D8400F974EA /* Info.plist */,
@@ -550,6 +553,7 @@
 				D46A7CA31E574D8400F974EA /* LaunchScreen.storyboard in Resources */,
 				D46A7CA01E574D8400F974EA /* Assets.xcassets in Resources */,
 				63DF246C1E67076000625FB2 /* olivier_demo.ttf in Resources */,
+				D430A5931E6C1E0000CE85B8 /* profilo.png in Resources */,
 				D46A7C9E1E574D8400F974EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

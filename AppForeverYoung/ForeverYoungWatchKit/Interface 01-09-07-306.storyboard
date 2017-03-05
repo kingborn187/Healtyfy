@@ -108,20 +108,21 @@
                 <controller id="dKW-2O-sHl">
                     <items>
                         <label width="135" height="82" alignment="left" text="GOOD MOORNING. HOW ARE YOU TODAY?" textAlignment="center" numberOfLines="0" id="BFY-Qh-hjT">
+                            <color key="textColor" red="1" green="0.40999432260000002" blue="0.069671252049999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <group width="1" alignment="left" id="Ydl-rF-KIm">
                             <items>
-                                <button width="35" alignment="left" title="😀" id="d5L-Rr-pzJ"/>
-                                <button width="35" alignment="left" title="☹️" id="CAd-8J-ukX"/>
-                                <button width="35" alignment="left" title="😡" id="xbF-R6-Mx3"/>
-                                <button width="35" alignment="left" title="😴" id="hKP-tu-4cU"/>
+                                <button width="32" alignment="left" title="😀" id="d5L-Rr-pzJ"/>
+                                <button width="32" alignment="left" title="☹️" id="CAd-8J-ukX"/>
+                                <button width="32" alignment="left" title="😡" id="xbF-R6-Mx3"/>
+                                <button width="32" alignment="left" title="😴" id="hKP-tu-4cU"/>
                             </items>
                         </group>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-215" y="1174"/>
+            <point key="canvasLocation" x="-212" y="1157"/>
         </scene>
         <!--Animation Medicine-->
         <scene sceneID="bIM-9E-HF1">
@@ -290,7 +291,7 @@
             <objects>
                 <controller id="Ca3-t5-lwP" customClass="AnswerInterfaceController" customModule="ForeverYoungWatchKit_Extension">
                     <items>
-                        <button width="1" height="67" alignment="left" title="YES" id="qdC-V4-2hW">
+                        <button width="1" height="67" alignment="left" title="..." id="qdC-V4-2hW">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" type="system" weight="heavy" pointSize="24"/>
@@ -298,7 +299,7 @@
                                 <action selector="sendMessage1" destination="Ca3-t5-lwP" id="GKj-ta-iui"/>
                             </connections>
                         </button>
-                        <button width="1" height="67" alignment="left" verticalAlignment="bottom" title="NO" id="Vuc-tQ-Kch">
+                        <button width="1" height="67" alignment="left" verticalAlignment="bottom" title="..." id="Vuc-tQ-Kch">
                             <color key="titleColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="heavy" pointSize="24"/>
