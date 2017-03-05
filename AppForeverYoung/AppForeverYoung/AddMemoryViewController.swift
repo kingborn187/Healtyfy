@@ -16,6 +16,7 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
     @IBOutlet var timeMemory: UITextField!
     @IBOutlet var imageMemory: UIImageView!
     @IBOutlet weak var SendMemoryButton: UIButton!
+    @IBOutlet weak var riquadro1: UIImageView!
     
     let serviceManager = ServiceManager()
     let picker = UIImagePickerController()
@@ -23,6 +24,11 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        riquadro1.layer.cornerRadius = 15
+        riquadro1.layer.masksToBounds = true
+        riquadro1.layer.borderWidth = 2.0
+        riquadro1.layer.borderColor = UIColor(hue: 0.7222, saturation: 0, brightness: 1, alpha: 0.25).cgColor
         
         SendMemoryButton.layer.borderWidth = 1.0
         SendMemoryButton.layer.borderColor = UIColor(white: 1.0, alpha: 0.7).cgColor

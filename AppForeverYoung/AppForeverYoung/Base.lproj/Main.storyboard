@@ -272,6 +272,10 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.MasksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXv-Pb-fJ9">
+                                <rect key="frame" x="8" y="75" width="359" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -283,6 +287,7 @@
                         <outlet property="bodyMemory" destination="2aB-sW-MGE" id="6oe-ej-26u"/>
                         <outlet property="dateMemory" destination="UDz-lm-g1g" id="nv1-GQ-Mni"/>
                         <outlet property="imageMemory" destination="7VO-zq-2uZ" id="jeZ-JV-8HF"/>
+                        <outlet property="riquadro1" destination="YXv-Pb-fJ9" id="S6K-P8-Vpa"/>
                         <outlet property="timeMemory" destination="yvG-hA-Dy8" id="QpA-NV-OUQ"/>
                         <outlet property="titleMemory" destination="A6m-aA-ppx" id="lFZ-YH-Ver"/>
                         <segue destination="5r4-FH-Jva" kind="show" identifier="returnMainRelatives" id="Yzd-Tg-44w"/>
@@ -1295,6 +1300,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Yzd-Tg-44w"/>
-        <segue reference="QxB-kO-N1I"/>
+        <segue reference="AYp-Bs-Fa2"/>
     </inferredMetricsTieBreakers>
 </document>
