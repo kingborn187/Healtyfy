@@ -578,7 +578,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sfondo1" translatesAutoresizingMaskIntoConstraints="NO" id="YJt-7d-aY4">
@@ -701,7 +701,7 @@
             <objects>
                 <tableViewController id="eZg-yW-gWw" customClass="MemoryTableViewController" customModule="AppForeverYoung" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="4OR-gp-o2W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -774,7 +774,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dqE-ib-QQQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XC6-mw-78h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sfondogenerale" translatesAutoresizingMaskIntoConstraints="NO" id="XSE-iF-ImE">
@@ -881,7 +881,7 @@
             <objects>
                 <tableViewController id="fRd-5q-4VS" customClass="NotificationTableViewController" customModule="AppForeverYoung" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="I8i-JI-lhM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -963,7 +963,7 @@
             <objects>
                 <tableViewController id="ENm-hO-CW1" customClass="ChatTableViewController" customModule="AppForeverYoung" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="b1J-SQ-F5C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -1019,7 +1019,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KJa-8w-OlT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EtL-jW-J7o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sfondogenerale" translatesAutoresizingMaskIntoConstraints="NO" id="rT5-Jt-QKU">
@@ -1176,7 +1176,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                        <color key="barTintColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.97588807344436646" green="0.43843698910850193" blue="0.086975083972915548" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" red="0.075111040609137092" green="0.063411117644058032" blue="0.0024177164731816344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1202,12 +1202,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.97588807339999994" green="0.43843698910000001" blue="0.086975083970000006" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.95478636026382446" green="0.36264243721961975" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.98211938142776489" green="0.757823646068573" blue="0.02305920235812664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.60067157018264161" green="0.60661881345177671" blue="0.60661881345177671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.85077304636956308" green="0.85919654187817263" blue="0.85919654187817263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -1227,7 +1228,7 @@
     <resources>
         <image name="1" width="25" height="25"/>
         <image name="2" width="25" height="15"/>
-        <image name="3" width="22" height="25"/>
+        <image name="3" width="25" height="28"/>
         <image name="4" width="28" height="25"/>
         <image name="LogoHeltify" width="1280" height="1024"/>
         <image name="Select Person0" width="21" height="25"/>
@@ -1244,6 +1245,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HHv-Qg-qua"/>
-        <segue reference="8ON-Ca-yxa"/>
+        <segue reference="AYp-Bs-Fa2"/>
     </inferredMetricsTieBreakers>
 </document>
