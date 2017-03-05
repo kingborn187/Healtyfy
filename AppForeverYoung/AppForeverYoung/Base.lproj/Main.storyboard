@@ -128,7 +128,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0o1-iQ-NmX">
-                                <rect key="frame" x="8" y="144" width="359" height="209"/>
+                                <rect key="frame" x="8" y="93" width="359" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyz-QC-3uR">
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbz-aG-uBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="-1531"/>
+            <point key="canvasLocation" x="1740" y="-1531.4842578710645"/>
         </scene>
         <!--Insert Memory-->
         <scene sceneID="fU3-mi-K5A">
@@ -1170,10 +1170,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.MasksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2IM-n4-RnZ">
+                                <rect key="frame" x="8" y="72" width="359" height="472"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New User" id="75m-NU-8mN">
+                    <navigationItem key="navigationItem" title="NEW USER" id="75m-NU-8mN">
                         <barButtonItem key="backBarButtonItem" title="Login" id="zMP-On-mgi"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -1184,6 +1188,7 @@
                         <outlet property="imagePerson" destination="B8s-V2-jjN" id="OHS-B6-FS5"/>
                         <outlet property="name" destination="W5v-H3-q2f" id="6Ev-I7-Aub"/>
                         <outlet property="password" destination="nhs-0j-fmn" id="zQE-wy-dy7"/>
+                        <outlet property="riquadro1" destination="2IM-n4-RnZ" id="ba0-PG-Ugq"/>
                         <outlet property="surname" destination="l3S-PG-F4z" id="ypS-O7-0Lj"/>
                         <outlet property="telephone" destination="Ldk-Zr-aNT" id="KQp-mL-5MC"/>
                         <outlet property="typePersonPicker" destination="Rhz-wZ-WSC" id="Zgq-Dy-YYc"/>
@@ -1210,6 +1215,7 @@
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" red="0.075111040609137092" green="0.063411117644058032" blue="0.0024177164731816344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1299,7 +1305,7 @@
         <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yzd-Tg-44w"/>
         <segue reference="AYp-Bs-Fa2"/>
+        <segue reference="HHv-Qg-qua"/>
     </inferredMetricsTieBreakers>
 </document>
