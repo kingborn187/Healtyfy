@@ -19,6 +19,8 @@
 		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
 		D433A1C81E69C24A00924B01 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433A1C71E69C24A00924B01 /* NotificationTableViewController.swift */; };
 		D433A1CA1E69C26700924B01 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433A1C91E69C26700924B01 /* NotificationTableViewCell.swift */; };
+		D434F0161E6B8F47008DD931 /* Interface 01-09-07-306.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D434F0151E6B8F47008DD931 /* Interface 01-09-07-306.storyboard */; };
+		D434F0181E6B8FC2008DD931 /* AnswerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434F0171E6B8FC2008DD931 /* AnswerInterfaceController.swift */; };
 		D43B27591E68C21B00784847 /* MemoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B27581E68C21B00784847 /* MemoryRow.swift */; };
 		D43EE5541E68D7BC0095AAC7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */; };
 		D45062CB1E69D43F00E7C969 /* NotificationInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45062CA1E69D43F00E7C969 /* NotificationInterfaceController.swift */; };
@@ -44,7 +46,6 @@
 		F981F5BD1E66D9010060BB30 /* ShareClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981F5BC1E66D9010060BB30 /* ShareClass.swift */; };
 		F981F5BE1E66D9050060BB30 /* ShareClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981F5BC1E66D9010060BB30 /* ShareClass.swift */; };
 		F981F5BF1E66D9210060BB30 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7CC81E575E6200F974EA /* DataBase.swift */; };
-		F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8B81E60242E005C65C7 /* Interface.storyboard */; };
 		F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */; };
 		F9FBE8C31E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F9FBE8CA1E60242E005C65C7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */; };
@@ -124,6 +125,8 @@
 		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
 		D433A1C71E69C24A00924B01 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		D433A1C91E69C26700924B01 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		D434F0151E6B8F47008DD931 /* Interface 01-09-07-306.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Interface 01-09-07-306.storyboard"; sourceTree = "<group>"; };
+		D434F0171E6B8FC2008DD931 /* AnswerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerInterfaceController.swift; sourceTree = "<group>"; };
 		D43B27581E68C21B00784847 /* MemoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryRow.swift; sourceTree = "<group>"; };
 		D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		D45062CA1E69D43F00E7C969 /* NotificationInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationInterfaceController.swift; sourceTree = "<group>"; };
@@ -155,7 +158,6 @@
 		F951DC451E604E4B00B81B01 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = AppForeverYoung/Notification.swift; sourceTree = "<group>"; };
 		F981F5BC1E66D9010060BB30 /* ShareClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareClass.swift; sourceTree = "<group>"; };
 		F9FBE8B61E60242E005C65C7 /* ForeverYoungWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForeverYoungWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9FBE8B91E60242E005C65C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9FBE8BD1E60242E005C65C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9FBE8C21E60242E005C65C7 /* ForeverYoungWatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ForeverYoungWatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -328,7 +330,7 @@
 		F9FBE8B71E60242E005C65C7 /* ForeverYoungWatchKit */ = {
 			isa = PBXGroup;
 			children = (
-				F9FBE8B81E60242E005C65C7 /* Interface.storyboard */,
+				D434F0151E6B8F47008DD931 /* Interface 01-09-07-306.storyboard */,
 				F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8BD1E60242E005C65C7 /* Info.plist */,
 			);
@@ -348,6 +350,7 @@
 				D49F599A1E68DD63000EB0A7 /* ChatRow.swift */,
 				D45062CA1E69D43F00E7C969 /* NotificationInterfaceController.swift */,
 				D45062CC1E69D46200E7C969 /* NotificationRow.swift */,
+				D434F0171E6B8FC2008DD931 /* AnswerInterfaceController.swift */,
 				F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8D11E60242E005C65C7 /* Info.plist */,
 				F9FBE8C71E60242E005C65C7 /* Supporting Files */,
@@ -569,8 +572,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D434F0161E6B8F47008DD931 /* Interface 01-09-07-306.storyboard in Resources */,
 				F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */,
-				F9FBE8BA1E60242E005C65C7 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +650,7 @@
 				F981F5BE1E66D9050060BB30 /* ShareClass.swift in Sources */,
 				6301250F1E6996F500935F9F /* AnimationMedicine.swift in Sources */,
 				639026EB1E6AD33200764226 /* AnimationNotification.swift in Sources */,
+				D434F0181E6B8FC2008DD931 /* AnswerInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,14 +694,6 @@
 				D46A7CA21E574D8400F974EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F9FBE8B81E60242E005C65C7 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9FBE8B91E60242E005C65C7 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -46,6 +46,13 @@ class ChatInterfaceController: WKInterfaceController {
     }
     
     
+    override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
+        query = chat[rowIndex].message
+        ricevent = chat[rowIndex].sender
+        sender = chat[rowIndex].consignee
+        return chat[rowIndex].message
+    }
+    
     func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in

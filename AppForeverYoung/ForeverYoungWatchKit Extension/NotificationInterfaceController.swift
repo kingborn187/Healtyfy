@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class NotificationInterfaceController: WKInterfaceController {
 
     @IBOutlet var tableView: WKInterfaceTable!

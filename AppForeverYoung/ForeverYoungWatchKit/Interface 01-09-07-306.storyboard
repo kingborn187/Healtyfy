@@ -78,7 +78,7 @@
                                                     </label>
                                                 </items>
                                             </group>
-                                            <imageView alignment="left" id="sgB-2X-Mfc"/>
+                                            <imageView height="102" alignment="left" id="sgB-2X-Mfc"/>
                                             <label width="1" alignment="left" text="date" textAlignment="center" id="RN5-gN-47q">
                                                 <fontDescription key="font" type="system" pointSize="13"/>
                                             </label>
@@ -100,7 +100,28 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-215" y="865"/>
+            <point key="canvasLocation" x="-215" y="867.5"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="qwB-ys-ihc">
+            <objects>
+                <controller id="dKW-2O-sHl">
+                    <items>
+                        <label width="135" height="82" alignment="left" text="GOOD MOORNING. HOW ARE YOU TODAY?" textAlignment="center" numberOfLines="0" id="BFY-Qh-hjT">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <group width="1" alignment="left" id="Ydl-rF-KIm">
+                            <items>
+                                <button width="35" alignment="left" title="😀" id="d5L-Rr-pzJ"/>
+                                <button width="35" alignment="left" title="☹️" id="CAd-8J-ukX"/>
+                                <button width="35" alignment="left" title="😡" id="xbF-R6-Mx3"/>
+                                <button width="35" alignment="left" title="😴" id="hKP-tu-4cU"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-215" y="1174"/>
         </scene>
         <!--Animation Medicine-->
         <scene sceneID="bIM-9E-HF1">
@@ -251,6 +272,7 @@
                                     <connections>
                                         <outlet property="image" destination="TSI-P6-L7I" id="S9a-vU-pj7"/>
                                         <outlet property="query" destination="IK2-Pb-pg8" id="ycr-la-DGK"/>
+                                        <segue destination="Ca3-t5-lwP" kind="modal" id="0R8-xV-1ZV"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -263,25 +285,35 @@
             </objects>
             <point key="canvasLocation" x="423" y="875"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Answer Interface Controller-->
         <scene sceneID="OhA-g4-c8Y">
             <objects>
-                <controller id="Ca3-t5-lwP">
+                <controller id="Ca3-t5-lwP" customClass="AnswerInterfaceController" customModule="ForeverYoungWatchKit_Extension">
                     <items>
                         <button width="1" height="67" alignment="left" title="YES" id="qdC-V4-2hW">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" type="system" weight="heavy" pointSize="24"/>
+                            <connections>
+                                <action selector="sendMessage1" destination="Ca3-t5-lwP" id="GKj-ta-iui"/>
+                            </connections>
                         </button>
                         <button width="1" height="67" alignment="left" verticalAlignment="bottom" title="NO" id="Vuc-tQ-Kch">
                             <color key="titleColor" red="0.96144300699999996" green="0.51502692699999997" blue="0.0034006061030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="heavy" pointSize="24"/>
+                            <connections>
+                                <action selector="sendMessage2" destination="Ca3-t5-lwP" id="y2B-uT-AeW"/>
+                            </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="ans1" destination="qdC-V4-2hW" id="4gS-cN-a2b"/>
+                        <outlet property="ans2" destination="Vuc-tQ-Kch" id="XOV-zj-f6r"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="677" y="866"/>
+            <point key="canvasLocation" x="693" y="866"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="V3i-Zf-6vC">

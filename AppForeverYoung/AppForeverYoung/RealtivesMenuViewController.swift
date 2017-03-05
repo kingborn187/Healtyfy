@@ -56,9 +56,11 @@ class RealtivesMenuViewController: UIViewController {
         }
     }
     
+
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
 }

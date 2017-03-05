@@ -84,6 +84,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 print("enter in action decline")
             }
         }
+        else if response.notification.request.content.categoryIdentifier == "memorySaved" {
+            print("memory aggiunta")
+        }
         
 
     }
@@ -101,6 +104,14 @@ extension AppDelegate {
                 let friendRequest = UNNotificationCategory(identifier: "friendRequest", actions: [answer1, answer2] , intentIdentifiers: [], options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([friendRequest])
                 UNUserNotificationCenter.current().delegate = self
+                
+                
+                let respost = UNNotificationAction(identifier: "view", title: "VIEW", options: [])
+                let memorySaved = UNNotificationCategory(identifier: "memorySaved", actions: [respost] , intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([memorySaved])
+                UNUserNotificationCenter.current().delegate = self
+            
+                
                 print("⌚️⌚️⌚️Successfully registered notification support")
             } else {
                 print("⌚️⌚️⌚️ERROR: \(error?.localizedDescription)")
