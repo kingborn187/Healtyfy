@@ -20,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Check if you have permission to use notifications.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         registerUserNotificationSettings()
+        
+        
+        // LEVARE
+        let answerOne = UNNotificationAction(identifier: "answerOne", title: "29", options: [.foreground])
+        let answerTwo = UNNotificationAction(identifier: "answerTwo", title: "55", options: [.foreground])
+        let clue = UNNotificationAction(identifier: "clue", title: "Get a clue...", options: [.foreground])
+        
+        let quizCategory = UNNotificationCategory(identifier: "quizCategory", actions: [answerOne, answerTwo, clue], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([quizCategory])
+
+        
         return true
     }
     

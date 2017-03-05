@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications // LEVARE
 
 var name = ""
 var surname = ""
@@ -28,7 +29,35 @@ class RealtivesMenuViewController: UIViewController {
             namePerson.text = name
             surnamePerson.text = surname
         }
+        
+        scheduleNotification() // LEVARE
     }
+    
+    // LEVARE
+    func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Association request "
+        //content.subtitle = "Let's see how smart you are!"
+        content.body = "How many countries are there in Africa?"
+        content.badge = 1
+        content.categoryIdentifier = "quizCategory"
+        content.sound = UNNotificationSound.default()
+        let url = Bundle.main.url(forResource: "Aladdin-Thinking-GIF", withExtension: "gif")
+        
+        if let attachment = try? UNNotificationAttachment(identifier: "africaQuiz", url: url!, options: nil) {
+            content.attachments = [attachment]
+        }
+        
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let requestIdentifier = "africaQuiz"
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+            // handle error
+        })
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

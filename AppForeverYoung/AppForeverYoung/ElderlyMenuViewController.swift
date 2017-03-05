@@ -39,7 +39,7 @@ class ElderlyMenuViewController: UIViewController {
     
     
     func showMessage(msg: String) {
-        let alertController = UIAlertController(title: "Friend request", message: "you have received a request for amiciza by ...", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Association request", message: "you have received a request for association by Guido", preferredStyle: UIAlertControllerStyle.alert)
         
         alertController.addAction(UIAlertAction(title: "DECLINE", style: UIAlertActionStyle.default, handler: nil))
         alertController.addAction(UIAlertAction(title: "ACCEPT", style: UIAlertActionStyle.default, handler:  {(action:UIAlertAction) in
