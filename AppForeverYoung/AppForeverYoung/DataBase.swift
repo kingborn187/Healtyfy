@@ -394,7 +394,7 @@ class DataBase {
                 if let dataArr = data as? [[String: Any]] {
                     for person in dataArr {
                         //your code for accessing dd.
-                        if globalUsername != person["username"] as! String {
+                        if (globalUsername != person["username"] as! String) && ("Elderly" == person["type"] as! String)  {
                             let telephone = person["telephone"] as! String
                             let name = person["name"] as! String
                             let surname = person["surname"] as! String
