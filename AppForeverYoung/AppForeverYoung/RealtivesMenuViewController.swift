@@ -19,6 +19,12 @@ class RealtivesMenuViewController: UIViewController {
     @IBOutlet var namePerson: UILabel!
     @IBOutlet var surnamePerson: UILabel!
     
+    
+    @IBOutlet var ms1: UILabel!
+    @IBOutlet var ms2: UILabel!
+    @IBOutlet var ms3: UILabel!
+    @IBOutlet var ms4: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +34,8 @@ class RealtivesMenuViewController: UIViewController {
             self.imagePerson.clipsToBounds = true
             namePerson.text = name
             surnamePerson.text = surname
+//            ms3.text = lastPosition
+//            ms4.text = goodMorning
         }
         
         scheduleNotification() // LEVARE
@@ -36,20 +44,20 @@ class RealtivesMenuViewController: UIViewController {
     // LEVARE
     func scheduleNotification() {
         let content = UNMutableNotificationContent()
-        content.title = "Association request "
+        content.title = "Answer"
         //content.subtitle = "Let's see how smart you are!"
-        content.body = "How many countries are there in Africa?"
-        content.badge = 1
+        content.body = "I'm fine thanks"
+        content.badge = 0
         content.categoryIdentifier = "quizCategory"
         content.sound = UNNotificationSound.default()
-        let url = Bundle.main.url(forResource: "Aladdin-Thinking-GIF", withExtension: "gif")
+        let url = Bundle.main.url(forResource: "vincenzo", withExtension: "jpg")
         
         if let attachment = try? UNNotificationAttachment(identifier: "africaQuiz", url: url!, options: nil) {
             content.attachments = [attachment]
         }
         
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         
         let requestIdentifier = "africaQuiz"
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)

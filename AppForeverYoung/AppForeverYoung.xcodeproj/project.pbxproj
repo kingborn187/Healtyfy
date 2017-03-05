@@ -25,7 +25,6 @@
 		D43EE5541E68D7BC0095AAC7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */; };
 		D45062CB1E69D43F00E7C969 /* NotificationInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45062CA1E69D43F00E7C969 /* NotificationInterfaceController.swift */; };
 		D45062CD1E69D46200E7C969 /* NotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45062CC1E69D46200E7C969 /* NotificationRow.swift */; };
-		D45772B41E6C7399001B87DF /* guido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D45772B31E6C7399001B87DF /* guido.jpg */; };
 		D46A7C991E574D8400F974EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7C981E574D8400F974EA /* AppDelegate.swift */; };
 		D46A7C9B1E574D8400F974EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A7C9A1E574D8400F974EA /* ViewController.swift */; };
 		D46A7C9E1E574D8400F974EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46A7C9C1E574D8400F974EA /* Main.storyboard */; };
@@ -39,6 +38,10 @@
 		D49F59991E68D7DE000EB0A7 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F59981E68D7DE000EB0A7 /* ChatTableViewController.swift */; };
 		D49F599B1E68DD63000EB0A7 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F599A1E68DD63000EB0A7 /* ChatRow.swift */; };
 		D49F599D1E68DD98000EB0A7 /* ChatInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F599C1E68DD98000EB0A7 /* ChatInterfaceController.swift */; };
+		D4ADBFD41E6C9F13004B413B /* guido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD31E6C9F13004B413B /* guido.jpg */; };
+		D4ADBFD61E6CAE39004B413B /* vincenzo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD51E6CAE39004B413B /* vincenzo.jpg */; };
+		D4ADBFD91E6CC411004B413B /* guido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD71E6CC411004B413B /* guido.jpg */; };
+		D4ADBFDA1E6CC411004B413B /* vincenzo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD81E6CC411004B413B /* vincenzo.jpg */; };
 		D4B23E511E64AD86009E8EBC /* AddMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */; };
 		D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */; };
 		D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */; };
@@ -132,7 +135,6 @@
 		D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		D45062CA1E69D43F00E7C969 /* NotificationInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationInterfaceController.swift; sourceTree = "<group>"; };
 		D45062CC1E69D46200E7C969 /* NotificationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRow.swift; sourceTree = "<group>"; };
-		D45772B31E6C7399001B87DF /* guido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guido.jpg; sourceTree = "<group>"; };
 		D46A7C951E574D8400F974EA /* AppForeverYoung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppForeverYoung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A7C981E574D8400F974EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46A7C9A1E574D8400F974EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,11 @@
 		D49F59981E68D7DE000EB0A7 /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		D49F599A1E68DD63000EB0A7 /* ChatRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		D49F599C1E68DD98000EB0A7 /* ChatInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInterfaceController.swift; sourceTree = "<group>"; };
+		D4ADBFD31E6C9F13004B413B /* guido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guido.jpg; sourceTree = "<group>"; };
+		D4ADBFD51E6CAE39004B413B /* vincenzo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vincenzo.jpg; sourceTree = "<group>"; };
+		D4ADBFD71E6CC411004B413B /* guido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guido.jpg; sourceTree = "<group>"; };
+		D4ADBFD81E6CC411004B413B /* vincenzo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vincenzo.jpg; sourceTree = "<group>"; };
+		D4ADBFDB1E6CC8F2004B413B /* ForeverYoungWatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ForeverYoungWatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryViewController.swift; sourceTree = "<group>"; };
 		D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtivesMenuViewController.swift; sourceTree = "<group>"; };
 		D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +232,8 @@
 		D4073CDB1E6814630082A765 /* Relatives Class */ = {
 			isa = PBXGroup;
 			children = (
+				D4ADBFD31E6C9F13004B413B /* guido.jpg */,
+				D4ADBFD51E6CAE39004B413B /* vincenzo.jpg */,
 				D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */,
 				D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */,
 				D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */,
@@ -279,7 +288,6 @@
 		D46A7C971E574D8400F974EA /* AppForeverYoung */ = {
 			isa = PBXGroup;
 			children = (
-				D45772B31E6C7399001B87DF /* guido.jpg */,
 				D46A7C981E574D8400F974EA /* AppDelegate.swift */,
 				D46A7C9A1E574D8400F974EA /* ViewController.swift */,
 				D46A7CC61E5751B600F974EA /* CreateUserViewController.swift */,
@@ -343,8 +351,11 @@
 		F9FBE8C61E60242E005C65C7 /* ForeverYoungWatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */,
 				F9FBE8CB1E60242E005C65C7 /* ExtensionDelegate.swift */,
+				D4ADBFDB1E6CC8F2004B413B /* ForeverYoungWatchKit Extension.entitlements */,
+				D4ADBFD71E6CC411004B413B /* guido.jpg */,
+				D4ADBFD81E6CC411004B413B /* vincenzo.jpg */,
+				F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */,
 				F9FBE8CD1E60242E005C65C7 /* NotificationController.swift */,
 				D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */,
 				D4073CE11E6825830082A765 /* MemoryInterfaceController.swift */,
@@ -520,6 +531,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 93JF9LS6ZY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -550,11 +566,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D45772B41E6C7399001B87DF /* guido.jpg in Resources */,
+				D4ADBFD41E6C9F13004B413B /* guido.jpg in Resources */,
 				D46A7CA31E574D8400F974EA /* LaunchScreen.storyboard in Resources */,
 				D46A7CA01E574D8400F974EA /* Assets.xcassets in Resources */,
 				63DF246C1E67076000625FB2 /* olivier_demo.ttf in Resources */,
 				D46A7C9E1E574D8400F974EA /* Main.storyboard in Resources */,
+				D4ADBFD61E6CAE39004B413B /* vincenzo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +602,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4ADBFD91E6CC411004B413B /* guido.jpg in Resources */,
 				F9FBE8D01E60242E005C65C7 /* Assets.xcassets in Resources */,
+				D4ADBFDA1E6CC411004B413B /* vincenzo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

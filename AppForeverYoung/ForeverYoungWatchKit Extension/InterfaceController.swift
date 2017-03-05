@@ -17,7 +17,11 @@ class InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         registerUserNotificationSettings()
+        print("pronto")
     }
+    
+    
+
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -27,6 +31,7 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        print("pronto3")
     }
     
 }
@@ -75,18 +80,27 @@ extension InterfaceController {
     func registerUserNotificationSettings() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
             if granted {
-                let answer1 = UNNotificationAction(identifier: "answer1", title: "ACCEPT", options: [])
-                let answer2 = UNNotificationAction(identifier: "answer2", title: "DECLINE", options: [])
-                let friendRequest = UNNotificationCategory(identifier: "friendRequest", actions: [answer1, answer2] , intentIdentifiers: [], options: [])
-                UNUserNotificationCenter.current().setNotificationCategories([friendRequest])
-                UNUserNotificationCenter.current().delegate = self
-                print("⌚️⌚️⌚️Successfully registered notification support")
+//                let answer1 = UNNotificationAction(identifier: "answer1", title: "ACCEPT", options: [])
+//                let answer2 = UNNotificationAction(identifier: "answer2", title: "DECLINE", options: [])
+//                let friendRequest = UNNotificationCategory(identifier: "friendRequest", actions: [answer1, answer2] , intentIdentifiers: [], options: [])
+//                UNUserNotificationCenter.current().setNotificationCategories([friendRequest])
+//                UNUserNotificationCenter.current().delegate = self
+//              
+//                
+//                
+//                let respost = UNNotificationAction(identifier: "view", title: "VIEW", options: [])
+//                let memorySaved = UNNotificationCategory(identifier: "memorySaved", actions: [respost] , intentIdentifiers: [], options: [])
+//                UNUserNotificationCenter.current().setNotificationCategories([memorySaved])
+//                UNUserNotificationCenter.current().delegate = self
                 
+                print("ciaooooo!")
+                // LEVARE
+                let answerOne = UNNotificationAction(identifier: "ACCEPT", title: "OK", options: [.foreground])
+                let answerTwo = UNNotificationAction(identifier: "DECLINE", title: "OK", options: [.foreground])
+                let quizCategory = UNNotificationCategory(identifier: "quizCategory", actions: [answerOne, answerTwo], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([quizCategory])
+            
                 
-                let respost = UNNotificationAction(identifier: "view", title: "VIEW", options: [])
-                let memorySaved = UNNotificationCategory(identifier: "memorySaved", actions: [respost] , intentIdentifiers: [], options: [])
-                UNUserNotificationCenter.current().setNotificationCategories([memorySaved])
-                UNUserNotificationCenter.current().delegate = self
                 print("⌚️⌚️⌚️Successfully registered notification support")
             } else {
                 print("⌚️⌚️⌚️ERROR: \(error?.localizedDescription)")

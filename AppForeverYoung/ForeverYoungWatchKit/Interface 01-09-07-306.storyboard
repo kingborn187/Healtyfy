@@ -15,7 +15,7 @@
                 <notificationController id="Gld-hM-8lx">
                     <items>
                         <label width="1" alignment="left" verticalAlignment="center" text="Alert Label" textAlignment="center" numberOfLines="0" id="dv3-IE-8f1"/>
-                        <imageView height="100" alignment="left" image="unknown-1" id="q16-q6-3gL"/>
+                        <imageView height="100" alignment="left" image="guido" id="q16-q6-3gL"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="friendRequest" id="71D-Nz-ejJ"/>
                     <connections>
@@ -23,7 +23,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="-478" y="215"/>
+            <point key="canvasLocation" x="-484" y="215"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
