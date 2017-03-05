@@ -14,6 +14,7 @@ class AddPersonViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet weak var BackgroundCardView: UIImageView!
+    @IBOutlet weak var AddButton: UIButton!
     
     var person: (name: String, surname: String)? = ("", "")
     var find = false
@@ -21,6 +22,11 @@ class AddPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AddButton.layer.borderWidth = 1.0
+        AddButton.layer.borderColor = UIColor(white: 1.0, alpha: 0.7).cgColor
+        AddButton.layer.cornerRadius = 10
+       
         
         BackgroundCardView.layer.cornerRadius = 15
         BackgroundCardView.layer.masksToBounds = true

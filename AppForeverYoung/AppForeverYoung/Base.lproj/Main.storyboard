@@ -157,6 +157,7 @@
                     <navigationItem key="navigationItem" title="Contact Person" id="cXq-G0-bHT"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="SendButton" destination="hlE-oh-PH7" id="zbA-LB-j1o"/>
                         <outlet property="label" destination="KwV-bJ-oiz" id="Mw2-GW-z49"/>
                         <outlet property="riquadro1" destination="0o1-iQ-NmX" id="1kM-aT-0Cz"/>
                         <outlet property="typeQuestionPicker" destination="gyz-QC-3uR" id="Xgc-2A-Al4"/>
@@ -240,11 +241,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH6-bp-cFh">
-                                <rect key="frame" x="59" y="91" width="256" height="129"/>
+                                <rect key="frame" x="82" y="91" width="211" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.96178576175104669" green="1" blue="0.98762262176108873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                         <integer key="value" value="10"/>
@@ -256,7 +259,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7VO-zq-2uZ">
-                                <rect key="frame" x="59" y="91" width="256" height="128"/>
+                                <rect key="frame" x="82" y="91" width="211" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -272,6 +275,7 @@
                     <navigationItem key="navigationItem" title="Send Memory" id="STS-5F-KRg"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="SendMemoryButton" destination="3Pm-NS-fNe" id="MZo-bE-Q08"/>
                         <outlet property="bodyMemory" destination="2aB-sW-MGE" id="6oe-ej-26u"/>
                         <outlet property="dateMemory" destination="UDz-lm-g1g" id="nv1-GQ-Mni"/>
                         <outlet property="imageMemory" destination="7VO-zq-2uZ" id="jeZ-JV-8HF"/>
@@ -283,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kti-ZJ-K1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2702" y="-1531"/>
+            <point key="canvasLocation" x="2701.5999999999999" y="-1531.4842578710645"/>
         </scene>
         <!--Control Person-->
         <scene sceneID="m1D-Ew-4Xt">
@@ -559,6 +563,7 @@
                     <navigationItem key="navigationItem" title="Add Person" id="elv-AW-YlD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="AddButton" destination="3Sn-9D-xqM" id="84e-j1-m98"/>
                         <outlet property="BackgroundCardView" destination="0bu-PI-byM" id="qRv-f4-V8O"/>
                         <outlet property="nameLabel" destination="o57-13-dZA" id="WiM-xe-DjN"/>
                         <outlet property="surnameLabel" destination="JLo-Vi-aMA" id="n7F-Dm-k9W"/>
@@ -1176,7 +1181,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aK5-IP-ge2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="m0B-ok-Ynb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MlB-PX-xG8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MlB-PX-xG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1234,7 +1239,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d7Q-EY-kfs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zVE-Kd-LHE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zVE-Kd-LHE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="0.40999432260000002" blue="0.069671252049999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1269,7 +1274,7 @@
         <image name="unknown" width="387" height="382"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bz0-18-ap0"/>
         <segue reference="AYp-Bs-Fa2"/>
+        <segue reference="Yzd-Tg-44w"/>
     </inferredMetricsTieBreakers>
 </document>

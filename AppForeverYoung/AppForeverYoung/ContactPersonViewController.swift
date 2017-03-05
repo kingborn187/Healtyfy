@@ -13,6 +13,7 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
     @IBOutlet var typeQuestionPicker: UIPickerView!
     @IBOutlet var label: UILabel!
     @IBOutlet weak var riquadro1: UIImageView!
+    @IBOutlet weak var SendButton: UIButton!
     
     //let typeQuestion = ["How are you?", "Do you have a lunch?", "Are you alone?", "Are you at home?"]
     let typeQuestion = DataBase.getQuestions()
@@ -21,6 +22,10 @@ class ContactPersonViewController: UIViewController, UIPickerViewDataSource, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SendButton.layer.borderWidth = 1.0
+        SendButton.layer.borderColor = UIColor(white: 1.0, alpha: 0.7).cgColor
+        SendButton.layer.cornerRadius = 10
         
         riquadro1.layer.cornerRadius = 15
         riquadro1.layer.masksToBounds = true

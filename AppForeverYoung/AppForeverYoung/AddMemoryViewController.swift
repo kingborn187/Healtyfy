@@ -15,6 +15,7 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
     @IBOutlet var dateMemory: UITextField!
     @IBOutlet var timeMemory: UITextField!
     @IBOutlet var imageMemory: UIImageView!
+    @IBOutlet weak var SendMemoryButton: UIButton!
     
     let serviceManager = ServiceManager()
     let picker = UIImagePickerController()
@@ -22,6 +23,11 @@ class AddMemoryViewController: UIViewController, UITextFieldDelegate, UIImagePic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SendMemoryButton.layer.borderWidth = 1.0
+        SendMemoryButton.layer.borderColor = UIColor(white: 1.0, alpha: 0.7).cgColor
+        SendMemoryButton.layer.cornerRadius = 10
+        
         picker.delegate = self
         // Do any additional setup after loading the view.
         timeMemory.delegate = self
