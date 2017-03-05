@@ -15,6 +15,7 @@ class MemoryTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.title = "Memory Menu"
     }
     
     override func didReceiveMemoryWarning() {
