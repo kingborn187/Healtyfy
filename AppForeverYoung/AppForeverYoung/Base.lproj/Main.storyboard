@@ -1176,7 +1176,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aK5-IP-ge2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="m0B-ok-Ynb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MlB-PX-xG8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MlB-PX-xG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.95483976599999998" green="0.3545615077" blue="0.00095754925859999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1210,10 +1210,10 @@
                         <color key="barTintColor" red="0.97588807339999994" green="0.43843698910000001" blue="0.086975083970000006" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.98211938142776489" green="0.757823646068573" blue="0.02305920235812664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.85077304636956308" green="0.85919654187817263" blue="0.85919654187817263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="1" green="0.7803921568627451" blue="0.26666666666666666" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -1234,7 +1234,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d7Q-EY-kfs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zVE-Kd-LHE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zVE-Kd-LHE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="0.40999432260000002" blue="0.069671252049999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
