@@ -20,6 +20,7 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet var imagePerson: UIImageView!
     @IBOutlet var age: UITextField!
     @IBOutlet weak var CreateButton: UIButton!
+    @IBOutlet weak var riquadro1: UIImageView!
     
     let typePerson = ["Elderly", "Relative"]
     var person = String()
@@ -29,6 +30,11 @@ class CreateUserViewController: UIViewController, UIPickerViewDataSource, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        riquadro1.layer.cornerRadius = 15
+        riquadro1.layer.masksToBounds = true
+        riquadro1.layer.borderWidth = 2.0
+        riquadro1.layer.borderColor = UIColor(hue: 0.7222, saturation: 0, brightness: 1, alpha: 0.25).cgColor
         
         CreateButton.layer.borderWidth = 1.0
         CreateButton.layer.borderColor = UIColor(white: 1.0, alpha: 0.7).cgColor
