@@ -1231,12 +1231,12 @@
             </objects>
             <point key="canvasLocation" x="-118" y="180"/>
         </scene>
-        <!--MENU RELATIVES-->
+        <!--RELATIVES MENU-->
         <scene sceneID="RcG-6X-fjL">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5r4-FH-Jva" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="MENU RELATIVES" id="sS9-4z-zFc"/>
+                    <navigationItem key="navigationItem" title="RELATIVES MENU" id="sS9-4z-zFc"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="usM-JR-6qc">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
