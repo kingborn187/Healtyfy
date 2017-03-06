@@ -16,8 +16,9 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        registerUserNotificationSettings()
         print("pronto")
+        registerUserNotificationSettings()
+        scheduleLocalNotification()
     }
     
     
@@ -37,6 +38,64 @@ class InterfaceController: WKInterfaceController {
 }
 
 
+extension Int {
+    static func randomInt(_ min: Int, max:Int) -> Int {
+        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+    }
+}
+
+extension InterfaceController {
+    
+    func registerUserNotificationSettings() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if granted {
+                let viewCatsAction = UNNotificationAction(identifier: "viewCatsAction", title: "OK", options: .foreground)
+                //let viewCatsAction1 = UNNotificationAction(identifier: "viewCatsAction1", title: "I'm not very well", options: .foreground)
+                let pawsomeCategory = UNNotificationCategory(identifier: "Pawsome", actions: [viewCatsAction], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([pawsomeCategory])
+                UNUserNotificationCenter.current().delegate = self
+                print("⌚️⌚️⌚️Successfully registered notification support")
+            } else {
+                print("⌚️⌚️⌚️ERROR: \(error?.localizedDescription)")
+            }
+        }
+    }
+    
+    func scheduleLocalNotification() {
+        
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if settings.alertSetting == .enabled {
+        
+                let catImageURL = Bundle.main.url(forResource: "insulina", withExtension: "jpg")
+                let notificationAttachment = try! UNNotificationAttachment(identifier: "Pawsome4", url: catImageURL!, options: nil)
+                
+                let notificationContent = UNMutableNotificationContent()
+                notificationContent.title = "Memory"
+                notificationContent.subtitle = "It's <11:24>"
+                notificationContent.body = "Hello "
+                notificationContent.categoryIdentifier = "Pawsome"
+                notificationContent.attachments = [notificationAttachment]
+                
+                var date = DateComponents()
+                date.minute = 30
+                let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                
+                let notificationRequest = UNNotificationRequest(identifier: "Pawsome32", content: notificationContent, trigger: notificationTrigger)
+                
+                UNUserNotificationCenter.current().add(notificationRequest) { (error) in
+                    if let error = error {
+                        print("⌚️⌚️⌚️ERROR:\(error.localizedDescription)")
+                    } else {
+                        print("⌚️⌚️⌚️Local notification was scheduled")
+                    }
+                }
+            } else {
+                print("⌚️⌚️⌚️Notification alerts are disabled")
+            }
+        }
+    }
+}
+
 // Notification Center Delegate
 extension InterfaceController: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -45,66 +104,7 @@ extension InterfaceController: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
-        
-        if response.notification.request.content.categoryIdentifier == "friendRequest" {
-            // Handle the actions for the expired timer.
-            print("enter in category: friendRequest")
-            if response.actionIdentifier == "answer1" {
-                // Invalidate the old timer and create a new one. . .
-                print("enter in action accet")
-                let result = DataBase.createFriendship(usernameElderly: "sergio", usernameRelative: "renato")
-                if result == true {
-                    print("amicizia aggiunta")
-                } else {
-                    print("amicizia non aggiunta")
-                }
-            }
-            else if response.actionIdentifier == "answer2" {
-                // Invalidate the timer. . .
-                print("enter in action decline")
-            }
-        }
-        else if response.notification.request.content.categoryIdentifier == "memorySaved" {
-        
-        }
-        
-        // Else handle actions for other notification types. . .
-    }
-    
-}
-
-
-// Notification Center
-extension InterfaceController {
-    
-    func registerUserNotificationSettings() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-            if granted {
-//                let answer1 = UNNotificationAction(identifier: "answer1", title: "ACCEPT", options: [])
-//                let answer2 = UNNotificationAction(identifier: "answer2", title: "DECLINE", options: [])
-//                let friendRequest = UNNotificationCategory(identifier: "friendRequest", actions: [answer1, answer2] , intentIdentifiers: [], options: [])
-//                UNUserNotificationCenter.current().setNotificationCategories([friendRequest])
-//                UNUserNotificationCenter.current().delegate = self
-//              
-//                
-//                
-//                let respost = UNNotificationAction(identifier: "view", title: "VIEW", options: [])
-//                let memorySaved = UNNotificationCategory(identifier: "memorySaved", actions: [respost] , intentIdentifiers: [], options: [])
-//                UNUserNotificationCenter.current().setNotificationCategories([memorySaved])
-//                UNUserNotificationCenter.current().delegate = self
-                
-                print("ciaooooo!")
-                // LEVARE
-                let answerOne = UNNotificationAction(identifier: "ACCEPT", title: "OK", options: [.foreground])
-                let answerTwo = UNNotificationAction(identifier: "DECLINE", title: "OK", options: [.foreground])
-                let quizCategory = UNNotificationCategory(identifier: "quizCategory", actions: [answerOne, answerTwo], intentIdentifiers: [], options: [])
-                UNUserNotificationCenter.current().setNotificationCategories([quizCategory])
-            
-                
-                print("⌚️⌚️⌚️Successfully registered notification support")
-            } else {
-                print("⌚️⌚️⌚️ERROR: \(error?.localizedDescription)")
-            }
-        }
+        print("waakakaka")
+        //presentController(withName: "ModifierMenu", context: nil)
     }
 }

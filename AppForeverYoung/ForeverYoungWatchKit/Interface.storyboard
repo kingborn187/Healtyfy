@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,9 +15,9 @@
                 <notificationController id="Gld-hM-8lx">
                     <items>
                         <label width="1" alignment="left" verticalAlignment="center" text="Alert Label" textAlignment="center" numberOfLines="0" id="dv3-IE-8f1"/>
-                        <imageView height="100" alignment="left" image="guido" id="q16-q6-3gL"/>
+                        <imageView height="100" alignment="left" image="insulina" id="q16-q6-3gL"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="friendRequest" id="71D-Nz-ejJ"/>
+                    <notificationCategory key="notificationCategory" identifier="Pawsome" id="71D-Nz-ejJ"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="dv3-IE-8f1" id="SDJ-Wh-fvO"/>
                     </connections>
@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-484" y="215"/>
         </scene>
-        <!--Interface Controller-->
+        <!--prova-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ForeverYoungWatchKit" customModuleProvider="target">
+                <controller identifier="prova" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ForeverYoungWatchKit" customModuleProvider="target">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="feS-JM-dv4">
                             <group key="contentGroup" width="1" height="1" alignment="left" alpha="0.90000000000000002" backgroundImage="notificheWatch" layout="vertical" radius="12" id="pOI-3z-BHG">
@@ -102,27 +102,36 @@
             </objects>
             <point key="canvasLocation" x="-215" y="867.5"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Good Morning Interface Controller-->
         <scene sceneID="qwB-ys-ihc">
             <objects>
-                <controller id="dKW-2O-sHl">
+                <controller id="dKW-2O-sHl" customClass="GoodMorningInterfaceController" customModule="ForeverYoungWatchKit_Extension">
                     <items>
-                        <label width="135" height="82" alignment="left" text="GOOD MOORNING. HOW ARE YOU TODAY?" textAlignment="center" numberOfLines="0" id="BFY-Qh-hjT">
+                        <label width="1" height="82" alignment="left" text="GOOD MOORNING. HOW ARE YOU TODAY?" textAlignment="center" numberOfLines="0" id="BFY-Qh-hjT">
                             <color key="textColor" red="1" green="0.40999432260000002" blue="0.069671252049999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <group width="1" alignment="left" id="Ydl-rF-KIm">
                             <items>
-                                <button width="32" alignment="left" title="😀" id="d5L-Rr-pzJ"/>
-                                <button width="32" alignment="left" title="☹️" id="CAd-8J-ukX"/>
-                                <button width="32" alignment="left" title="😡" id="xbF-R6-Mx3"/>
-                                <button width="32" alignment="left" title="😴" id="hKP-tu-4cU"/>
+                                <button width="38" alignment="left" title="😀" id="d5L-Rr-pzJ">
+                                    <connections>
+                                        <action selector="SmileAction" destination="dKW-2O-sHl" id="sdc-Wu-W0Q"/>
+                                        <segue destination="AgC-eL-Hgc" kind="modal" id="Pcq-Vh-Lfm"/>
+                                    </connections>
+                                </button>
+                                <button width="38" alignment="left" title="☹️" id="CAd-8J-ukX"/>
+                                <button width="38" alignment="left" title="😡" id="xbF-R6-Mx3"/>
+                                <button width="38" alignment="left" title="😴" id="hKP-tu-4cU">
+                                    <connections>
+                                        <action selector="SmileAction" destination="dKW-2O-sHl" id="fGF-nM-HqN"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-212" y="1157"/>
+            <point key="canvasLocation" x="-215" y="1210"/>
         </scene>
         <!--Animation Medicine-->
         <scene sceneID="bIM-9E-HF1">
@@ -138,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="102" y="215"/>
         </scene>
-        <!--Animation Notification-->
+        <!--animation1-->
         <scene sceneID="bup-dx-ajB">
             <objects>
-                <controller id="CFx-vx-dzJ" customClass="AnimationNotification" customModule="ForeverYoungWatchKit_Extension">
+                <controller identifier="animation1" id="CFx-vx-dzJ" customClass="AnimationNotification" customModule="ForeverYoungWatchKit_Extension">
                     <items>
                         <imageView alignment="left" id="79z-Bz-Va8"/>
                     </items>
@@ -150,7 +159,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-215" y="215"/>
+            <point key="canvasLocation" x="-197" y="215"/>
         </scene>
         <!--Animation Chat-->
         <scene sceneID="M3y-IH-O1Y">

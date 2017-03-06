@@ -19,7 +19,7 @@
 		D4319DC81E60B35B00D51C97 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */; };
 		D433A1C81E69C24A00924B01 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433A1C71E69C24A00924B01 /* NotificationTableViewController.swift */; };
 		D433A1CA1E69C26700924B01 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433A1C91E69C26700924B01 /* NotificationTableViewCell.swift */; };
-		D434F0161E6B8F47008DD931 /* Interface 01-09-07-306.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D434F0151E6B8F47008DD931 /* Interface 01-09-07-306.storyboard */; };
+		D434F0161E6B8F47008DD931 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D434F0151E6B8F47008DD931 /* Interface.storyboard */; };
 		D434F0181E6B8FC2008DD931 /* AnswerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434F0171E6B8FC2008DD931 /* AnswerInterfaceController.swift */; };
 		D43B27591E68C21B00784847 /* MemoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B27581E68C21B00784847 /* MemoryRow.swift */; };
 		D43EE5541E68D7BC0095AAC7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */; };
@@ -40,8 +40,9 @@
 		D49F599D1E68DD98000EB0A7 /* ChatInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F599C1E68DD98000EB0A7 /* ChatInterfaceController.swift */; };
 		D4ADBFD41E6C9F13004B413B /* guido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD31E6C9F13004B413B /* guido.jpg */; };
 		D4ADBFD61E6CAE39004B413B /* vincenzo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD51E6CAE39004B413B /* vincenzo.jpg */; };
-		D4ADBFD91E6CC411004B413B /* guido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD71E6CC411004B413B /* guido.jpg */; };
-		D4ADBFDA1E6CC411004B413B /* vincenzo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADBFD81E6CC411004B413B /* vincenzo.jpg */; };
+		D4ADC1231E6CE186004B413B /* insulina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADC1221E6CE186004B413B /* insulina.jpg */; };
+		D4ADC1251E6CE30D004B413B /* insulina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ADC1241E6CE30D004B413B /* insulina.jpg */; };
+		D4ADC1271E6CE7A8004B413B /* GoodMorningInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ADC1261E6CE7A8004B413B /* GoodMorningInterfaceController.swift */; };
 		D4B23E511E64AD86009E8EBC /* AddMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */; };
 		D4DBDBDA1E636659004237EC /* RealtivesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */; };
 		D4DC12FC1E5844E1003DF05C /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */; };
@@ -129,7 +130,7 @@
 		D4319DC71E60B35B00D51C97 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
 		D433A1C71E69C24A00924B01 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		D433A1C91E69C26700924B01 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
-		D434F0151E6B8F47008DD931 /* Interface 01-09-07-306.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Interface 01-09-07-306.storyboard"; sourceTree = "<group>"; };
+		D434F0151E6B8F47008DD931 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		D434F0171E6B8FC2008DD931 /* AnswerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerInterfaceController.swift; sourceTree = "<group>"; };
 		D43B27581E68C21B00784847 /* MemoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryRow.swift; sourceTree = "<group>"; };
 		D43EE5531E68D7BC0095AAC7 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -156,9 +157,10 @@
 		D49F599C1E68DD98000EB0A7 /* ChatInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInterfaceController.swift; sourceTree = "<group>"; };
 		D4ADBFD31E6C9F13004B413B /* guido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guido.jpg; sourceTree = "<group>"; };
 		D4ADBFD51E6CAE39004B413B /* vincenzo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vincenzo.jpg; sourceTree = "<group>"; };
-		D4ADBFD71E6CC411004B413B /* guido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guido.jpg; sourceTree = "<group>"; };
-		D4ADBFD81E6CC411004B413B /* vincenzo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vincenzo.jpg; sourceTree = "<group>"; };
 		D4ADBFDB1E6CC8F2004B413B /* ForeverYoungWatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ForeverYoungWatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		D4ADC1221E6CE186004B413B /* insulina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = insulina.jpg; sourceTree = "<group>"; };
+		D4ADC1241E6CE30D004B413B /* insulina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = insulina.jpg; sourceTree = "<group>"; };
+		D4ADC1261E6CE7A8004B413B /* GoodMorningInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodMorningInterfaceController.swift; sourceTree = "<group>"; };
 		D4B23E501E64AD86009E8EBC /* AddMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryViewController.swift; sourceTree = "<group>"; };
 		D4DBDBD91E636659004237EC /* RealtivesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtivesMenuViewController.swift; sourceTree = "<group>"; };
 		D4DC12FB1E5844E1003DF05C /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
@@ -341,7 +343,8 @@
 		F9FBE8B71E60242E005C65C7 /* ForeverYoungWatchKit */ = {
 			isa = PBXGroup;
 			children = (
-				D434F0151E6B8F47008DD931 /* Interface 01-09-07-306.storyboard */,
+				D4ADC1221E6CE186004B413B /* insulina.jpg */,
+				D434F0151E6B8F47008DD931 /* Interface.storyboard */,
 				F9FBE8BB1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8BD1E60242E005C65C7 /* Info.plist */,
 			);
@@ -351,10 +354,9 @@
 		F9FBE8C61E60242E005C65C7 /* ForeverYoungWatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D4ADC1241E6CE30D004B413B /* insulina.jpg */,
 				F9FBE8CB1E60242E005C65C7 /* ExtensionDelegate.swift */,
 				D4ADBFDB1E6CC8F2004B413B /* ForeverYoungWatchKit Extension.entitlements */,
-				D4ADBFD71E6CC411004B413B /* guido.jpg */,
-				D4ADBFD81E6CC411004B413B /* vincenzo.jpg */,
 				F9FBE8C91E60242E005C65C7 /* InterfaceController.swift */,
 				F9FBE8CD1E60242E005C65C7 /* NotificationController.swift */,
 				D42508F31E65D2D400CFDB07 /* FriedRequestNotificationController.swift */,
@@ -365,6 +367,7 @@
 				D45062CA1E69D43F00E7C969 /* NotificationInterfaceController.swift */,
 				D45062CC1E69D46200E7C969 /* NotificationRow.swift */,
 				D434F0171E6B8FC2008DD931 /* AnswerInterfaceController.swift */,
+				D4ADC1261E6CE7A8004B413B /* GoodMorningInterfaceController.swift */,
 				F9FBE8CF1E60242E005C65C7 /* Assets.xcassets */,
 				F9FBE8D11E60242E005C65C7 /* Info.plist */,
 				F9FBE8C71E60242E005C65C7 /* Supporting Files */,
@@ -593,8 +596,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D434F0161E6B8F47008DD931 /* Interface 01-09-07-306.storyboard in Resources */,
+				D434F0161E6B8F47008DD931 /* Interface.storyboard in Resources */,
 				F9FBE8BC1E60242E005C65C7 /* Assets.xcassets in Resources */,
+				D4ADC1231E6CE186004B413B /* insulina.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,9 +606,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4ADBFD91E6CC411004B413B /* guido.jpg in Resources */,
+				D4ADC1251E6CE30D004B413B /* insulina.jpg in Resources */,
 				F9FBE8D01E60242E005C65C7 /* Assets.xcassets in Resources */,
-				D4ADBFDA1E6CC411004B413B /* vincenzo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +674,7 @@
 				D45062CB1E69D43F00E7C969 /* NotificationInterfaceController.swift in Sources */,
 				F981F5BF1E66D9210060BB30 /* DataBase.swift in Sources */,
 				F981F5BE1E66D9050060BB30 /* ShareClass.swift in Sources */,
+				D4ADC1271E6CE7A8004B413B /* GoodMorningInterfaceController.swift in Sources */,
 				6301250F1E6996F500935F9F /* AnimationMedicine.swift in Sources */,
 				639026EB1E6AD33200764226 /* AnimationNotification.swift in Sources */,
 				D434F0181E6B8FC2008DD931 /* AnswerInterfaceController.swift in Sources */,
