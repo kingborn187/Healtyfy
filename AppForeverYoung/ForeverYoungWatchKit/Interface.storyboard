@@ -78,7 +78,7 @@
                                                     </label>
                                                 </items>
                                             </group>
-                                            <imageView height="102" alignment="left" id="sgB-2X-Mfc"/>
+                                            <imageView height="102" alignment="left" contentMode="scaleAspectFit" id="sgB-2X-Mfc"/>
                                             <label width="1" alignment="left" text="date" textAlignment="center" id="RN5-gN-47q">
                                                 <fontDescription key="font" type="system" pointSize="13"/>
                                             </label>
