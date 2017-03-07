@@ -72,7 +72,7 @@ extension InterfaceController {
                 let notificationContent = UNMutableNotificationContent()
                 notificationContent.title = "Memory"
                 notificationContent.subtitle = "It's <11:24>"
-                notificationContent.body = "Hello "
+                notificationContent.body = "It's <11:24>. It's in the kitchen"
                 notificationContent.categoryIdentifier = "Pawsome"
                 notificationContent.attachments = [notificationAttachment]
                 
@@ -80,7 +80,7 @@ extension InterfaceController {
                 date.minute = 30
                 let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                 
-                let notificationRequest = UNNotificationRequest(identifier: "Pawsome32", content: notificationContent, trigger: notificationTrigger)
+                let notificationRequest = UNNotificationRequest(identifier: "Pawsome55", content: notificationContent, trigger: notificationTrigger)
                 
                 UNUserNotificationCenter.current().add(notificationRequest) { (error) in
                     if let error = error {

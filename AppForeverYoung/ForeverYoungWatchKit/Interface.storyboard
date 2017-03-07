@@ -15,7 +15,7 @@
                 <notificationController id="Gld-hM-8lx">
                     <items>
                         <label width="1" alignment="left" verticalAlignment="center" text="Alert Label" textAlignment="center" numberOfLines="0" id="dv3-IE-8f1"/>
-                        <imageView height="100" alignment="left" image="insulina" id="q16-q6-3gL"/>
+                        <imageView height="100" alignment="left" image="triatec" id="q16-q6-3gL"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="Pawsome" id="71D-Nz-ejJ"/>
                     <connections>
