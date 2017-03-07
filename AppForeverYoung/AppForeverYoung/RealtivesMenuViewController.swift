@@ -34,6 +34,8 @@ class RealtivesMenuViewController: UIViewController {
             self.imagePerson.clipsToBounds = true
             namePerson.text = name
             surnamePerson.text = surname
+//            ms1.text = lastSms
+//            ms2.text = lastNotify
 //            ms3.text = lastPosition
 //            ms4.text = goodMorning
         }
@@ -57,7 +59,7 @@ class RealtivesMenuViewController: UIViewController {
         }
         
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         let requestIdentifier = "africaQuiz"
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
